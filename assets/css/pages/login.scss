@@ -1,0 +1,84 @@
+.register-link{
+    padding: 30px 0 8px;
+}
+.register-lines {
+  margin-top: 20px;
+  position: relative;
+  z-index: 0;
+}
+.register-lines:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+}
+.register-lines p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -90px;
+  width: 180px;
+  height: 25px;
+  line-height: 25px;
+  background: white;
+  text-align: center;
+  font-size: 18px;
+  color: #969190;
+}
+.register-share {
+  overflow: hidden;
+  margin-top: 20px;
+  text-align: center;
+}
+.register-share-box {
+  display: inline-block;
+  width: 70px;
+  height: 24x;
+  line-height: 24px;
+  margin-right: 0;
+  padding-top: 11px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 18px;
+  color: #969190;
+  cursor: pointer;
+}
+.register-share-box:last-child {
+  margin-right: 0;
+}
+.register-share-box img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.register-share-box a {
+  color: #969190;
+  text-decoration: none;
+}
+.register-form {
+  padding-top: 10px;
+}
+.register-form /deep/ .v-text-field{
+  padding-top: 25px;
+}
+.register-form /deep/ .v-input input{
+    width: 100%;
+    height: 50px !important;
+    line-height: 48px;
+    max-height: 50px !important;
+    border-radius: 6px;
+    border: 1px solid #CACACA;
+    padding: 8px 10px;
+}
+.register-form /deep/ .theme--light.v-text-field > .v-input__control > .v-input__slot:before,
+.register-form /deep/ .v-text-field > .v-input__control > .v-input__slot:after{
+  display: none;
+}
+.register-form /deep/ .v-text-field .v-label{
+  top: -25px;
+}
+.register-form /deep/ .v-label--active{
+  transform: inherit;
+}

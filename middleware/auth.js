@@ -52,14 +52,14 @@ const defaultAuth = async ({ route, store, redirect }) => {
         store.dispatch('toast/add', { type: 'error', text: e });
         store.dispatch('user/resetStore');
         localStorage.removeItem('headers');
-        redirect('/login');
+        //redirect('/login');
       }
     }
   }
 
   // my collection
   if (!store.state.user.currentUser.uid && /^\/my/.test(route.path)) {
-    redirect('/login');
+    //redirect('/login');
   }
 };
 

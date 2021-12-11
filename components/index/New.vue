@@ -1,5 +1,6 @@
 <template>
-  <v-card elevation="24" class="mx-auto">
+  <section>
+    <div class="text-h6">{{ $t('index.titles.latest_products') }}</div>
     <v-carousel
       :continuous="false"
       :cycle="cycle"
@@ -14,6 +15,7 @@
         v-for="(item, i) in items"
         :key="i"
         :src="item.cover_image_url"
+        class="img-item"
       ></v-carousel-item>
     </v-carousel>
     <v-list two-line v-if="current">
@@ -32,7 +34,7 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
-  </v-card>
+  </section>
 </template>
 
 <script>
@@ -69,3 +71,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .img-item{
+    border-radius: 16px 16px 0 0;  
+    overflow: hidden;
+  }
+  .v-sheet.v-list{
+    box-shadow: 0 0 0 rgba(0,0,0,0)
+  }
+</style>

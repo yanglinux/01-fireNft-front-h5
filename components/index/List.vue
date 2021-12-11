@@ -6,9 +6,7 @@
       </v-col>
     </v-row>
     <v-row v-if="items.length >= 3">
-      <v-col>
-        <v-btn @click="toProductPage()" dark color="black" block>{{ $t('buttons.load_more') }}</v-btn>
-      </v-col>
+      <v-btn @click="toProductPage()" block class="btn-white-radius">{{ $t('buttons.load_more') }}</v-btn>
     </v-row>
   </v-container>
 </template>
@@ -34,3 +32,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.btn-white-radius{
+  height: 48px !important;
+  border-radius: 90px;
+  border: 2px solid #0E7868;
+  background: transparent;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  color: #0E7868;
+  font-size: 16px;
+}
+</style>

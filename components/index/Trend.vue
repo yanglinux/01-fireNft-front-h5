@@ -1,15 +1,17 @@
 <template>
   <div>
     <div class="text-h6">{{ $t('index.titles.hot_products') }}</div>
-    <v-carousel height="307">
+    <v-carousel height="350">
       <v-carousel-item
         @click="() => $router.push(`/products/${item.id}`)"
         v-for="(item, i) in items"
         :key="i"
-        :src="item.cover_image_url"
+        src="/assets/img/banner1.jpg"        
         reverse-transition="fade-transition"
         transition="fade-transition"
+        class="img-item"
       ></v-carousel-item>
+      <!-- :src="item.cover_image_url" -->
     </v-carousel>
   </div>
 </template>
@@ -26,3 +28,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .img-item{
+    border-radius: 16px;
+    overflow: hidden;
+  }
+</style>

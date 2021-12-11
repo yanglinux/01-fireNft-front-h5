@@ -1,7 +1,8 @@
 <template>
   <v-app-bar fixed app>
-    <v-toolbar-title v-text="layout.title" />
-    <v-spacer />
+    <v-toolbar-title @click="() => $router.push('/')">
+        <img src="@/assets/img/logo.svg" style="width: 115px" />
+    </v-toolbar-title>    
     <Language />
   </v-app-bar>
 </template>

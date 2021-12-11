@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="login">
     <div class="mt-4 mb-4 d-flex justify-center align-center">
       <span class="text-h6">{{ $t('user.welcome') }}</span>
     </div>
-    <v-form ref="form" @submit.prevent="onSubmit" lazy-validation :disabled="loading">
+    <v-form ref="form" @submit.prevent="onSubmit" lazy-validation :disabled="loading" class="register-form">
       <v-text-field v-model="form.email" :rules="rules.email" :label="$t('user.labels.email')" required></v-text-field>
 
       <v-text-field
@@ -35,38 +35,36 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
-
-      <v-row align="center" justify="center" class="mt-2">
-        <v-col cols="12">
-          <v-btn block :loading="loading" color="primary" type="submit">{{ $t('buttons.login') }}</v-btn>
-        </v-col>
-      </v-row>
+      <div class="d-flex justify-end">
+          <NuxtLink to="/forgot">{{ $t('user.password-reset') }}</NuxtLink>
+      </div>
+      <div class="d-flex justify-center mt-4">
+          <v-btn block :loading="loading" type="submit" class="btn-blue-radius">{{ $t('buttons.login') }}</v-btn>
+      </div>
     </v-form>
 
-    <div class="d-flex justify-end mt-4">
-      <NuxtLink to="/signup">{{ $t('user.labels.register') }}</NuxtLink>
+    <div class="d-flex justify-center register-link">
+      <NuxtLink to="/signup" class="link-black">{{ $t('user.labels.register') }}</NuxtLink>
     </div>
 
-    <div class="d-flex justify-end mt-4">
-      <NuxtLink to="/forgot">{{ $t('user.password-reset') }}</NuxtLink>
+    <div class="register-lines"><p>OR Login in with</p></div>
+    <div class="register-share">
+      <div class="register-share-box">
+        <a @click="redirectTo('facebook')">
+          <img src="@/assets/img/svg/share-icon1.svg" alt="" />
+        </a>
+      </div>
+      <div class="register-share-box">
+        <a @click="redirectTo('twitter')">
+          <img src="@/assets/img/svg/share-icon2.svg" alt="" />
+        </a>
+      </div>
+      <div class="register-share-box">
+        <a @click="redirectTo('line')">
+          <img src="@/assets/img/svg/share-icon3.svg" alt="" />
+        </a>
+      </div>
     </div>
-
-    <v-row align="center" justify="center" class="mt-2">
-      <v-col cols="12">
-        <v-btn block outlined @click="redirectTo('facebook')">
-          <img height="26px" src="@/assets/img/svg/share-icon1.svg" alt="" />
-          <span class="ml-2">FACEBOOK</span>
-        </v-btn>
-        <v-btn block class="mt-2" outlined @click="redirectTo('twitter')">
-          <img height="26px" src="@/assets/img/svg/share-icon2.svg" alt="" />
-          <span class="ml-2">TWITTER</span>
-        </v-btn>
-        <v-btn block class="mt-2" outlined @click="redirectTo('line')">
-          <img height="26px" src="@/assets/img/svg/share-icon3.svg" alt="" />
-          <span class="ml-2">LINE</span>
-        </v-btn>
-      </v-col>
-    </v-row>
   </div>
 </template>
 
@@ -155,3 +153,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '@/assets/css/pages/login.scss';
+</style>

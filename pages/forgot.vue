@@ -1,17 +1,15 @@
 <template>
   <div>
-    <v-form v-model="valid" @submit.prevent="onSubmit">
-      <v-card>
-        <v-card-title>{{ $t('forgot.title') }}</v-card-title>
-        <v-card-text>
-          <v-text-field :rules="rules.email" v-model="form.email" :label="$t('forgot.email')"></v-text-field>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn :loading="loading" type="submit" :disabled="!valid" color="primary" block>
+    <div class="mt-4 mb-4 d-flex justify-center align-center">
+      <span class="text-h6">{{ $t('forgot.title') }}</span>
+    </div>
+    <v-form v-model="valid" @submit.prevent="onSubmit" class="register-form">    
+        <v-text-field :rules="rules.email" v-model="form.email" :label="$t('forgot.email')"></v-text-field>
+        <div class="d-flex justify-center mt-2">
+          <v-btn :loading="loading" type="submit" :disabled="!valid" block class="btn-blue-radius">
             {{ $t('buttons.sent') }}
           </v-btn>
-        </v-card-actions>
-      </v-card>
+        </div>     
     </v-form>
   </div>
 </template>
@@ -66,3 +64,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '@/assets/css/pages/login.scss';
+</style>

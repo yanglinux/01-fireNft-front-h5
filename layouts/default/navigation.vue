@@ -8,12 +8,12 @@
     app
   >
     <v-list>
-      <v-list-item v-for="(item, i) in items" :key="item.title" :to="item.to" router exact>
+      <v-list-item v-for="(item, i) in items" :key="item.title" :to="item.to" router exact v-if="false">
         <v-list-item-content>
           <v-list-item-title v-text="$t(`header.${item.title}`)" />
         </v-list-item-content>
       </v-list-item>
-      <v-divider />
+      <v-divider v-if="false" />
       <v-list-item v-for="(item, i) in subItems" :key="item.title" :to="item.to" router exact>
         <v-list-item-content>
           <v-list-item-title v-text="$t(`${item.title}`)" />
