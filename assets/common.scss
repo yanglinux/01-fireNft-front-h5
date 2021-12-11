@@ -1,0 +1,24 @@
+.v-data-table.custom {
+  th {
+    span {
+      word-break: keep-all;
+    }
+  }
+
+  tbody {
+    td {
+      word-break: keep-all;
+
+      img {
+        max-width: 100px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.mytab {
+  .v-slide-group__prev.v-slide-group__prev--disabled {
+    display: none !important;
+  }
+}

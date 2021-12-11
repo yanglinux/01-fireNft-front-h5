@@ -1,0 +1,616 @@
+{
+  "append": {
+    "amount_unit": "円"
+  },
+  "banner": {
+    "homepage": "My Profile"
+  },
+  "buttons": {
+    "auction": "入札",
+    "back": "戻る",
+    "bankcode_manage": "銀行口座管理",
+    "buy": "購入",
+    "cancel": "キャンセル",
+    "cancel_sale": "出品取り消し",
+    "change": "変更する",
+    "close": "閉じる",
+    "completion": "完了",
+    "confirm": "確認",
+    "confirm_contract": "コントラクト確認",
+    "confirm_history": "履歴確認",
+    "create_nft_request": "NFT作成申請",
+    "create_sale": "出品する",
+    "create_sale_short": "出品",
+    "credit_card_register": "新規クレジットカード登録",
+    "csv_download": "CSVダウンロード",
+    "detail": "詳細",
+    "detail_confirm": "詳細確認",
+    "edit": "編集",
+    "later_transfer": "後で振り込み",
+    "load_more": "もっと見る",
+    "login": "ログイン",
+    "next": "次へ",
+    "ok": "OK",
+    "order_confirm": "支払を承認する",
+    "otp_confirm": " 認証する",
+    "password_update": "パスワード変更",
+    "payment": "支払",
+    "prev": "前へ",
+    "processing": "処理中",
+    "regist": "登録する",
+    "regist_product": "商品新規登録",
+    "relieve": "解除",
+    "remanded_reason": "差し戻し理由をみる",
+    "request_cancel": "申請取り消し",
+    "search": "絞り込む",
+    "send": "発送する",
+    "sent": "送信",
+    "signup": "新規登録",
+    "step2_cancel": "二段階認証解除",
+    "step2_settings": "二段階認証設定",
+    "transferred": "振込済み",
+    "unregister": "登録解除",
+    "update": "更新する",
+    "upload_image": "画像アップロード",
+    "upload_product_image": "商品写真をアップロード"
+  },
+  "deliver": {
+    "delivered": "送達済み",
+    "discarded": "廃棄済み",
+    "requested": "発送待ち",
+    "sent": "配送中"
+  },
+  "errors": {
+    "brand_required": "ブランドを入力してください",
+    "can_not_get_profile": "ユーザプロファイルの取得は失敗しました",
+    "can_not_get_two_auth": "二段階情報の取得は失敗しました",
+    "common": "エラーが起こりました！",
+    "current_password_required": "現在のパスワードを入力してください",
+    "otp_must_number": "二段階認証コードは数字のみとなります",
+    "otp_required": "二段階認証コードを入力してください",
+    "password_confirm_required": "新しいパスワードの確認を入力してください",
+    "password_confirm_to_password": "新しいパスワードの確認は一致していません",
+    "password_required": "新しいパスワードを入力してください",
+    "product_image_required": "商品写真をアップロードしてください",
+    "product_name_required": "商品名を入力してください",
+    "email_required": "メールアドレスは有効なメールアドレスではありません",
+    "shop_login": "ショップIDまたはユーザ名またはパスワードが間違っています！",
+    "shop_login_otp": "認証コードが間違えています！"
+  },
+  "fields": {
+    "bid_days": "入札期間",
+    "bid_unit": "入札単位",
+    "fee": "手数料",
+    "fixed_price": "価格",
+    "price_type": "出品タイプ",
+    "start_price": "開始価格"
+  },
+  "forgot": {
+    "email": "メールアドレス（ユーザ名）",
+    "explain": "上記メールアドレスに再設定用のURLを送信します。",
+    "expired": "パスワードリセットの有効期限が切れました。パスワード再リセットしてください。",
+    "password": "新しいパスワードを入力してください",
+    "password_confirmation": "パスワード確認",
+    "successed": "再設定用のURLを送信しました。メール内のリンクからパスワードを再設定してください。",
+    "title": "パスワードリセット",
+    "verified": "パスワードがリセットできました。"
+  },
+  "footer": {
+    "about": "APREについて",
+    "company_overview": "会社概要",
+    "help_guide": "ヘルプ＆ガイド",
+    "inquiry": "お問い合わせ",
+    "faq": "FAQ",
+    "privacy_andterms": "プライバシーと利用規約",
+    "privacy_policy": "プライバシーポリシー",
+    "utilization_protocol": "利用規約",
+    "transaction_platform": "特定商取引法に基づく表示（プラットフォーム）",
+    "transaction_producer": "特定商取引法に基づく表示（出品者）"
+  },
+  "guide":{
+    "aprex_con1":"ブロックチェーンを使ったあたらしい流通のインフラです",
+    "aprex_con2":"APREX はモノとその価値を分離させ、その価値だけを売買できるプラットフォームです。あらゆるモノの価値（所有権）をNFTにして、実際のモノは厳重にAPREXで保管します。あらゆるモノの価値（所有権）をNFTにして、実際のモノは厳重にAPREXで保管します。",
+    "aprex_con3":"APREXをはじめるために必要なものは何もありません。まずは出品されているNFTからお気に入りを見つけてみましょう。",
+    "aprex_title":"APREX とは",
+    "feature_con1":"日本語・英語・中国語に対応しており、世界中のユーザーと取引ができます",
+    "feature_con2":"クレジットカード決済・銀行振込・仮想通貨決済（BTC/ETH等50種類以上の仮想通貨）での決済が可能",
+    "feature_con3":"ブロックチェーン、ウォレット、仮想通貨etcの専門的な知識がなくても、通常のECサイトのように直感的に利用できます",
+    "feature_con4":"最先端の物体指紋技術を採用することによってモノとNFTの紐づけが可能になり、NFTの価値と信用度が向上<br>来歴がわかるNFTを使用することで、贋作の撲滅につながります",
+    "feature_con5":"モノの移動がなくなるため、環境への負荷が少なります<br>NFTだけの取引により、モノの流動性が向上します",
+    "feature_explain":"※用語説明",
+    "feature_block_label":"ブロックチェーン：",
+    "feature_block_con":"日本語では「分散型台帳技術」と呼ばれます。取引データをブロックチェーンを利用する全てのユーザーのコンピューターに保存することで、「誰が、いつ、どのような取引を行ったか」を理論上偽造できないような形で管理、保存することができます。 ",
+    "feature_nft_label":"NFT：",
+    "feature_nft_con":"Non Fungible Token（ノン ファンジブル トークン）を省略した言葉で、日本語では「代替不可能なトークン」という意味です。デジタルデータが代替不可能となることで、唯一無二の価値を持てるようになります。",
+    "feature_title":"APREX 特徴"
+  },
+  "header": {
+    "guide": "Guide",
+    "login": "login",
+    "marketplace": "Marketplace",
+    "my_collection": "Collection",
+    "shop": "Shop",
+    "logout": "ログアウト",
+    "signup": "新規登録",
+    "user_setting": "ユーザ設定"
+  },
+  "index": {
+    "sorts": {
+      "date": "販売日時降順",
+      "hot": "人気順",
+      "price": "価格降順"
+    },
+    "titles": {
+      "auction": "オークション商品",
+      "fixed_price": "固定価格商品",
+      "hot_products": "TREND",
+      "latest_products": "NEW"
+    }
+  },
+  "labels": {
+    "email": "メールアドレス"
+  },
+  "message": {
+    "error_bank_payment_failure": "銀行振込決済処理に失敗しました。",
+    "error_contacts_sent_failure": "お問い合わせ送信に失敗しました。",
+    "error_create_credit_card_failure": "クレジットカード登録に失敗しました。",
+    "error_credit_card_payment_failure": "クレジットカード支払処理に失敗しました。",
+    "error_delete_credit_card_failure": "クレジットカードの解除が失敗しました。",
+    "error_exhibit_examination_failure": "出品申し込みに失敗しました。",
+    "error_forgot_failure": "パスワードリセットに失敗しました。",
+    "error_login_failure": "ログイン用の認証情報が正しくありません。再度お試しください。",
+    "error_password_change_failure": "パスワード変更に失敗しました。",
+    "error_payment_failure": "決済エラー",
+    "error_singnup_failure": "エラーが発生し登録できません。",
+    "error_transfer_failure": "振込済み処理に失敗しました。",
+    "error_twoauth_delete_failure": "二段階認証解除に失敗しました。",
+    "error_user_update_failure": "ユーザ設定処理に失敗しました。",
+    "info_auction_price_invalid": "有効な入札金額を入力してください。",
+    "info_auction_success": "入札完了",
+    "info_bid_unit_wrong": "入札単位は必ずお守りください。",
+    "info_confirm_password_wrong": "入力されたパスワードは一致しません。",
+    "info_contacts_sent_success": "提出完了",
+    "info_credit_card_register": "クレジットカードを登録してください",
+    "info_credit_card_unregister": "クレジットカードを解除しても宜しいでしょうか？",
+    "info_no_data": "データがありません",
+    "info_old_password_wrong": "現在のパスワードが正しくありません。",
+    "info_password_change_success": "パスワード変更成功",
+    "info_payment_success": "支払いが正常に完了しました。",
+    "info_transfer_completion": "振込完了しましたか？",
+    "info_twoauth_delete_success": "二段階認証解除成功",
+    "info_twoauth_qrcode_wrong": "二段階認証コードが正しくありません。",
+    "info_twoauth_set_success": "二段階認証設定成功",
+    "info_user_update_success": "ユーザ設定成功",
+    "login_successed": "ログインしました"
+  },
+  "my": {
+    "affiliate": {
+      "copy": "コピー",
+      "fields": {
+        "created_at": "日付",
+        "uuid": "ユーザーID"
+      },
+      "history": "招待履歴",
+      "qr_code": "QRコード",
+      "qr_code_explain": "QRコードをスキャンする",
+      "share_url": "招待リンク",
+      "title": "友達招待"
+    },
+    "contacts": {
+      "from_contents": "内容",
+      "from_email": "連絡先(E-MAIL)",
+      "from_title": "タイトル",
+      "title": "お問い合わせ"
+    },
+    "credit_card": {
+      "cardC_cvc": "CVC番号",
+      "card_expiry": "有効期限",
+      "card_number": "カード番号",
+      "copy": "コピー",
+      "created": "登録済",
+      "fields": {
+        "created_at": "日付",
+        "uuid": "ユーザーID"
+      },
+      "history": "招待履歴",
+      "title": "クレジットカード管理"
+    },
+    "collection":{
+      "collection":"コレクション",
+      "exchange_list":"現物引換一覧",
+      "status": {
+        "created": "未出品",
+        "listing": "出品中",
+        "sold": "出品終了（販売済み）"
+      }
+    },
+    "exhibitExamination": {
+      "approval_explain": "出品申込の内容を確認した上で承認をします",
+      "fields": {
+        "available_date": "日付",
+        "brand": "名前",
+        "status": "ステータス"
+      },
+      "pay_procedures": "pay 審査手続き",
+      "sub_title": "出品申し込み",
+      "tenant_url": "今紐付ける>",
+      "title": "出品申し込み"
+    },
+    "favorites": {
+      "title": "お気に入り"
+    },
+    "order": {
+      "append": {
+        "amount_unit": "円"
+      },
+      "bidded": {
+        "fields": {
+          "amount": "落札価格",
+          "created_at": "落札日付",
+          "name": "出品者",
+          "payment_due_at": "支払期限",
+          "status": "ステータス",
+          "title": "商品名"
+        },
+        "status": {
+          "cancel": "キャンセル",
+          "paid": "支払済み",
+          "transferred": "送金済み",
+          "waiting_confirm": "支払方法選択待ち",
+          "waiting_payment": "支払待ち"
+        }
+      },
+      "bidding": {
+        "fields": {
+          "current_price": "現在価格",
+          "last_bidded_at": "入札日付",
+          "name": "出品者",
+          "status": "ステータス",
+          "title": "商品名"
+        },
+        "status": {
+          "bidded": "成約",
+          "canceled": "キャンセル",
+          "churn": "流れ",
+          "listing": "入札中",
+          "top_bidded": "最高入札者"
+        }
+      },
+      "fixed_price": {
+        "fields": {
+          "amount": "購入価格",
+          "created_at": "日付",
+          "name": "出品者",
+          "payment_due_at": "支払期限",
+          "status": "ステータス",
+          "title": "商品名"
+        },
+        "status": {
+          "cancel": "キャンセル",
+          "paid": "支払済み",
+          "transferred": "送金済み",
+          "waiting_confirm": "支払方法選択待ち",
+          "waiting_payment": "支払待ち"
+        }
+      },
+      "labels": {
+        "account": "口座番号",
+        "account_type": "口座種別",
+        "account_type_checking": "当座預金",
+        "account_type_normal": "普通預金",
+        "amount": "価格",
+        "auction_amount": "入札価格",
+        "bank": "金融機関名",
+        "branch": "支店名",
+        "buy_created_at": "購入日付",
+        "buy_name": "支払いユーザー",
+        "created_at": "作成時刻",
+        "credit_card": "クレジットカード",
+        "exp_date": "有効期限",
+        "last4": "末尾",
+        "name": "口座名義",
+        "name_kana": "口座名義カナ",
+        "order_id": "取引番号",
+        "pay_method": "支払方法",
+        "pay_method_bank": "銀行振込",
+        "pay_method_credit_card": "クレジットカード支払",
+        "payment_due_at": "支払期限：",
+        "price_type_auction": "オークション商品",
+        "price_type_fixed_price": "固定価格商品",
+        "product_id": "登録番号"
+      },
+      "sale": {
+        "fields": {
+          "amount": "購入価格",
+          "created_at": "購入日付",
+          "name": "購入者",
+          "price_type": "販売方式",
+          "status": "ステータス",
+          "title": "商品名"
+        },
+        "status": {
+          "cancel": "キャンセル",
+          "paid": "支払済み",
+          "transferred": "送金済み",
+          "waiting_confirm": "支払方法選択待ち",
+          "waiting_payment": "支払待ち"
+        }
+      },
+      "titles": {
+        "bidded": "落札分",
+        "bidding": "入札中",
+        "buy_list": "購入一覧",
+        "credit_card_select": "お支払いカードの選択",
+        "fixed_price": "定额商品",
+        "sale_list": "販売一覧",
+        "transfer_destination": "振込先情報"
+      }
+    },
+    "produce": {
+      "fixed_price": "固定価格"
+    },
+    "profile": {
+      "address": "住所",
+      "auth_code": "認証コード",
+      "avatar": "アバター",
+      "avatar_image_select": "アバター画像選択",
+      "confirm_password": "新しいパスワードの確認",
+      "delivery": "お届け先",
+      "email": "メールアドレス",
+      "gender": "性别",
+      "gender_man": "男性",
+      "gender_woman": "女性",
+      "introduction": "紹介文",
+      "name": "名前",
+      "new_password": "新しいパスワード",
+      "nick_name": "ニックネーム",
+      "old_password": "現在のパスワード",
+      "password_change": "パスワード変更",
+      "set_two_auth": "二段階認証設定",
+      "tel": "電話番号",
+      "title": "ユーザ設定",
+      "two_auth": "二段階認証",
+      "two_auth_completed": "二段階認証設定済",
+      "two_auth_delete": "二段階認証解除",
+      "two_auth_explain": "Google Authenticatorなどの認証コード生成用モバイルアプリでQRコードを読み取る、表示される番号を入力してください。",
+      "zip_code": "郵便番号"
+    }
+  },
+  "omniauth": {
+    "processing": "認証中",
+    "rerequest": "再認証する"
+  },
+  "orders": {
+    "methods": {
+      "bank": "銀行振込",
+      "credit_card": "クレジットカード"
+    },
+    "status": {
+      "cancel": "キャンセル",
+      "discarded": "廃棄済み",
+      "null": "",
+      "paid": "支払済み",
+      "transferred": "支払確認待ち",
+      "waiting_confirm": "支払方法選択待ち",
+      "waiting_payment": "支払待ち"
+    }
+  },
+  "pager": {
+    "first": "最初のページ",
+    "next": "次のページ",
+    "prev": "前のページ"
+  },
+  "product": {
+    "detail": {
+      "fields": {
+        "created_at": "時間",
+        "nick_name": "ユーザー",
+        "price": "入札"
+      },
+      "labels": {
+        "account": "口座番号",
+        "auction_end": "オークション終了まであと",
+        "bank": "金融機関名",
+        "bid_days": "入札期間",
+        "bid_price": "入札価格",
+        "bid_unit": "入札単位",
+        "branch": "支店名",
+        "contract": "コントラクト確認",
+        "credit_card": "クレジットカード",
+        "days_ago": "日前",
+        "description": "説明",
+        "exp_date": "有効期限",
+        "hours_ago": "時間前",
+        "last4": "末尾",
+        "listing_at": "出品時刻",
+        "login": "ログインする",
+        "login_text_left": "購入するには、",
+        "login_text_right": "必要があります",
+        "minutes_ago": "分前",
+        "owner_name": "オーナー",
+        "pay_method_bank": "銀行振込",
+        "pay_method_credit_card": "クレジットカード支払",
+        "price": "価格",
+        "product_id": "登録番号",
+        "seconds_ago": "秒前",
+        "start_price": "スタート価格",
+        "transfer_destination": "振込先情報",
+        "transfer_name": "振込先名義人"
+      },
+      "titles": {
+        "auction": "入札",
+        "bid_history": "入札履歴",
+        "buy": "購入",
+        "credit_card_select": "お支払いカードの選択",
+        "detail": "詳細",
+        "other_products": "人気商品"
+      }
+    },
+    "labels": {
+      "listing_date": "出品日時",
+      "sold": "出品終了"
+    },
+    "nft": {
+      "status": {
+        "created": "未申請",
+        "discarded": "NFT廃棄済",
+        "listing": "NFT作成済",
+        "remanded": "差し戻し",
+        "replacemented": "引換済み",
+        "requested": "NFT申請中"
+      }
+    },
+    "search": {
+      "title": "検索結果"
+    },
+    "status": {
+      "bidded": "成約",
+      "canceled": "キャンセル",
+      "churn": "流れ",
+      "created": "未出品",
+      "listing": "出品済み"
+    },
+    "type": {
+      "auction": "オークション",
+      "fixed_price": "固定価格"
+    }
+  },
+  "shop": {
+    "labels": {
+      "paydate-search": "取引日で絞り込み"
+    },
+    "header":{
+      "title":"店舗管理",
+      "logout":"ログアウト"
+    }
+  },
+  "sidebar": {
+    "my": {
+      "affiliate": "友達招待",
+      "collection": "コレクション",
+      "contacts": "お問い合わせ",
+      "credit_card": "クレジットカード",
+      "exhibitExamination": "出品申し込み",
+      "favorites": "お気に入り",
+      "orders": "取引一覧",
+      "settings": "ユーザ設定"
+    },
+    "shop": {
+      "earnings_manager": "売上一覧",
+      "orders_manager": "取引管理",
+      "product_manager": "登録商品管理",
+      "replacement": "現物引換",
+      "sales_manager": "出品管理",
+      "setting": "設定"
+    }
+  },
+  "signup": {
+    "email": "メールアドレス（ユーザ名）",
+    "explain": "OR 新規登録 in with",
+    "expired": "確認リンクの有効期限が過ぎました。本人確認用のメールを再送信してください。",
+    "expired_failure": "アカウント作成時のメールを入力してください。",
+    "password": "パスワード",
+    "password_confirmation": "パスワード確認",
+    "successed": "本人確認用のメールを送信しました。メール内のリンクからアカウントを有効化させてください。",
+    "title": "アカウントを作成",
+    "verified": "メールアドレスが確認できました。"
+  },
+  "successes": {
+    "update": "更新は成功しました"
+  },
+  "titles": {
+    "on_listing": "出品中",
+    "address": "住所",
+    "all": "全て",
+    "amount": "金額",
+    "ask_for_cancel_sale": "出品を取り消しでよろしいでしょうか？",
+    "bid_days": "入札期間",
+    "bid_unit": "入札単位",
+    "brand": "ブランド",
+    "category_name": "カテゴリー",
+    "confirm": "確認",
+    "count": "数",
+    "cover_image_url": "画像プレビュー",
+    "completed_at": "完了時刻",
+    "created_at": "作成時刻",
+    "current_month_sales": "当月売上",
+    "day": "日",
+    "destination": "お届け先",
+    "detail_setting": "詳細設定",
+    "end_at": "終了日付",
+    "exhibit_code": "出品番号",
+    "fee": "手数料",
+    "fixed_price": "定価",
+    "google_qr_tip": "Google Authenticatorなどの認証コード生成用モバイルアプリでQRコードを読み取る、表示される番号を入力してください。",
+    "id": "登録番号",
+    "input_password": "現在のパスワードを入力してください",
+    "input_step_password": "二段階認証コードを入力してください",
+    "month": "月",
+    "name": "名前",
+    "name_kana": "名前（カナ）",
+    "nft_cancel_confirm": "NFTをキャンセルしますか？",
+    "nft_create_confirm": "NFT作成を申請します。よろしいですか？",
+    "nft_status": "NFT状態",
+    "no_data": "データがありません",
+    "num": "個",
+    "order_no": "取引番号",
+    "order_price": "取引金額",
+    "other_destination": "その他お届け先",
+    "pay_method": "支払方法",
+    "payment_amount": "支払金額",
+    "payment_due_at": "支払時刻",
+    "payment_at": "支払時刻",
+    "payment_status": "取引状況",
+    "payment_success": "支払を承認しました",
+    "phone": "個人電話番号",
+    "price": "価格",
+    "platform_fee": "プラットフォーム手数料",
+    "price_type": "出品タイプ",
+    "product_code": "登録番号",
+    "product_description": "商品説明",
+    "product_name": "商品名",
+    "product_type": "商品タイプ",
+    "product_type_setting": "商品タイプを設定",
+    "receive_confirm": "受取を確認する",
+    "receive_product": "NFTの実物を届きましたか？",
+    "replacement_updated_at": "引換日時",
+    "sale_price": "価格",
+    "sale_status": "出品状態",
+    "send_status": "配達状態",
+    "sent_company": "配送業者",
+    "sent_no": "追跡番号",
+    "shop": "店舗管理システム",
+    "shop_description": "店舗紹介",
+    "shop_listing_product": "店舗が出品している商品",
+    "shop_name": "店舗名",
+    "start_at": "開始日付",
+    "start_price": "スタート価格",
+    "status": "ステータス",
+    "step2": "二段階認証",
+    "step2_cancel": "二段階認証解除",
+    "tel": "個人電話番号",
+    "time": "時刻",
+    "total": "数量",
+    "total_revenue": "総収入",
+    "two_auth_actived": "二段階認証設定済",
+    "two_auth_code": "二段階認証コード",
+    "type": "タイプ",
+    "user_listing_product": "ユーザが出品している商品",
+    "visiable_nft_listed": "NFT作成済商品のみ表示する",
+    "year": "年",
+    "zip_code": "郵便番号"
+  },
+  "user": {
+    "labels": {
+      "auth_code": "認証コード",
+      "email": "メールアドレス（ユーザ名）",
+      "login_id": "ログインID",
+      "password": "パスワード",
+      "register": "新規登録",
+      "shop_id": "ショップID"
+    },
+    "login": "ログイン",
+    "password-reset": "パスワードリセット",
+    "welcome": "ようこそ"
+  }
+}

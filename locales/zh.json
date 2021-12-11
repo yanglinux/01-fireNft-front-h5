@@ -1,0 +1,610 @@
+{
+  "append": {
+    "amount_unit": "日元"
+  },
+  "banner": {
+    "homepage": "个人主页"
+  },
+  "buttons": {
+    "auction": "出价",
+    "back": "返回",
+    "bankcode_manage": "银行账户管理",
+    "buy": "买",
+    "cancel": "取消",
+    "cancel_sale": "取消出品",
+    "change": "更新",
+    "close": "关闭",
+    "completion": "结束",
+    "confirm": "确认",
+    "confirm_contract": "智能合约",
+    "confirm_history": "历史记录",
+    "create_nft_request": "申请生成NFT",
+    "create_sale": "出品",
+    "create_sale_short": "出品",
+    "credit_card_register": "添加信用卡信息",
+    "csv_download": "CSV下载",
+    "detail": "详细",
+    "detail_confirm": "详细确认",
+    "edit": "修改",
+    "later_transfer": "延后汇款",
+    "load_more": "详细",
+    "login": "登录",
+    "next": "下一步",
+    "ok": "OK",
+    "order_confirm": "支付承认",
+    "otp_confirm": "认证",
+    "password_update": "修改密码",
+    "payment": "支付",
+    "prev": "上一步",
+    "processing": "处理中",
+    "regist": "登录",
+    "regist_product": "登录新商品",
+    "relieve": "解除",
+    "remanded_reason": "看未通过理由",
+    "request_cancel": "申请取消",
+    "search": "检索",
+    "send": "发送",
+    "sent": "送信",
+    "signup": "注册",
+    "step2_cancel": "取消二次认证",
+    "step2_settings": "设定二次认证",
+    "transferred": "转账完成",
+    "unregister": "解除登录",
+    "update": "更新",
+    "upload_image": "上传图片",
+    "upload_product_image": "上传商品图片"
+  },
+  "deliver": {
+    "delivered": "已送达",
+    "discarded": "已废弃",
+    "requested": "等待发货",
+    "sent": "配送中"
+  },
+  "errors": {
+    "brand_required": "输入品牌",
+    "can_not_get_profile": "未能取得用户信息",
+    "can_not_get_two_auth": "未能取得二次认证信息",
+    "common": "发生错误",
+    "current_password_required": "输入现在的密码",
+    "otp_must_number": "二次验证码只能是数字",
+    "otp_required": "请输入二次验证码",
+    "password_confirm_required": "请确认新密码",
+    "password_confirm_to_password": "新密码不一致",
+    "password_required": "请输入新密码",
+    "product_image_required": "请上传商品图片",
+    "product_name_required": "请输入商品名",
+    "email_required": "メールアドレスは有効なメールアドレスではありません",
+    "shop_login": "店铺ID或用户名或密码错误",
+    "shop_login_otp": "验证码错误"
+  },
+  "fields": {
+    "bid_days": "拍卖期间",
+    "bid_unit": "出价单位",
+    "fee": "手续费",
+    "fixed_price": "价格",
+    "price_type": "出品类型",
+    "start_price": "开始价格"
+  },
+  "forgot": {
+    "email": "邮件地址（用户名）",
+    "explain": "重新设定用的URL会发送到上边的邮箱",
+    "expired": "重新设定密码用的URL已过期，请重新设定密码。",
+    "password": "请输入新密码",
+    "password_confirmation": "确认密码",
+    "successed": "重新设定用的URL已发，请通过邮件里的链接修改密码。",
+    "title": "重置密码",
+    "verified": "密码重置完了"
+  },
+  "footer": {
+    "about": "关于APRE",
+    "company_overview": "公司简介",
+    "help_guide": "帮助&指南",
+    "inquiry": "咨询",
+    "faq": "FAQ",
+    "privacy_andterms": "条款及协议",
+    "privacy_policy": "隐私条款",
+    "utilization_protocol": "用户协议",
+    "transaction_platform": "基于特定商业交易法显示内容（平台版）",
+    "transaction_producer": "基于特定商业交易法显示内容（店铺版）"
+  },
+  "guide":{
+    "aprex_con1":"APREX是使用区块链的全新交易平台",
+    "aprex_con2":"APREX是一个将物品本身和其价值分离开，可以仅对其价值进行买卖的平台。<br>将每一个物品的价值（所有权）NFT化，实际的物品本身APREX会慎重保管。<br> 仅通过让物品价值（NFT）的流通，就可以构筑一个在任何地方都不会改变物品价值的世界。",
+    "aprex_con3":"在开始APREX之前，不需要做任何的准备工作。先去看看在出品中的NFT里有没有你喜欢的吧",
+    "aprex_title":"什么是APREX",
+    "feature_con1":"我们可以对应日语，英语和中文三种语言。所以可以和世界各地的用户进行交易。",
+    "feature_con2":"你可以使用信用卡，银行卡转账，虚拟货币（BTC/ETH等50种以上的虚拟货币）这三种支付手段。",
+    "feature_con3":"即使没有区块链，钱包和虚拟货币等相关的专业知识，也可以像利用普通的电商购物平台一样无障碍使用。",
+    "feature_con4":"通过最先端的物品指纹技术将实物和NFT连接起来，这样可以提高NFT的价值以及信用度，也不用担心赝品的问题。",
+    "feature_con5":"由于没有物品的运输，对环境的负担也可以减少。<br>仅仅通过NFT的交易就可以增加物品的流动性。",
+    "feature_explain":"※用语说明",
+    "feature_block_label":"区块链：",
+    "feature_block_con":"是借由密码学串接并保护内容的串联文字记录。每一个区块包含了前一个区块的加密散列和交易资料等，这样的设计使得区块内容具有难以篡改的特性，并可永久查验此交易。 ",
+    "feature_nft_label":"NFT：",
+    "feature_nft_con":"NFT的英文全称为Non Fungible Token，翻译成中文就是非同质化代币。具有不可分割，不可替代，独一无二等特点。",
+    "feature_title":"APREX特征"
+  },
+  "header": {
+    "guide": "向导",
+    "login": "登录",
+    "logout": "退出登录",
+    "marketplace": "市场",
+    "my_collection": "收藏",
+    "shop": "店铺",
+    "signup": "注册",
+    "user_setting": "用户设定"
+  },
+  "index": {
+    "sorts": {
+      "date": "售卖时间降序",
+      "hot": "人气顺序",
+      "price": "价格降序"
+    },
+    "titles": {
+      "auction": "拍卖商品",
+      "fixed_price": "固定价格商品",
+      "hot_products": "人气商品",
+      "latest_products": "最新售卖"
+    }
+  },
+  "labels": {
+    "email": "邮箱地址"
+  },
+  "message": {
+    "error_bank_payment_failure": "银行汇款处理失败",
+    "error_contacts_sent_failure": "咨询信息发送失败",
+    "error_create_credit_card_failure": "添加信用卡失败",
+    "error_credit_card_payment_failure": "信用卡支付失败",
+    "error_delete_credit_card_failure": "删除信用卡失败",
+    "error_exhibit_examination_failure": "出品申请失败",
+    "error_forgot_failure": "密码重设失败",
+    "error_login_failure": "登录信息不正确，请再次输入",
+    "error_password_change_failure": "修改密码失败",
+    "error_payment_failure": "支付错误",
+    "error_singnup_failure": "发生错误不能登录",
+    "error_transfer_failure": "汇款完了处理失败",
+    "error_twoauth_delete_failure": "二次认证解除失败",
+    "error_user_update_failure": "用户设定失败",
+    "info_auction_price_invalid": "请输入有效的出价金额",
+    "info_auction_success": "完成出价",
+    "info_bid_unit_wrong": "请确保出价单位",
+    "info_confirm_password_wrong": "输入的密码不一致",
+    "info_contacts_sent_success": "完成",
+    "info_credit_card_register": "请添加信用卡",
+    "info_credit_card_unregister": "可以解除信用卡吗",
+    "info_no_data": "没有数据",
+    "info_old_password_wrong": "现在的密码错误",
+    "info_password_change_success": "更换密码成功",
+    "info_payment_success": "支付成功",
+    "info_transfer_completion": "确认汇款完成了吗",
+    "info_twoauth_delete_success": "二次认证解除成功",
+    "info_twoauth_qrcode_wrong": "二次认证验证码错误",
+    "info_twoauth_set_success": "二次认证设定成功",
+    "info_user_update_success": "用户设置成功",
+    "login_successed": "登录成功"
+  },
+  "my": {
+    "affiliate": {
+      "copy": "复制",
+      "fields": {
+        "created_at": "日期",
+        "uuid": "用户账号"
+      },
+      "history": "邀请记录",
+      "qr_code": "二维码",
+      "qr_code_explain": "扫描二维码",
+      "share_url": "邀请链接",
+      "title": "邀请好友"
+    },
+    "contacts": {
+      "from_contents": "内容",
+      "from_email": "联系人邮箱",
+      "from_title": "主题",
+      "title": "联系客服"
+    },
+    "credit_card": {
+      "cardC_cvc": "安全码",
+      "card_expiry": "有效期",
+      "card_number": "卡号",
+      "copy": "复制",
+      "created": "已绑定",
+      "fields": {
+        "created_at": "日期",
+        "uuid": "用户账号"
+      },
+      "history": "邀请记录",
+      "title": "管理信用卡"
+    },
+    "collection":{
+      "collection":"收藏",
+      "exchange_list":"现货兑换一览表",
+      "status": {
+        "created": "未展出",
+        "listing": "正在展出",
+        "sold": "展出结束（销售完毕）"
+      }
+    },
+    "exhibitExamination": {
+      "approval_explain": "我已阅读并同意以上条款",
+      "fields": {
+        "available_date": "日期",
+        "brand": "姓名",
+        "status": "状态"
+      },
+      "pay_procedures": "pay审查手续",
+      "sub_title": "申请出品",
+      "tenant_url": "绑定",
+      "title": "申请出品"
+    },
+    "favorites": {
+      "title": "我喜欢"
+    },
+    "order": {
+      "append": {
+        "amount_unit": "日元"
+      },
+      "bidded": {
+        "fields": {
+          "amount": "中标价格",
+          "created_at": "中标日期",
+          "name": "出品者",
+          "payment_due_at": "支付期限",
+          "status": "状态",
+          "title": "商品名"
+        },
+        "status": {
+          "cancel": "取消",
+          "paid": "已支付",
+          "transferred": "已汇款",
+          "waiting_confirm": "等待确认",
+          "waiting_payment": "等待支付"
+        }
+      },
+      "bidding": {
+        "fields": {
+          "current_price": "现在价格",
+          "last_bidded_at": "出价日期",
+          "name": "出品者",
+          "status": "状态",
+          "title": "商品名"
+        },
+        "status": {
+          "bidded": "成交",
+          "canceled": "取消",
+          "churn": "流拍",
+          "listing": "正在投标",
+          "top_bidded":"最高投标人"
+        }
+      },
+      "fixed_price": {
+        "fields": {
+          "amount": "购入价格",
+          "created_at": "日期",
+          "name": "出品者",
+          "payment_due_at": "支付期限",
+          "status": "状态",
+          "title": "商品名"
+        },
+        "status": {
+          "cancel": "取消",
+          "paid": "已支付",
+          "transferred": "已汇款",
+          "waiting_confirm": "等待确认",
+          "waiting_payment": "等待支付"
+        }
+      },
+      "labels": {
+        "account": "银行卡号",
+        "account_type": "账户种类",
+        "account_type_checking": "企业账户",
+        "account_type_normal": "个人账户",
+        "amount": "价格",
+        "auction_amount": "出价价格",
+        "bank": "银行名",
+        "branch": "支店名",
+        "buy_created_at": "购入日期",
+        "buy_name": "购买者",
+        "created_at": "日期",
+        "credit_card": "信用卡",
+        "exp_date": "有效期",
+        "last4": "末尾",
+        "order_id": "订单号",
+        "pay_method": "支付方式",
+        "pay_method_bank": "银行转账",
+        "pay_method_credit_card": "信用卡支付",
+        "payment_due_at": "支付期限",
+        "price_type_auction": "拍卖商品",
+        "price_type_fixed_price": "定价商品",
+        "product_id": "登录编号"
+      },
+      "sale": {
+        "fields": {
+          "amount": "购入价格",
+          "created_at": "购入日期",
+          "name": "购买者",
+          "price_type": "贩卖方式",
+          "status": "状态",
+          "title": "商品名"
+        },
+        "status": {
+          "cancel": "取消",
+          "paid": "已支付",
+          "transferred": "已汇款",
+          "waiting_confirm": "等待确认",
+          "waiting_payment": "等待支付"
+        }
+      },
+      "titles": {
+        "bidded": "中标",
+        "bidding": "出价中",
+        "buy_list": "购入一览",
+        "credit_card_select": "选择支付的银行卡",
+        "fixed_price": "定价商品",
+        "sale_list": "贩卖一览",
+        "transfer_destination": "汇款人信息"
+      }
+    },
+    "produce": {
+      "fixed_price": "定价"
+    },
+    "profile": {
+      "address": "住址",
+      "auth_code": "验证码",
+      "avatar": "头像",
+      "avatar_image_select": "头像选择",
+      "confirm_password": "确认新密码",
+      "delivery": "收件人",
+      "email": "邮箱",
+      "gender": "性别",
+      "gender_man": "男性",
+      "gender_woman": "女性",
+      "introduction": "介绍文",
+      "name": "姓名",
+      "new_password": "新密码",
+      "nick_name": "昵称",
+      "old_password": "现在的密码",
+      "password_change": "修改密码",
+      "set_two_auth": "二次认证设定",
+      "tel": "电话号码",
+      "title": "用户设定",
+      "two_auth": "二次认证",
+      "two_auth_completed": "已设定二次认证",
+      "two_auth_delete": "解除二次认证",
+      "two_auth_explain": "请用Google Authenticator扫描二维码并输入6位验证码",
+      "zip_code": "邮政编码"
+    }
+  },
+  "omniauth": {
+    "processing": "认证中",
+    "rerequest": "再认证"
+  },
+  "orders": {
+    "methods": {
+      "bank": "银行转账",
+      "credit_card": "信用卡"
+    },
+    "status": {
+      "cancel": "取消",
+      "discarded": "已废弃",
+      "null": "",
+      "paid": "已支付",
+      "transferred": "等待支付确认",
+      "waiting_confirm": "等待确认",
+      "waiting_payment": "等待支付"
+    }
+  },
+  "pager": {
+    "first": "第一页",
+    "next": "下一页",
+    "prev": "上一页"
+  },
+  "product": {
+    "detail": {
+      "fields": {
+        "created_at": "时间",
+        "nick_name": "用户",
+        "price": "出价"
+      },
+      "labels": {
+        "account": "银行卡号",
+        "auction_end": "离拍卖结束还有",
+        "bank": "银行名",
+        "bid_days": "拍卖期",
+        "bid_price": "出价价格",
+        "bid_unit": "出价单位",
+        "branch": "支店名",
+        "contract": "智能合约",
+        "credit_card": "信用卡",
+        "days_ago": "日前",
+        "description": "说明",
+        "exp_date": "有效期",
+        "hours_ago": "小时前",
+        "last4": "末尾",
+        "listing_at": "出品时间",
+        "login": "登录",
+        "login_text_left": "购入",
+        "login_text_right": "是必要的",
+        "minutes_ago": "分前",
+        "owner_name": "拥有者",
+        "pay_method_bank": "银行汇款",
+        "pay_method_credit_card": "信用卡",
+        "price": "价格",
+        "product_id": "登录号码",
+        "seconds_ago": "秒前",
+        "start_price": "起拍价",
+        "transfer_destination": "汇款方信息",
+        "transfer_name": "汇款方名义人"
+      },
+      "titles": {
+        "auction": "出价",
+        "bid_history": "出价履历",
+        "buy": "购入",
+        "credit_card_select": "选择支付的银行卡",
+        "detail": "详情信息",
+        "other_products": "人气商品"
+      }
+    },
+    "labels": {
+      "listing_date": "出品时间",
+      "sold": "结束出品"
+    },
+    "nft": {
+      "status": {
+        "created": "未申请",
+        "discarded": "NFT已废弃",
+        "listing": "NFT已作成",
+        "remanded": "退回",
+        "replacemented": "已兑换",
+        "requested": "NFT申请中"
+      }
+    },
+    "search": {
+      "title": "搜索结果"
+    },
+    "status": {
+      "bidded": "成交",
+      "canceled": "取消",
+      "churn": "流拍",
+      "created": "未出品",
+      "listing": "已出品"
+    },
+    "type": {
+      "auction": "拍卖",
+      "fixed_price": "定价"
+    }
+  },
+  "shop": {
+    "labels": {
+      "paydate-search": "用交易日期检索"
+    },
+    "header":{
+      "title":"店铺管理",
+      "logout":"注销"
+    }
+  },
+  "sidebar": {
+    "my": {
+      "affiliate": "友人邀请",
+      "collection": "收藏",
+      "contacts": "联系客服",
+      "credit_card": "信用卡管理",
+      "exhibitExamination": "出品审查",
+      "favorites": "关注",
+      "orders": "交易记录",
+      "settings": "用户设置"
+    },
+    "shop": {
+      "earnings_manager": "收益一览",
+      "orders_manager": "订单管理",
+      "product_manager": "登录商品管理",
+      "replacement": "实物兑换",
+      "sales_manager": "出品管理",
+      "setting": "设定"
+    }
+  },
+  "signup": {
+    "email": "邮箱（用户名）",
+    "explain": "OR 注册 in with",
+    "expired": "链接已过期。请重新发送本人确认邮件。",
+    "expired_failure": "请输入注册用户时的邮件",
+    "password": "密码",
+    "password_confirmation": "确认密码",
+    "successed": "已发送本人确认的邮件。请点击邮件内的链接确认。",
+    "title": "作成账号",
+    "verified": "已确认邮箱"
+  },
+  "successes": {
+    "update": "更新成功"
+  },
+  "titles": {
+    "address": "住址",
+    "all": "全部",
+    "amount": "金额",
+    "ask_for_cancel_sale": "确认取消出品吗？",
+    "bid_days": "拍卖期间",
+    "bid_unit": "出价单位",
+    "brand": "品牌",
+    "category_name": "类别",
+    "confirm": "确认",
+    "count": "数",
+    "cover_image_url": "图片",
+    "completed_at": "完成时间",
+    "created_at": "创建时间",
+    "current_month_sales": "本月收益",
+    "day": "日",
+    "destination": "收件人",
+    "detail_setting": "详细设定",
+    "end_at": "结束日期",
+    "exhibit_code": "出品号码",
+    "fee": "手续费",
+    "fixed_price": "定价",
+    "google_qr_tip": "请用Google Authenticator扫描二维码并输入6位验证码",
+    "id": "登录号码",
+    "input_password": "请输入现在的密码",
+    "input_step_password": "请输入二次认证验证码",
+    "name": "姓名",
+    "name_kana": "姓名（カナ）",
+    "nft_cancel_confirm": "取消NFT吗？",
+    "nft_create_confirm": "确认申请作成NFT吗？",
+    "nft_status": "NFT状态",
+    "no_data": "没有数据",
+    "num": "个",
+    "order_no": "订单号",
+    "order_price": "交易金额",
+    "other_destination": "其他收件人",
+    "payment_amount": "支付金额",
+    "payment_due_at": "支付时间",
+    "payment_status": "订单状态",
+    "payment_success": "已确认收款",
+    "phone": "个人电话号码",
+    "price": "价格",
+    "platform_fee": "平台手续费",
+    "price_type": "出品方式",
+    "product_code": "登录号码",
+    "product_description": "商品说明",
+    "product_name": "商品名",
+    "product_type": "商品类别",
+    "product_type_setting": "设定商品类别",
+    "receive_confirm": "确认收货",
+    "receive_product": "确认已经收到NFT实物了吗？",
+    "replacement_updated_at": "兑换日期",
+    "sale_price": "价格",
+    "sale_status": "出品状态",
+    "send_status": "配送状态",
+    "sent_company": "快递公司",
+    "sent_no": "快递号",
+    "shop": "店铺管理系统",
+    "shop_description": "店铺介绍",
+    "shop_listing_product": "店铺出品中的商品",
+    "shop_name": "店铺名",
+    "start_at": "开始日期",
+    "start_price": "起拍价",
+    "status": "状态",
+    "step2": "二次认证",
+    "step2_cancel": "解除二次认证",
+    "tel": "个人电话号码",
+    "time": "日期",
+    "total": "数量",
+    "total_revenue": "总收益",
+    "two_auth_actived": "已设定二次认证",
+    "two_auth_code": "二次认证验证码",
+    "type": "类别",
+    "user_listing_product": "用户出品中的商品",
+    "visiable_nft_listed": "仅显示已作成的NFT商品",
+    "zip_code": "邮政编码"
+  },
+  "user": {
+    "labels": {
+      "auth_code": "验证码",
+      "email": "邮箱（用户名）",
+      "login_id": "登录账号",
+      "password": "密码",
+      "register": "注册账号",
+      "shop_id": "店铺ID"
+    },
+    "login": "登录",
+    "password-reset": "重设密码",
+    "welcome": "欢迎"
+  }
+
+}

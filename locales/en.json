@@ -1,0 +1,609 @@
+{
+  "append": {
+    "amount_unit": "YEN"
+  },
+  "banner": {
+    "homepage": "homepage"
+  },
+  "buttons": {
+    "auction": "auction",
+    "back": "back",
+    "bankcode_manage": "bank information",
+    "buy": "buy",
+    "cancel": "cancel",
+    "cancel_sale": "cancle the exhibition",
+    "change": "update",
+    "close": "close",
+    "completion": "end",
+    "confirm": "confirm",
+    "confirm_contract": "smart contract",
+    "confirm_history": "history",
+    "create_nft_request": "create NFT",
+    "create_sale": "exhibit",
+    "create_sale_short": "exhibit",
+    "credit_card_register": "add credit card",
+    "csv_download": "download csv",
+    "detail": "details",
+    "detail_confirm": "details confirm",
+    "edit": "edit",
+    "later_transfer": "transfer later",
+    "load_more": "more",
+    "login": "login",
+    "next": "next",
+    "ok": "OK",
+    "order_confirm": "approve payment",
+    "otp_confirm": "verification",
+    "password_update": "change password",
+    "payment": "payment",
+    "prev": "front",
+    "processing": "processing",
+    "regist": "regist",
+    "regist_product": "regist new product",
+    "relieve": "release",
+    "remanded_reason": "reason for remand",
+    "request_cancel": "cancel the application",
+    "search": "search",
+    "send": "delivery",
+    "sent": "send message",
+    "signup": "sign up",
+    "step2_cancel": "release the two-factor authentication",
+    "step2_settings": "set the two-factor authentictaion",
+    "transferred": "bank transfer completed",
+    "unregister": "deregister",
+    "update": "updata",
+    "upload_image": "upload picture",
+    "upload_product_image": "upload the picture of product"
+  },
+  "deliver": {
+    "delivered": "delivered",
+    "discarded": "burned",
+    "requested": "waiting for delivery",
+    "sent": "in transit"
+  },
+  "errors": {
+    "brand_required": "please enter the name of brand",
+    "can_not_get_profile": "user profile acqusition failed",
+    "can_not_get_two_auth": "acqusition of two-factor authentication failed",
+    "common": "an error occurred",
+    "current_password_required": "please enter your current password",
+    "otp_must_number": "two-step verification code only number can contain ",
+    "otp_required": "please enter the two-factor authentication code",
+    "password_confirm_required": "please enter your new password again",
+    "password_confirm_to_password": "the new password did not match the one entered in the verify password field",
+    "password_required": "please enter your new pasword",
+    "product_image_required": "please upload the photo of product",
+    "product_name_required": "pleases enter the product name",
+    "email_required": "メールアドレスは有効なメールアドレスではありません",
+    "shop_login": "the shop ID or username of password is incorret",
+    "shop_login_otp": "the verification coad is wrong"
+  },
+  "fields": {
+    "bid_days": "bid period",
+    "bid_unit": "bid unit",
+    "fee": "commission",
+    "fixed_price": "price",
+    "price_type": "exhibit type",
+    "start_price": "start price"
+  },
+  "forgot": {
+    "email": "email（ user name）",
+    "explain": "we will send URL for resetting to the above email",
+    "expired": "パスワードリセットの有効期限が切れました。パスワード再リセットしてください。",
+    "password": "please enter your new pasword",
+    "password_confirmation": "password confirmation",
+    "successed": "we have already send URL for resetting. Please reset your password from the link in the mail",
+    "title": "password reset",
+    "verified": "password reset completed"
+  },
+  "footer": {
+    "about": "About",
+    "company_overview": "Company",
+    "help_guide": "Help & Guide",
+    "inquiry": "Contact",
+    "faq": "FAQ",
+    "privacy_andterms": "Privacy & Terms",
+    "privacy_policy": "Privacy Policy",
+    "utilization_protocol": "Terms of service",
+    "transaction_platform": "Specified Commercial Transactions Act (Platform)",
+    "transaction_producer": "Specified Commercial Transactions Act (Shop)"
+  },
+  "guide":{
+    "aprex_con1":"APREX is a new trading platform which using blockchain",
+    "aprex_con2":"APREX is a platform which separates actual items from its value so that users could trade only by the value.The value (ownership) of all items will be change to NFTs, and the actual items are strictly stored in APREX. We will build a world which the value of items do not change anywhere just by trading it. ",
+    "aprex_con3":"There is nothing you need to get started with APREX. Just  go exploring your favorite items in marketplace.",
+    "aprex_title":"What is the APREX",
+    "feature_con1":"We support Japanese, English and Chinese so that you can do business with users from all over the world.",
+    "feature_con2":"We support payment by credit card, bank transfer and virtual currency payment (more than 50 types of virtual currency such as BTC / ETH) .",
+    "feature_con3":"You can use APREX smoothly like a normal EC site without specialized knowledge of blockchain, wallet and virtual currency.",
+    "feature_con4":"By adopting the latest fingerprint technology, it is possible to link actual items and NFTs so that improving the value and credibility of NFTs.And it is not necessary to worry about the authenticity.",
+    "feature_con5":"Since there is no deliberation of actual items, the burden on the environment is reduced.<br>We could improve market liquidity only by the transaction of NFTs.",
+    "feature_explain":"※Glossary",
+    "feature_block_label":"Blockchain:",
+    "feature_block_con":"A blockchain is a distributed database that is shared among the nodes of a computer network. The innovation with a blockchain is that it guarantees the fidelity and security of a record of data and generates trust without the need for a trusted third party. ",
+    "feature_nft_label":"NFT：",
+    "feature_nft_con":"NFT also called non-fungible token which is unique, provably scarce, tradeable, and usable across multiple applications. ",
+    "feature_title":"Aprex features"
+  },
+  "header": {
+    "guide": "Guide",
+    "login": "login",
+    "logout": "log out",
+    "marketplace": "Marketplace",
+    "my_collection": "Collection",
+    "shop": "Shop",
+    "signup": "sign up",
+    "user_setting": "user setting"
+  },
+  "index": {
+    "sorts": {
+      "date": "sort by newest arrivals",
+      "hot": "sort of popularity",
+      "price": "sort in descending"
+    },
+    "titles": {
+      "auction": "aution",
+      "fixed_price": "commdity",
+      "hot_products": "populat products",
+      "latest_products": "latest release"
+    }
+  },
+  "labels": {
+    "email": "email"
+  },
+  "message": {
+    "error_bank_payment_failure": "bank transfer oayment processing failed",
+    "error_contacts_sent_failure": "sending failed",
+    "error_create_credit_card_failure": "credit card registration failed",
+    "error_credit_card_payment_failure": "credit card payment processing failed",
+    "error_delete_credit_card_failure": "credit card cancellation failed",
+    "error_exhibit_examination_failure": "listing application failed",
+    "error_forgot_failure": "password reset failed",
+    "error_login_failure": "the login credentials are incorrected. please try again.",
+    "error_password_change_failure": "password changing failed",
+    "error_payment_failure": "payment error",
+    "error_singnup_failure": "login failed because of an error has occured",
+    "error_transfer_failure": "bank transfer oayment processing failed",
+    "error_twoauth_delete_failure": "failed to deauthorize two-facor verification",
+    "error_user_update_failure": "user setting failed",
+    "info_auction_price_invalid": "please enter a valid bid amount ",
+    "info_auction_success": "bid completed",
+    "info_bid_unit_wrong": "please make sure to observe the bid unit",
+    "info_confirm_password_wrong": "inputed password does not match",
+    "info_contacts_sent_success": "completed",
+    "info_credit_card_register": "please register your credit card",
+    "info_credit_card_unregister": "make sure to cancle the credit card",
+    "info_no_data": "no data",
+    "info_old_password_wrong": "current password is wrong",
+    "info_password_change_success": "change password completed",
+    "info_payment_success": "payment complete",
+    "info_transfer_completion": "Did you complete the bank transfer?",
+    "info_twoauth_delete_success": "complete to deauthorize two-facor verification",
+    "info_twoauth_qrcode_wrong": "two-factor authentication code failed",
+    "info_twoauth_set_success": "complete to setting two-facor verification",
+    "info_user_update_success": "user setting completed",
+    "login_successed": "login completed"
+  },
+  "my": {
+    "affiliate": {
+      "copy": "copy",
+      "fields": {
+        "created_at": "date",
+        "uuid": "user ID"
+      },
+      "history": "invitation history",
+      "qr_code": "QR code",
+      "qr_code_explain": "scan the QR code",
+      "share_url": "invitaion link",
+      "title": "invite friends"
+    },
+    "contacts": {
+      "from_contents": "message",
+      "from_email": "name(email)",
+      "from_title": "subject",
+      "title": "contact"
+    },
+    "credit_card": {
+      "cardC_cvc": "cvc number",
+      "card_expiry": "expiration date",
+      "card_number": "card number",
+      "copy": "copy",
+      "created": "registered",
+      "fields": {
+        "created_at": "date",
+        "uuid": "user ID"
+      },
+      "history": "invitation history",
+      "title": "credit card management"
+    },
+    "collection":{
+      "collection":"collection",
+      "exchange_list":"exchange list",
+      "status": {
+        "created": "created",
+        "listing": "listing",
+        "sold": "end of listing（Sold）"
+      }
+    },
+    "exhibitExamination": {
+      "approval_explain": "i have read and accept the terms and conditions",
+      "fields": {
+        "available_date": "date",
+        "brand": "name",
+        "status": "status"
+      },
+      "pay_procedures": "pay examination procedure",
+      "sub_title": "exhibition verification",
+      "tenant_url": "binding",
+      "title": "exhibit application"
+    },
+    "favorites": {
+      "title": "favourite"
+    },
+    "order": {
+      "append": {
+        "amount_unit": "YEN"
+      },
+      "bidded": {
+        "fields": {
+          "amount": "hammer price",
+          "created_at": "successful bid date",
+          "name": "seller",
+          "payment_due_at": "due date for payment",
+          "status": "status",
+          "title": "product name"
+        },
+        "status": {
+          "cancel": "cancel",
+          "paid": "paid",
+          "transferred": "transfer completed",
+          "waiting_confirm": "to be confirmed",
+          "waiting_payment": "to be paied"
+        }
+      },
+      "bidding": {
+        "fields": {
+          "current_price": "current price",
+          "last_bidded_at": "did date",
+          "name": "seller",
+          "status": "status",
+          "title": "product name"
+        },
+        "status": {
+          "bidded": "deal",
+          "canceled": "cancel",
+          "churn": "bought-in",
+          "listing": "during a bid",
+          "top_bidded":"a high bidder"
+        }
+      },
+      "fixed_price": {
+        "fields": {
+          "amount": "prucase price",
+          "created_at": "date",
+          "name": "seller",
+          "payment_due_at": "due date for payment",
+          "status": "status",
+          "title": "product name"
+        },
+        "status": {
+          "cancel": "cancle",
+          "paid": "paid",
+          "transferred": "transfer completed",
+          "waiting_confirm": "to be confirmed",
+          "waiting_payment": "to be paied"
+        }
+      },
+      "labels": {
+        "account": "account number",
+        "account_type": "account type",
+        "account_type_checking": "checking account",
+        "account_type_normal": "savings account",
+        "amount": "price",
+        "auction_amount": "price",
+        "bank": "bank name",
+        "branch": "branch name",
+        "buy_created_at": "purchase date",
+        "buy_name": "buyer",
+        "created_at": "date",
+        "credit_card": "credit card",
+        "exp_date": "expiration date",
+        "last4": "final letter",
+        "order_id": "transition number",
+        "pay_method": "payment type",
+        "pay_method_bank": "bank transfer",
+        "pay_method_credit_card": "credit card payment",
+        "payment_due_at": "due date for payment",
+        "price_type_auction": "aution",
+        "price_type_fixed_price": "commidty",
+        "product_id": "registration number"
+      },
+      "sale": {
+        "fields": {
+          "amount": "prucase price",
+          "created_at": "date",
+          "name": "buyer",
+          "price_type": "selling type",
+          "status": "status",
+          "title": "product name"
+        },
+        "status": {
+          "cancel": "cancle",
+          "paid": "paid",
+          "transferred": "transfer completed",
+          "waiting_confirm": "to be confirmed",
+          "waiting_payment": "to be paied"
+        }
+      },
+      "titles": {
+        "bidded": "successful bid",
+        "bidding": "bidding",
+        "buy_list": "purchase list",
+        "credit_card_select": "payment card selection",
+        "fixed_price": "commodity",
+        "sale_list": "sales list",
+        "transfer_destination": "transfer information"
+      }
+    },
+    "produce": {
+      "fixed_price": "fixed price"
+    },
+    "profile": {
+      "address": "address",
+      "auth_code": "the verification coad",
+      "avatar": "avatar",
+      "avatar_image_select": "avatat selection",
+      "confirm_password": "comfire new password",
+      "delivery": "addressee",
+      "email": "email",
+      "gender": "gender",
+      "gender_man": "male",
+      "gender_woman": "female",
+      "introduction": "intruduce yourself",
+      "name": "name",
+      "new_password": "new password",
+      "nick_name": "nick name",
+      "old_password": "current password",
+      "password_change": "change password",
+      "set_two_auth": "set the two-factor authentictaion",
+      "tel": "phone number",
+      "title": "user setting",
+      "two_auth": " two-factor authentictaion",
+      "two_auth_completed": "set the two-factor authentictaion",
+      "two_auth_delete": "release the two-factor authentictaion",
+      "two_auth_explain": "please use Google Authentication to scan QR code and enter the verification code",
+      "zip_code": "postal code"
+    }
+  },
+  "omniauth": {
+    "processing": "certificating",
+    "rerequest": "certificate again"
+  },
+  "orders": {
+    "methods": {
+      "bank": "Bank transfer",
+      "credit_card": "Credit Card"
+    },
+    "status": {
+      "cancel": "cancle",
+      "discarded": "burned",
+      "null": "",
+      "paid": "paid",
+      "transferred": "to be confirmed",
+      "waiting_confirm": "to be confirmed",
+      "waiting_payment": "to be paied"
+    }
+  },
+  "pager": {
+    "first": "the first page",
+    "next": "next",
+    "prev": "back"
+  },
+  "product": {
+    "detail": {
+      "fields": {
+        "created_at": "time",
+        "nick_name": "user",
+        "price": "bid"
+      },
+      "labels": {
+        "account": "account number",
+        "auction_end": "until end of the auction",
+        "bank": "bank name",
+        "bid_days": "bid period",
+        "bid_price": "price",
+        "bid_unit": "bid unit",
+        "branch": "branch name",
+        "contract": "contract address",
+        "credit_card": "credit card",
+        "days_ago": "date",
+        "description": "introduction",
+        "exp_date": "expiration date",
+        "hours_ago": "hours ago",
+        "last4": "final letter",
+        "listing_at": "exhibition time",
+        "login": "login",
+        "login_text_left": "if you want to buy it,",
+        "login_text_right": "is necessary",
+        "minutes_ago": "minutes ago",
+        "owner_name": "owner",
+        "pay_method_bank": "bank transfer",
+        "pay_method_credit_card": "credit card payment",
+        "price": "price",
+        "product_id": "registration number",
+        "seconds_ago": "second ago",
+        "start_price": "start price",
+        "transfer_destination": "transfer information",
+        "transfer_name": "bank account holder"
+      },
+      "titles": {
+        "auction": "bid",
+        "bid_history": "bid history",
+        "buy": "buy",
+        "credit_card_select": "credit card selection",
+        "detail": "detail",
+        "other_products": "popular product"
+      }
+    },
+    "labels": {
+      "listing_date": "exhibition time",
+      "sold": "close exhibition"
+    },
+    "nft": {
+      "status": {
+        "created": "unapplied",
+        "discarded": "burned",
+        "listing": "created",
+        "remanded": "remand",
+        "replacemented": "exchanged",
+        "requested": "applying"
+      }
+    },
+    "search": {
+      "title": "search results"
+    },
+    "status": {
+      "bidded": "deal",
+      "canceled": "cancle",
+      "churn": "bought-in",
+      "created": "not in exhibition",
+      "listing": "under exhibition"
+    },
+    "type": {
+      "auction": "auction",
+      "fixed_price": "commodity"
+    }
+  },
+  "shop": {
+    "labels": {
+      "paydate-search": "narrow down by date"
+    },
+    "header":{
+      "title":"store management",
+      "logout":"logout"
+    }
+  },
+  "sidebar": {
+    "my": {
+      "affiliate": "Affiliate",
+      "collection": "Collection",
+      "contacts": "Contact",
+      "credit_card": "Credit Card",
+      "exhibitExamination": "Exhibit Examination",
+      "favorites": "Favorites",
+      "orders": "Orders",
+      "settings": "Settings"
+    },
+    "shop": {
+      "earnings_manager": "sales list ",
+      "orders_manager": "transaction management",
+      "product_manager": "registered management",
+      "replacement": "product exchange",
+      "sales_manager": "exhibit management",
+      "setting": "set"
+    }
+  },
+  "signup": {
+    "email": "mail (user name)",
+    "explain": "or sign up with ",
+    "expired": "Confirmation link has expired. Please resend the email for verification of your identity.",
+    "expired_failure": "Please enter your account creation email.",
+    "password": "password",
+    "password_confirmation": "password confirmation",
+    "successed": "Please click URL in the email to do the verification",
+    "title": "creat an accout",
+    "verified": "email confirmed"
+  },
+  "successes": {
+    "update": "update completed"
+  },
+  "titles": {
+    "address": "address",
+    "all": "all",
+    "amount": "Amount",
+    "ask_for_cancel_sale": "make sure to cancle the exhibition?",
+    "bid_days": "bid period",
+    "bid_unit": "bid unit",
+    "brand": "brand",
+    "category_name": "category",
+    "confirm": "confirm",
+    "count": "number",
+    "cover_image_url": "picture",
+    "completed_at": "Completed At",
+    "created_at": "Created at",
+    "current_month_sales": "monthly sales",
+    "day": "day",
+    "destination": "addressee",
+    "detail_setting": "setting",
+    "end_at": "the end day",
+    "exhibit_code": "exhibition number",
+    "fee": "commission",
+    "fixed_price": "price",
+    "google_qr_tip": "please use Google Authentication to scan QR code and enter the verification code",
+    "id": "registration number",
+    "input_password": "please enter the current password",
+    "input_step_password": "please enter two-factor authentication code",
+    "name": "name ",
+    "name_kana": "name ",
+    "nft_cancel_confirm": "make sure to cancle the NFT?",
+    "nft_create_confirm": "make sure to apply the NFT?",
+    "nft_status": "NFT status",
+    "no_data": "no data",
+    "num": "",
+    "order_no": "transition number",
+    "order_price": "order price",
+    "other_destination": "other addressee",
+    "payment_amount": "payment amount",
+    "payment_due_at": "payment date",
+    "payment_status": "transaction status",
+    "payment_success": "bank transfer completed",
+    "phone": "phone number",
+    "price": "price",
+    "platform_fee": "platform commission",
+    "price_type": "exhibit tyoe",
+    "product_code": "registration number",
+    "product_description": "detail",
+    "product_name": "product name",
+    "product_type": "prduct catagory",
+    "product_type_setting": "set prduct catagory",
+    "receive_confirm": "confirmation of receipt",
+    "receive_product": "make sure you have already recived the product",
+    "replacement_updated_at": "date",
+    "sale_price": "price",
+    "sale_status": "exhibition status",
+    "send_status": "delivery status",
+    "sent_company": "delivery company",
+    "sent_no": "tracking number",
+    "shop": "shop management system",
+    "shop_description": "shop introduction",
+    "shop_listing_product": "products under exhibition",
+    "shop_name": "shop name",
+    "start_at": "start date",
+    "start_price": "stary price",
+    "status": "status",
+    "step2": "two-factor authentictaion",
+    "step2_cancel": "release the two-factor authentictaion",
+    "tel": "phone number",
+    "time": "date",
+    "total": "qutantity",
+    "total_revenue": "total income",
+    "two_auth_actived": "complete to set the two-factor authentictaion",
+    "two_auth_code": "the two-factor authentictaion coad",
+    "type": "category",
+    "user_listing_product": "products under exhibition",
+    "visiable_nft_listed": "display created NFT only",
+    "zip_code": "postal code"
+  },
+  "user": {
+    "labels": {
+      "auth_code": "the verification coad",
+      "email": "email",
+      "login_id": "login ID",
+      "password": "password",
+      "register": "sign up",
+      "shop_id": "shop ID"
+    },
+    "login": "login",
+    "password-reset": "password reset",
+    "welcome": "welcome"
+  }
+}
