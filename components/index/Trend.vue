@@ -33,4 +33,7 @@ export default {
     border-radius: 16px;
     overflow: hidden;
   }
+  /deep/ .v-carousel__controls{
+    display: none;
+  }
 </style>
