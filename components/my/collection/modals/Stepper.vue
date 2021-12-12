@@ -1,7 +1,7 @@
 <template>
   <v-dialog fullscreen :value="modal.visible" transition="dialog-bottom-transition" persistent>
     <v-card>
-      <v-toolbar dark color="primary">
+      <v-toolbar class="cp-head">
         <v-btn icon dark @click="onHide">
           <v-icon>mdi-close</v-icon>
         </v-btn>
@@ -31,10 +31,10 @@
                 <v-slide-group v-model="form.price_type" mandatory>
                   <v-slide-item v-slot="{ active, toggle }" value="auction">
                     <v-btn
-                      class="mx-2"
+                      class="btn-white-radius-medium mx-2"
                       rounded
                       depressed
-                      active-class="primary white--text"
+                      active-class="btn-green-radius-medium white--text"
                       :input-value="active"
                       @click="toggle"
                     >
@@ -43,10 +43,10 @@
                   </v-slide-item>
                   <v-slide-item v-slot="{ active, toggle }" value="fixed_price">
                     <v-btn
-                      class="mx-2"
+                      class="btn-white-radius-medium mx-2"
                       rounded
                       depressed
-                      active-class="primary white--text"
+                      active-class="btn-green-radius-medium white--text"
                       :input-value="active"
                       @click="toggle"
                     >
@@ -108,10 +108,10 @@
         </div>
       </v-card-text>
       <v-card-actions class="d-flex justify-center align-center mt-4">
-        <v-btn :disabled="step === 1" color="primary" @click="prevStep">
+        <v-btn :disabled="step === 1"  class="btn-green-radius-large" @click="prevStep">
           {{ $t('buttons.prev') }}
         </v-btn>
-        <v-btn :disabled="nextDisable" color="primary" @click="onNext">
+        <v-btn :disabled="nextDisable"  class="btn-green-radius-large" @click="onNext">
           {{ $t('buttons.next') }}
         </v-btn>
       </v-card-actions>
@@ -255,3 +255,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.cp-head{
+  background: #0E7868 !important;
+}
+</style>

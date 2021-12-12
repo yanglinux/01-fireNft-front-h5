@@ -1,19 +1,18 @@
 <template>
-  <v-dialog :value="editModal.visible" transition="dialog-bottom-transition" persistent>
-    <v-card>
-      <v-card-text class="pt-2">
+  <v-dialog :value="editModal.visible" transition="dialog-bottom-transition" width="100%" persistent>
+    <v-card class="pa-4">
+      <v-card-text class="pa-0">
         <v-textarea
           :label="$t('titles.product_description')"
           :value="editModal.description"
           @change="(e) => setEditModal({ description: e })"
         />
       </v-card-text>
-      <v-card-actions>
-        <v-spacer></v-spacer>
-        <v-btn text @click="() => setEditModal({ visible: false, id: null, description: '' })">
+      <v-card-actions class="dialog-cancle-foot justify-center">
+        <v-btn  @click="() => setEditModal({ visible: false, id: null, description: '' })" class="btn-gray-radius-large">
           {{ $t('buttons.cancel') }}
         </v-btn>
-        <v-btn :loading="updateLoading" color="primary" @click="update">{{ $t('buttons.update') }}</v-btn>
+        <v-btn :loading="updateLoading" @click="update" class="btn-green-radius-large">{{ $t('buttons.update') }}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

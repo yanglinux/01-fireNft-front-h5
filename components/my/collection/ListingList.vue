@@ -46,6 +46,6 @@ export default {
     updatePage(page) {
       this.getItems({ page });
     },
-  },
+  },  
 };
 </script>

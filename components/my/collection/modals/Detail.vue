@@ -12,7 +12,7 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn text @click="onHide">
+        <v-btn class="btn-gray-radius-large" @click="onHide">
           {{ $t('buttons.close') }}
         </v-btn>
       </v-card-actions>

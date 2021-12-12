@@ -22,6 +22,13 @@
     display: none !important;
   }
 }
+.v-dialog{
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.dialog-cancle-foot .v-btn{
+  width: 120px;
+}
 
 .v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined){
   box-shadow: 0 0 0 rgb(0, 0, 0 ,0) !important;
@@ -50,9 +57,21 @@
 }
 
 .btn-green-radius-large{
+  min-width: 100px !important;
   height: 48px !important;
   background: #0E7868 !important;
   color: #fff !important;
+  border-radius: 32px !important;
+  font-size: 16px !important;
+  box-shadow: 0 0 0 rgb(0, 0, 0 ,0) !important;
+}
+
+.btn-gray-radius-large{
+  min-width: 100px !important;
+  height: 48px !important;
+  background: #fff !important;
+  color: #000 !important;
+  border:solid 1px #CACACA;
   border-radius: 32px !important;
   font-size: 16px !important;
   box-shadow: 0 0 0 rgb(0, 0, 0 ,0) !important;
