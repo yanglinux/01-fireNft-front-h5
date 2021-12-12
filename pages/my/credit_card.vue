@@ -1,5 +1,6 @@
 <template>
-  <div v-if="loaded">    
+  <div v-if="loaded">   
+    <Banner />  
     <Register v-if="!mycard.persisted" />
     <v-card class="my-profile-box" v-else>
       <v-card-text>
@@ -30,9 +31,10 @@
 <script>
 import { mapActions, mapState } from 'vuex';
 import Register from '@/components/my/credit_card/Register.vue';
+import Banner from '@/layouts/my/Banner';
 
 export default {
-  components: { Register },
+  components: { Register,Banner },
   data() {
     return {
       modal: false,

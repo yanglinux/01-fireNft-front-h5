@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>用户默认头像</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="80" height="80" rx="40"></rect>
+    </defs>
+    <g id="我的" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-80.000000, -63.000000)">
+            <g id="用户默认头像" transform="translate(80.000000, 63.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="蒙版" fill="#F5F5F5" xlink:href="#path-1"></use>
+                <path d="M39.1142803,40.7771345 C46.046716,40.7771345 51.6876256,35.2208507 51.6872463,28.3885909 C51.6872463,21.5567105 46.0467634,16 39.1143277,16 C32.1819394,16 26.5414565,21.5586543 26.5414565,28.3885909 C26.5414565,35.2188595 32.181892,40.7771345 39.1142803,40.7771345 Z M44.295556,41.9700966 L34.8748867,41.9700966 C26.1205087,41.9700966 19,48.9811845 19,57.6016309 L19,58.5294798 C19,63.0360252 26.0065366,63.0360252 34.8748867,63.0360252 L44.295556,63.0360252 C52.8149731,63.0360252 60.1718649,63.0360252 60.1718649,58.5294798 L60.1718649,57.6016309 C60.1718649,48.9831282 53.0501236,41.9700966 44.295556,41.9700966 Z" id="形状" fill="#D7D7D7" fill-rule="nonzero" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

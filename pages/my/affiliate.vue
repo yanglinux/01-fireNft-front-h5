@@ -1,71 +1,78 @@
 <template>
-  <div>
-    <div class="text-h6 pa-3">{{ $t('my.affiliate.title') }}</div> 
+  <section>
+    <Banner /> 
+    <div>
+      <div class="text-h6 pa-3">{{ $t('my.affiliate.title') }}</div> 
 
-    <v-card class="my-profile-box">
-      <v-card-text>
-        <div class="text-body-1">{{ $t('my.affiliate.qr_code') }}</div>
-        <v-img v-if="QRURL" :src="QRURL" />
-        <div class="text-body-2 d-flex align-center justify-center">{{ $t('my.affiliate.qr_code_explain') }}</div>
-      </v-card-text>
-    </v-card>
-    
-    <v-card class="my-profile-box mt-2">
-      <v-card-text>
-        <div class="text-body-1">{{ $t('my.affiliate.share_url') }}</div>
-        <div class="d-flex justify-center align-center">
-          <v-text-field :value="shareURL" readonly ref="input">
-            <template v-slot:append-outer>
-              <v-btn outlined small @click="onCopy">
-                <v-icon small>mdi-content-copy</v-icon>
-                {{ $t('my.affiliate.copy') }}
-              </v-btn>
+      <v-card class="my-profile-box">
+        <v-card-text>
+          <div class="text-body-1">{{ $t('my.affiliate.qr_code') }}</div>
+          <v-img v-if="QRURL" :src="QRURL" />
+          <div class="text-body-2 d-flex align-center justify-center">{{ $t('my.affiliate.qr_code_explain') }}</div>
+        </v-card-text>
+      </v-card>
+      
+      <v-card class="my-profile-box mt-2">
+        <v-card-text>
+          <div class="text-body-1">{{ $t('my.affiliate.share_url') }}</div>
+          <div class="d-flex justify-center align-center">
+            <v-text-field :value="shareURL" readonly ref="input">
+              <template v-slot:append-outer>
+                <v-btn outlined small @click="onCopy">
+                  <v-icon small>mdi-content-copy</v-icon>
+                  {{ $t('my.affiliate.copy') }}
+                </v-btn>
+              </template>
+            </v-text-field>
+          </div>
+        </v-card-text>
+      </v-card>
+
+      <v-card class="my-profile-box mt-2">
+        <v-card-text>
+          <div class="text-body-1">{{ $t('my.affiliate.history') }}</div>
+          <v-data-table
+            disable-sort
+            fixed-header
+            hide-default-footer
+            mobile-breakpoint="0"
+            :loading="loading"
+            :headers="headers"
+            :items="items"
+            :items-per-page="25"
+            class="elevation-1 custom mt-2"
+          >
+            <template #no-data>
+              {{ $t('titles.no_data') }}
             </template>
-          </v-text-field>
-        </div>
-      </v-card-text>
-    </v-card>
+            <template #item.created_at="row">
+              {{ formatDate(row.item.created_at) }}
+            </template>
+          </v-data-table>
+          <v-pagination
+            circle
+            :disabled="loading"
+            @input="updatePage"
+            :value="paging.current_page || 1"
+            :length="Math.ceil(paging.total_count / paging.per_page) || 1"
+          ></v-pagination>
+        </v-card-text>
+      </v-card>
 
-    <v-card class="my-profile-box mt-2">
-      <v-card-text>
-        <div class="text-body-1">{{ $t('my.affiliate.history') }}</div>
-        <v-data-table
-          disable-sort
-          fixed-header
-          hide-default-footer
-          mobile-breakpoint="0"
-          :loading="loading"
-          :headers="headers"
-          :items="items"
-          :items-per-page="25"
-          class="elevation-1 custom mt-2"
-        >
-          <template #no-data>
-            {{ $t('titles.no_data') }}
-          </template>
-          <template #item.created_at="row">
-            {{ formatDate(row.item.created_at) }}
-          </template>
-        </v-data-table>
-        <v-pagination
-          circle
-          :disabled="loading"
-          @input="updatePage"
-          :value="paging.current_page || 1"
-          :length="Math.ceil(paging.total_count / paging.per_page) || 1"
-        ></v-pagination>
-      </v-card-text>
-    </v-card>
-
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import Banner from '@/layouts/my/Banner';
 import QRCode from 'qrcode';
 import moment from 'moment';
 
 export default {
+  components: {
+    Banner,    
+  },
   data() {
     return {
       QRURL: null,
