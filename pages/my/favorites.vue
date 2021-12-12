@@ -1,27 +1,23 @@
 <template>
-  <v-container fluid>
-    <v-row>
-      <v-col cols="12">
-        <div class="text-h6">{{ $t('my.favorites.title') }}</div>
-      </v-col>
-      <v-col cols="12">
-        <NoData v-if="!items.length" />
+  <div class="my-box">
+    <div class="text-h6">{{ $t('my.favorites.title') }}</div>
+    <v-row>      
+      <v-col cols="12" v-if="!items.length">
+        <NoData />
       </v-col>
       <v-col cols="6" v-for="item in items" :key="item.product.id">
-        <v-card @click="() => redictDetail(item.product.id)">
-          <div class="d-flex flex-no-wrap justify-space-between">
-            <v-img
-              :src="item.product.cover_image_url"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-              <v-card-title class="pb-1 text-body-2" v-text="item.product.title"></v-card-title>
-            </v-img>
-          </div>
-        </v-card>
+        <div class="d-flex flex-no-wrap justify-space-between"  @click="() => redictDetail(item.product.id)">
+          <v-img
+            :src="item.product.cover_image_url"
+            class="white--text align-end product-img"
+            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+            height="200px"
+          >
+            <v-card-title class="pb-1 text-body-2" v-text="item.product.title"></v-card-title>
+          </v-img>
+        </div>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" v-if="items.length">
         <v-pagination
           circle
           :disabled="loading"
@@ -31,7 +27,7 @@
         ></v-pagination>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -61,3 +57,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '@/assets/css/pages/my.scss';
+</style>

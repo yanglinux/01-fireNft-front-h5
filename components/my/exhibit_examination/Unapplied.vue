@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mt-2">
+  <v-card class="my-profile-box">
     <v-card-title>{{ $t('my.exhibitExamination.sub_title') }}</v-card-title>
     <v-card-text>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
@@ -20,7 +20,7 @@
       <v-checkbox v-model="checkbox" :label="$t('my.exhibitExamination.approval_explain')"></v-checkbox>
     </v-card-text>
     <v-card-actions>
-      <v-btn :loading="loading" block color="primary" :disabled="!checkbox" @click="request">OK</v-btn>
+      <v-btn :loading="loading" block :disabled="!checkbox" @click="request" class="btn-green-radius-large">OK</v-btn>
     </v-card-actions>
   </v-card>
 </template>

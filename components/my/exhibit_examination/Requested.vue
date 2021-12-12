@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="my-profile-box" >
     <v-card-text>
       <v-alert type="error">
         <v-row align="center">

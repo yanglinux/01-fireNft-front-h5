@@ -1,11 +1,11 @@
 <template>
-  <v-container fluid>
+  <section>
     <v-row>
       <v-col cols="12">
         <span class="text-h6">{{ $t('my.affiliate.title') }}</span>
       </v-col>
       <v-col cols="12">
-        <v-card>
+        <v-card class="my-profile-box">
           <v-card-text>
             <div class="text-body-1">{{ $t('my.affiliate.qr_code') }}</div>
             <v-img v-if="QRURL" :src="QRURL" />
@@ -13,7 +13,7 @@
           </v-card-text>
         </v-card>
 
-        <v-card class="mt-2">
+        <v-card class="my-profile-box mt-2">
           <v-card-text>
             <div class="text-body-1">{{ $t('my.affiliate.share_url') }}</div>
 
@@ -30,7 +30,7 @@
           </v-card-text>
         </v-card>
 
-        <v-card class="mt-2">
+        <v-card class="my-profile-box mt-2">
           <v-card-text>
             <div class="text-body-1">{{ $t('my.affiliate.history') }}</div>
 
@@ -63,7 +63,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-container>
+  </section>
 </template>
 
 <script>
@@ -140,3 +140,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '@/assets/css/pages/my.scss';
+</style>

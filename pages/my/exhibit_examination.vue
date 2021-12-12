@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="text-h6 mb-2">{{ $t('my.exhibitExamination.title') }}</div>
+  <div>   
     <div v-if="loading" class="d-flex justify-center align-center">
       <v-progress-circular :size="50" color="primary" indeterminate></v-progress-circular>
     </div>
@@ -47,3 +46,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+    @import '@/assets/css/pages/my.scss';
+    </style>

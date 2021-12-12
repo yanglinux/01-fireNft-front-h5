@@ -40,6 +40,7 @@
     width: 30px !important;
 }
 
+.my-profile-box,
 /deep/ .my-profile-box{
     box-shadow: 0 0 0 rgba(0,0,0,0) !important;
     border-radius: 16px;
@@ -73,4 +74,20 @@
 }
 /deep/ .my-profile-form .v-label--active{
     transform: inherit;
+}
+
+/deep/ .product-items{
+    box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+}
+/deep/ .product-img{
+    position: relative;
+    z-index: 0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+/deep/ .product-edit{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    z-index: 0;
 }
