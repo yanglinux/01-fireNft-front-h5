@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <section>
     <v-row>
       <v-col cols="6" v-for="item in items" :key="item.id">
         <Product :item="item" :key="item.id" />
@@ -8,7 +8,7 @@
     <v-row v-if="items.length >= 3">
       <v-btn @click="toProductPage()" block class="btn-white-radius">{{ $t('buttons.load_more') }}</v-btn>
     </v-row>
-  </v-container>
+  </section>
 </template>
 
 <script>

@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .myappbar {
-  background: rgba(255,255,255,0.38) !important;
+  background: rgba(255,255,255,0.8) !important;
   box-shadow: 0 0 0 rgba(0,0,0,0) !important;
   ::v-deep .v-toolbar__content {
     padding-right: 0;

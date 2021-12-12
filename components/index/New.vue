@@ -18,22 +18,10 @@
         class="img-item"
       ></v-carousel-item>
     </v-carousel>
-    <v-list two-line v-if="current">
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>
-            {{ current.title }}
-            <br />
-            JPY ¥ {{ getPrice() }}
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            ≈ CNY ¥{{ getPrice('cny') }}
-            <br />
-            ≈ USD ${{ getPrice('usd') }}
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
+    <div class="news-info pa-3" v-if="current">
+        <p class="text-ellipsis" :title="current.title">{{ current.title }}</p>        
+        <p>JPY <span>¥{{ getPrice() }}</span></p>
+    </div>
   </section>
 </template>
 
@@ -77,7 +65,16 @@ export default {
     border-radius: 16px 16px 0 0;  
     overflow: hidden;
   }
-  .v-sheet.v-list{
-    box-shadow: 0 0 0 rgba(0,0,0,0)
+  .news-info{
+    background: #fff;
+    border-radius: 0 0 16px 16px; 
+  }
+  .news-info p{
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  .news-info p span{
+    font-size: 16px;
+    font-weight: bold;
   }
 </style>

@@ -86,3 +86,12 @@
 .link-green{
   color: #0E7868 !important;
 }
+
+.text-ellipsis {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1 !important;
+  -webkit-box-orient: vertical !important;
+  word-break: break-all !important;
+}

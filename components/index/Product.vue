@@ -2,20 +2,36 @@
   <v-card class="item mx-auto" max-width="374" @click="toDetailPage">
     <v-img :src="item.cover_image_url"></v-img>
 
-    <v-card-title class="text-body-2">{{ item.title }}</v-card-title>
-
-    <v-card-text>
-      <v-row class="mx-0">
-        <div class="grey--text">{{ item.category.name }}</div>
-      </v-row>
-      <div class="my-4 mb-1">JPY ¥{{ getPrice() }}</div>
-      <div class="grey--text">≈ CNY ¥{{ getPrice('cny') }}</div>
-      <div class="grey--text">≈ USD ${{ getPrice('usd') }}</div>
-    </v-card-text>
+    <div class="pa-2">
+      <div class="text-ellipsis" style="font-size:14px;">{{ item.title }}</div> 
+      <section class="intro-user clearfix" v-if="item.owner.owner_type == 'User'">
+        <span class="intro-user-head"><img :src="item.owner.image_url ? item.owner.image_url : 'defaultHeadImage'" @error="replaceHeadImgByDefault" /></span>
+        <p class="intro-user-info">オーナー</p>
+        <p class="intro-user-name text-ellipsis">
+          <router-link :to="'/users/' + item.owner.name">{{ item.owner.name }}</router-link>
+        </p>
+      </section>
+      <section class="intro-user clearfix" v-else>
+        <span class="intro-user-head"><img src="@/assets/img/svg/shop.svg" /></span>
+        <p class="intro-user-info">オーナー</p>
+        <p class="intro-user-name text-ellipsis">
+          <router-link :to="'/shops/' + item.owner.name">{{ item.owner.name }}</router-link>
+        </p>
+      </section>
+      <section class="intro-tabs">
+        <h3>JPY <span>¥{{ getPrice() }}</span></h3>
+        <div class="dz" :class="{'ydz': item.favorited}" style="cursor: unset;" @click="setFavorites">
+          <img src="@/assets/img/svg/wdz.svg" v-if="!item.favorited"/>
+          <img src="@/assets/img/svg/ydz.svg" v-if="item.favorited"/>{{ item.favorites_count }}
+        </div>
+      </section>       
+    </div>
+   
   </v-card>
 </template>
 
 <script>
+import defaultHeadImage from "@/assets/img/head.jpg";
 export default {
   props: {
     item: {
@@ -37,7 +53,84 @@ export default {
     },
     toDetailPage() {
       this.$router.push(`/products/${this.item.id}`);
+    },    
+    replaceHeadImgByDefault(event) {
+      event.target.src = defaultHeadImage;
     },
   },
 };
 </script>
+
+<style scoped>
+.intro-user {
+  padding: 12px 0;
+}
+
+.intro-user-head {
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+  border-radius: 24px;
+  width: 34px;
+  height: 34px;
+}
+
+.intro-user-head img{
+  border-radius: 24px;
+  width: 34px;
+  height: 34px;
+}
+
+.intro-user-info {
+  line-height: 17px;
+  font-size: 12px;
+  color: #969190;
+  margin: 0 !important;
+}
+
+.intro-user-name {
+  line-height: 17px;
+  font-size: 14px;
+  color: #231815;
+  margin: 0 !important;
+}
+
+.intro-user-name a,
+.intro-user-name a:hover,
+.intro-user-name a:active,
+.intro-user-name a:visited{
+  color:#0E7868;
+}
+.intro-tabs h3 {
+  line-height: 20px;
+  font-size: 14px;
+  color: #191D2B;
+  font-weight: normal;
+}
+
+.intro-tabs h3 span{
+  font-size: 18px;
+}
+
+.intro-tabs .dz {
+  position: absolute;
+  z-index: 0;
+  bottom: 10px;
+  right: 16px;
+  color: #969190;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 14px;
+}
+.intro-tabs .dz.ydz {
+  color: #ff609b;
+}
+.intro-tabs .dz img {
+  float: left;
+  width: 13px;
+  height: 13px;
+  margin-right: 3px;
+  border-radius: 0;
+  vertical-align: middle;
+}
+</style>
