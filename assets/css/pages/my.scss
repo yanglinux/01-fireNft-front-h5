@@ -1,6 +1,10 @@
 .my-box{
     padding: 12px;
 }
+.my-tab-items,
+.my-sub-tab-items{
+    background-color: transparent !important;
+}
 /deep/ .my-tab.theme--light.v-tabs > .v-tabs-bar{
     background: transparent;
     color: #0E7868 !important;
@@ -78,11 +82,12 @@
 
 /deep/ .product-items{
     box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+    background-color: transparent;
 }
 /deep/ .product-img{
     position: relative;
     z-index: 0;
-    border-radius: 16px;
+    border-radius: 16px !important;
     overflow: hidden;
 }
 /deep/ .product-edit{

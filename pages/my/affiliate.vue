@@ -1,69 +1,63 @@
 <template>
-  <section>
-    <v-row>
-      <v-col cols="12">
-        <span class="text-h6">{{ $t('my.affiliate.title') }}</span>
-      </v-col>
-      <v-col cols="12">
-        <v-card class="my-profile-box">
-          <v-card-text>
-            <div class="text-body-1">{{ $t('my.affiliate.qr_code') }}</div>
-            <v-img v-if="QRURL" :src="QRURL" />
-            <div class="text-body-2 d-flex align-center justify-center">{{ $t('my.affiliate.qr_code_explain') }}</div>
-          </v-card-text>
-        </v-card>
+  <div>
+    <div class="text-h6 pa-3">{{ $t('my.affiliate.title') }}</div> 
 
-        <v-card class="my-profile-box mt-2">
-          <v-card-text>
-            <div class="text-body-1">{{ $t('my.affiliate.share_url') }}</div>
+    <v-card class="my-profile-box">
+      <v-card-text>
+        <div class="text-body-1">{{ $t('my.affiliate.qr_code') }}</div>
+        <v-img v-if="QRURL" :src="QRURL" />
+        <div class="text-body-2 d-flex align-center justify-center">{{ $t('my.affiliate.qr_code_explain') }}</div>
+      </v-card-text>
+    </v-card>
+    
+    <v-card class="my-profile-box mt-2">
+      <v-card-text>
+        <div class="text-body-1">{{ $t('my.affiliate.share_url') }}</div>
+        <div class="d-flex justify-center align-center">
+          <v-text-field :value="shareURL" readonly ref="input">
+            <template v-slot:append-outer>
+              <v-btn outlined small @click="onCopy">
+                <v-icon small>mdi-content-copy</v-icon>
+                {{ $t('my.affiliate.copy') }}
+              </v-btn>
+            </template>
+          </v-text-field>
+        </div>
+      </v-card-text>
+    </v-card>
 
-            <div class="d-flex justify-center align-center">
-              <v-text-field :value="shareURL" readonly ref="input">
-                <template v-slot:append-outer>
-                  <v-btn outlined small @click="onCopy">
-                    <v-icon small>mdi-content-copy</v-icon>
-                    {{ $t('my.affiliate.copy') }}
-                  </v-btn>
-                </template>
-              </v-text-field>
-            </div>
-          </v-card-text>
-        </v-card>
+    <v-card class="my-profile-box mt-2">
+      <v-card-text>
+        <div class="text-body-1">{{ $t('my.affiliate.history') }}</div>
+        <v-data-table
+          disable-sort
+          fixed-header
+          hide-default-footer
+          mobile-breakpoint="0"
+          :loading="loading"
+          :headers="headers"
+          :items="items"
+          :items-per-page="25"
+          class="elevation-1 custom mt-2"
+        >
+          <template #no-data>
+            {{ $t('titles.no_data') }}
+          </template>
+          <template #item.created_at="row">
+            {{ formatDate(row.item.created_at) }}
+          </template>
+        </v-data-table>
+        <v-pagination
+          circle
+          :disabled="loading"
+          @input="updatePage"
+          :value="paging.current_page || 1"
+          :length="Math.ceil(paging.total_count / paging.per_page) || 1"
+        ></v-pagination>
+      </v-card-text>
+    </v-card>
 
-        <v-card class="my-profile-box mt-2">
-          <v-card-text>
-            <div class="text-body-1">{{ $t('my.affiliate.history') }}</div>
-
-            <v-data-table
-              disable-sort
-              fixed-header
-              hide-default-footer
-              mobile-breakpoint="0"
-              :loading="loading"
-              :headers="headers"
-              :items="items"
-              :items-per-page="25"
-              class="elevation-1 custom mt-2"
-            >
-              <template #no-data>
-                {{ $t('titles.no_data') }}
-              </template>
-              <template #item.created_at="row">
-                {{ formatDate(row.item.created_at) }}
-              </template>
-            </v-data-table>
-            <v-pagination
-              circle
-              :disabled="loading"
-              @input="updatePage"
-              :value="paging.current_page || 1"
-              :length="Math.ceil(paging.total_count / paging.per_page) || 1"
-            ></v-pagination>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-  </section>
+  </div>
 </template>
 
 <script>

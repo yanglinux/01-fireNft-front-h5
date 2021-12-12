@@ -8,7 +8,7 @@
         {{ $t('my.order.titles.sale_list') }}
       </v-tab>
     </v-tabs>
-    <v-tabs-items v-model="tab">
+    <v-tabs-items v-model="tab" class="my-tab-items">
       <v-tab-item>
         <v-tabs v-model="subtab" class="mytab my-sub-tab">
           <v-tab>
@@ -21,7 +21,7 @@
             {{ $t('my.order.titles.bidded') }}
           </v-tab>
         </v-tabs>
-        <v-tabs-items v-model="subtab">
+        <v-tabs-items v-model="subtab" class="my-sub-tab-items">
           <v-tab-item><MyOrdersFixedPrice /></v-tab-item>
           <v-tab-item><MyOrdersBidding /></v-tab-item>
           <v-tab-item><MyOrdersBidded /></v-tab-item>

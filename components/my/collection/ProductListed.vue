@@ -44,21 +44,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.product-items{
-  box-shadow: 0 0 0 rgba(0,0,0,0) !important;
-}
-.product-img{
-  position: relative;
-  z-index: 0;
-  border-radius: 16px;
-  overflow: hidden;
-}
-.product-edit{
-  position: absolute;
-  right: 10px;
-  bottom: 5px;
-  z-index: 0;
-}
-</style>

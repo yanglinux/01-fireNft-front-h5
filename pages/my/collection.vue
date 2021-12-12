@@ -1,5 +1,5 @@
 <template>
-  <div class="my-box">
+  <div class="pa-3">
     <v-tabs v-model="tab" class="my-tab">
       <v-tabs-slider></v-tabs-slider>
       <v-tab>
@@ -9,7 +9,7 @@
         {{ $t('my.collection.exchange_list') }}
       </v-tab>
     </v-tabs>
-    <v-tabs-items v-model="tab">
+    <v-tabs-items v-model="tab" class="my-tab-items">
       <v-tab-item>
         <v-tabs v-model="subtab" class="mytab my-sub-tab">
           <v-tabs-slider></v-tabs-slider>
@@ -23,7 +23,7 @@
             {{ $t('my.collection.status.sold') }}
           </v-tab>
         </v-tabs>
-        <v-tabs-items v-model="subtab">
+        <v-tabs-items v-model="subtab" class="my-sub-tab-items">
           <v-tab-item><NotListedList /></v-tab-item>
           <v-tab-item><ListingList /></v-tab-item>
           <v-tab-item><SoldList /></v-tab-item>

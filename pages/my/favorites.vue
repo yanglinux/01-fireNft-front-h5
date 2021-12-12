@@ -1,6 +1,6 @@
 <template>
-  <div class="my-box">
-    <div class="text-h6">{{ $t('my.favorites.title') }}</div>
+  <div class="pa-3">
+    <div class="text-h6 mb-4">{{ $t('my.favorites.title') }}</div>
     <v-row>      
       <v-col cols="12" v-if="!items.length">
         <NoData />

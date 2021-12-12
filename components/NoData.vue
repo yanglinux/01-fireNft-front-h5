@@ -1,5 +1,5 @@
 <template>
-  <section class="d-flex justify-center align-center no-data mt-2">
+  <section class="d-flex justify-center align-center no-data">
     {{ $t('titles.no_data') }}
   </section>
 </template>

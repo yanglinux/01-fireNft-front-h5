@@ -1,13 +1,13 @@
 <template>
-  <v-container fluid>
+  <div class="pt-4">
     <v-row>
-      <v-col cols="12">
-        <NoData v-if="!items.length" />
+      <v-col cols="12" v-if="!items.length">
+        <NoData />
       </v-col>
       <v-col cols="6" v-for="item in items" :key="item.id">
         <Product :item="item" :key="item.id" />
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" v-if="items.length">
         <v-pagination
           circle
           :disabled="loading"
@@ -22,7 +22,7 @@
     <StepperModal />
     <DetailModal />
     <ReplacementModal />
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -52,6 +52,6 @@ export default {
     updatePage(page) {
       this.getItems({ page });
     },
-  },
+  },  
 };
 </script>
