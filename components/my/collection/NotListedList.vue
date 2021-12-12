@@ -44,7 +44,7 @@ export default {
       loading: (state) => state.api.my.not_listed.onFetch,
       paging: (state) => state.api.my.not_listed.data?.result?.paging || {},
     }),
-  },
+  }, 
   methods: {
     ...mapActions({
       getItems: 'api/my/not_listed/request',

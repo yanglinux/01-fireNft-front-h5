@@ -1,0 +1,76 @@
+.my-box{
+    padding: 12px;
+}
+/deep/ .my-tab.theme--light.v-tabs > .v-tabs-bar{
+    background: transparent;
+    color: #0E7868 !important;
+    caret-color: #0E7868 !important;
+    position: relative;
+    border-bottom: solid 1px #CFCFCF;
+}
+.my-tab .v-tab{
+    padding: 0;
+    margin-right: 10px;
+    font-size: 16px;
+    min-width: auto;
+}
+/deep/ .my-tab .v-tab--active{
+    font-size: 18px
+}
+.my-tab .v-tabs-slider-wrapper{
+    width: 30px !important;
+}
+
+/deep/ .my-sub-tab.theme--light.v-tabs > .v-tabs-bar{
+    background: transparent;
+    color: #0E7868 !important;
+    caret-color: #0E7868 !important;
+    position: relative;
+}
+.my-sub-tab .v-tab{
+    padding: 0;
+    margin-right: 10px;
+    font-size: 14px;
+    min-width: auto;
+}
+/deep/ .my-sub-tab .v-tab--active{
+    font-size: 16px
+}
+.my-sub-tab .v-tabs-slider-wrapper{
+    width: 30px !important;
+}
+
+/deep/ .my-profile-box{
+    box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+    border-radius: 16px;
+}
+
+/deep/ .my-profile-form .v-text-field{
+    padding-top: 25px;
+}
+/deep/ .my-profile-form .v-input input{
+    width: 100%;
+    height: 50px !important;
+    line-height: 48px;
+    max-height: 50px !important;
+    border-radius: 6px;
+    border: 1px solid #CACACA;
+    padding: 8px 10px;
+}
+/deep/ .my-profile-form .v-input textarea{
+    width: 100%;    
+    line-height: 48px;
+    border-radius: 6px;
+    border: 1px solid #CACACA;
+    padding: 8px 10px;
+}
+/deep/ .my-profile-form .theme--light.v-text-field > .v-input__control > .v-input__slot:before,
+/deep/ .my-profile-form .v-text-field > .v-input__control > .v-input__slot:after{
+    display: none;
+}
+/deep/ .my-profile-form .v-text-field .v-label{
+    top: -25px;
+}
+/deep/ .my-profile-form .v-label--active{
+    transform: inherit;
+}

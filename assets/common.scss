@@ -29,6 +29,35 @@
 
 
 //button 
+.btn-white-radius-medium{
+  padding: 0 5px !important;
+  height: 40px !important;
+  line-height: 38px !important;
+  background: #fff !important;
+  border:solid 1px #0E7868;
+  border-radius: 20px !important;
+  color: #0E7868 !important; 
+  box-shadow: 0 0 0 rgb(0, 0, 0 ,0) !important;  
+}
+.btn-green-radius-medium{
+  padding: 0 5px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  background: #0E7868 !important;
+  border-radius: 20px !important;
+  color: #fff !important;  
+  box-shadow: 0 0 0 rgb(0, 0, 0 ,0) !important;
+}
+
+.btn-green-radius-large{
+  height: 48px !important;
+  background: #0E7868 !important;
+  color: #fff !important;
+  border-radius: 32px !important;
+  font-size: 16px !important;
+  box-shadow: 0 0 0 rgb(0, 0, 0 ,0) !important;
+}
+
 .btn-blue-radius{
   height: 48px !important;
   background: #0E7868 !important;

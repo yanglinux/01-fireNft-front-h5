@@ -1,22 +1,17 @@
 <template>
-  <div>
-    <v-card>
-      <v-card-text class="pa-0">
-        <v-tabs v-model="tab">
-          <v-tabs-slider></v-tabs-slider>
-          <v-tab>
-            {{ $t('my.collection.collection') }}
-          </v-tab>
-          <v-tab>
-            {{ $t('my.collection.exchange_list') }}
-          </v-tab>
-        </v-tabs>
-      </v-card-text>
-    </v-card>
-
+  <div class="my-box">
+    <v-tabs v-model="tab" class="my-tab">
+      <v-tabs-slider></v-tabs-slider>
+      <v-tab>
+        {{ $t('my.collection.collection') }}
+      </v-tab>
+      <v-tab>
+        {{ $t('my.collection.exchange_list') }}
+      </v-tab>
+    </v-tabs>
     <v-tabs-items v-model="tab">
       <v-tab-item>
-        <v-tabs v-model="subtab" class="mytab mt-2">
+        <v-tabs v-model="subtab" class="mytab my-sub-tab">
           <v-tabs-slider></v-tabs-slider>
           <v-tab>
             {{ $t('my.collection.status.created') }}
@@ -28,7 +23,6 @@
             {{ $t('my.collection.status.sold') }}
           </v-tab>
         </v-tabs>
-
         <v-tabs-items v-model="subtab">
           <v-tab-item><NotListedList /></v-tab-item>
           <v-tab-item><ListingList /></v-tab-item>
@@ -75,3 +69,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '@/assets/css/pages/my.scss';
+</style>

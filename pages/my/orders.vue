@@ -1,21 +1,16 @@
 <template>
-  <div>
-    <v-card>
-      <v-card-text class="pa-0">
-        <v-tabs v-model="tab">
-          <v-tab>
-            {{ $t('my.order.titles.buy_list') }}
-          </v-tab>
-          <v-tab>
-            {{ $t('my.order.titles.sale_list') }}
-          </v-tab>
-        </v-tabs>
-      </v-card-text>
-    </v-card>
-
+  <div class="my-box">
+    <v-tabs v-model="tab" class="my-tab">
+      <v-tab>
+        {{ $t('my.order.titles.buy_list') }}
+      </v-tab>
+      <v-tab>
+        {{ $t('my.order.titles.sale_list') }}
+      </v-tab>
+    </v-tabs>
     <v-tabs-items v-model="tab">
       <v-tab-item>
-        <v-tabs v-model="subtab" class="mytab mt-2">
+        <v-tabs v-model="subtab" class="mytab my-sub-tab">
           <v-tab>
             {{ $t('my.order.titles.fixed_price') }}
           </v-tab>
@@ -26,7 +21,6 @@
             {{ $t('my.order.titles.bidded') }}
           </v-tab>
         </v-tabs>
-
         <v-tabs-items v-model="subtab">
           <v-tab-item><MyOrdersFixedPrice /></v-tab-item>
           <v-tab-item><MyOrdersBidding /></v-tab-item>
@@ -56,3 +50,8 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '@/assets/css/pages/my.scss';
+</style>
+    

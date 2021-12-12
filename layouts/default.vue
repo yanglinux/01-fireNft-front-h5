@@ -2,7 +2,7 @@
   <v-app>
     <Navigation />
     <Appbar />
-    <v-main>
+    <v-main class="main">
       <v-container>
         <Nuxt />
       </v-container>
@@ -29,3 +29,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .main{
+    background: #F2F2F2;
+  }
+  .main /deep/ .v-main__wrap{
+    padding-bottom: 10px
+  }
+  .main .container{
+    height: 100%; 
+    padding: 0;
+  }
+</style>

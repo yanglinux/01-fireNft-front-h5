@@ -28,7 +28,7 @@ export default {
   components: { Product },
   created() {
     this.getItems();
-  },
+  },  
   computed: {
     ...mapState({
       items: (state) => state.api.my.sold.data?.result || [],

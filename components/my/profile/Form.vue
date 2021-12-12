@@ -1,68 +1,69 @@
 <template>
-  <v-card>
-    <v-card-text>
-      <v-form :disabled="loading || error">
-        <v-text-field
-          class="mb-2"
-          hide-details
-          v-model="form.nick_name"
-          :label="$t('my.profile.nick_name')"
-        ></v-text-field>
-        <v-textarea
-          class="mb-2"
-          hide-details
-          v-model="form.introduction"
-          :label="$t('my.profile.introduction')"
-        ></v-textarea>
+  <section>
+    <v-card class="my-profile-box">
+      <v-card-text>
+        <v-form :disabled="loading || error" class="my-profile-form">
+          <v-text-field
+            class="mb-2"
+            hide-details
+            v-model="form.nick_name"
+            :label="$t('my.profile.nick_name')"
+          ></v-text-field>
+          <v-textarea
+            class="mb-2"
+            hide-details
+            v-model="form.introduction"
+            :label="$t('my.profile.introduction')"
+          ></v-textarea>
 
-        <div class="mb-2">
-          <v-img v-if="image_tmp" :src="image_tmp" height="200" class="grey darken-4"></v-img>
-          <v-img
-            v-else
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-            height="200"
-            class="grey darken-4"
-          />
-          <v-file-input
-            ref="file"
-            @change="uploadImage"
-            prepend-icon="mdi-camera"
-            accept="image/png, image/gif, image/jpeg"
-          />
-        </div>
+          <div class="mb-2">
+            <v-img v-if="image_tmp" :src="image_tmp" height="200" class="grey darken-4"></v-img>
+            <v-img
+              v-else
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+              height="200"
+              class="grey darken-4"
+            />
+            <v-file-input
+              ref="file"
+              @change="uploadImage"
+              prepend-icon="mdi-camera"
+              accept="image/png, image/gif, image/jpeg"
+            />
+          </div>
 
-        <v-text-field
-          :value="currentUser.email"
-          class="mb-2"
-          readonly
-          hide-details
-          :label="$t('my.profile.email')"
-        ></v-text-field>
-        <v-text-field class="mb-2" hide-details v-model="form.tel" :label="$t('my.profile.tel')"></v-text-field>
-        <v-text-field class="mb-2" hide-details v-model="form.twiter" label="twitter"></v-text-field>
-        <v-text-field class="mb-2" hide-details v-model="form.instagram" label="instagram"></v-text-field>
-        <v-text-field class="mb-2" hide-details v-model="form.facebook" label="facebook"></v-text-field>
+          <v-text-field
+            :value="currentUser.email"
+            class="mb-2"
+            readonly
+            hide-details
+            :label="$t('my.profile.email')"
+          ></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.tel" :label="$t('my.profile.tel')"></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.twiter" label="twitter"></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.instagram" label="instagram"></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.facebook" label="facebook"></v-text-field>
 
-        <v-divider class="mt-5 mb-5" />
+          <v-divider class="mt-5 mb-5" />
 
-        <div class="text-body-1">{{ $t('my.profile.delivery') }}</div>
-        <v-text-field class="mb-2" hide-details v-model="form.name" :label="$t('my.profile.name')"></v-text-field>
-        <v-text-field
-          class="mb-2"
-          hide-details
-          v-model="form.zip_code"
-          :label="$t('my.profile.zip_code')"
-        ></v-text-field>
-        <v-text-field class="mb-2" hide-details v-model="form.address" :label="$t('my.profile.address')"></v-text-field>
-      </v-form>
-    </v-card-text>
-    <v-card-actions>
-      <v-spacer />
-      <v-btn :loading="updateLoading" :disabled="loading || error" block color="primary" @click="onSubmit">
+          <div class="text-body-1">{{ $t('my.profile.delivery') }}</div>
+          <v-text-field class="mb-2" hide-details v-model="form.name" :label="$t('my.profile.name')"></v-text-field>
+          <v-text-field
+            class="mb-2"
+            hide-details
+            v-model="form.zip_code"
+            :label="$t('my.profile.zip_code')"
+          ></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.address" :label="$t('my.profile.address')"></v-text-field>
+        </v-form>
+      </v-card-text>    
+    </v-card>
+    <footer class="pl-2 pr-2 mt-6 mb-2">
+      <v-btn :loading="updateLoading" :disabled="loading || error" block @click="onSubmit" class="btn-green-radius-large">
         {{ $t('buttons.change') }}
       </v-btn>
-    </v-card-actions>
-  </v-card>
+    </footer>
+  </section>
 </template>
 
 <script>

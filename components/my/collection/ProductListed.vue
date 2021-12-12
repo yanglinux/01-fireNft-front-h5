@@ -1,7 +1,7 @@
 <template>
-  <v-card>
+  <v-card class="product-items">
     <Label :text="label" />
-    <div class="d-flex flex-no-wrap justify-space-between">
+    <div class="d-flex flex-no-wrap justify-space-between product-img">
       <v-img
         :src="item.cover_image_url"
         class="white--text align-end"
@@ -11,10 +11,9 @@
         <v-card-title class="pb-1 text-body-2" v-text="item.title"></v-card-title>
       </v-img>
     </div>
-    <v-card-actions>
-      <v-spacer />
-      <v-btn color="primary" small @click="open">{{ $t('buttons.cancel_sale') }}</v-btn>
-    </v-card-actions>
+    <section class="product-btn-group">
+      <v-btn small block @click="open" class="btn-white-radius-medium mt-4">{{ $t('buttons.cancel_sale') }}</v-btn>
+    </section>
   </v-card>
 </template>
 
@@ -45,3 +44,21 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.product-items{
+  box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+}
+.product-img{
+  position: relative;
+  z-index: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.product-edit{
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  z-index: 0;
+}
+</style>

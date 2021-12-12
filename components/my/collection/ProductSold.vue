@@ -1,7 +1,7 @@
 <template>
-  <v-card>
+  <v-card class="product-items">
     <Label :text="$t('product.labels.sold')" />
-    <div class="d-flex flex-no-wrap justify-space-between">
+    <div class="d-flex flex-no-wrap justify-space-between product-img">
       <v-img
         :src="item.cover_image_url"
         class="white--text align-end"

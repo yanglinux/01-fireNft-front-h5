@@ -31,7 +31,7 @@ export default {
   components: { Product, CancelModal },
   created() {
     this.getItems();
-  },
+  },  
   computed: {
     ...mapState({
       items: (state) => state.api.my.listing.data?.result || [],
