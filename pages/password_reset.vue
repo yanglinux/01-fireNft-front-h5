@@ -19,7 +19,7 @@
           ></v-text-field>
         
         <div class="d-flex justify-center mt-2">
-          <v-btn block class="btn-blue-radius">{{ $t('buttons.ok') }}</v-btn>
+          <v-btn block class="btn-green-radius-large">{{ $t('buttons.ok') }}</v-btn>
         </div>
     </v-form>
   </div>

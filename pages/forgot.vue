@@ -6,7 +6,7 @@
     <v-form v-model="valid" @submit.prevent="onSubmit" class="register-form">    
         <v-text-field :rules="rules.email" v-model="form.email" :label="$t('forgot.email')"></v-text-field>
         <div class="d-flex justify-center mt-2">
-          <v-btn :loading="loading" type="submit" :disabled="!valid" block class="btn-blue-radius">
+          <v-btn :loading="loading" type="submit" :disabled="!valid" block class="btn-green-radius-large">
             {{ $t('buttons.sent') }}
           </v-btn>
         </div>     

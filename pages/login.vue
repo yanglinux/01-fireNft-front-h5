@@ -39,7 +39,7 @@
           <NuxtLink to="/forgot">{{ $t('user.password-reset') }}</NuxtLink>
       </div>
       <div class="d-flex justify-center mt-4">
-          <v-btn block :loading="loading" type="submit" class="btn-blue-radius">{{ $t('buttons.login') }}</v-btn>
+          <v-btn block :loading="loading" type="submit" class="btn-green-radius-large">{{ $t('buttons.login') }}</v-btn>
       </div>
     </v-form>
 

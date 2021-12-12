@@ -1,6 +1,6 @@
 <template>
   <div class="mt-2" v-if="!isOver">
-    <v-btn block color="primary" @click="bidModal = true">{{ $t('buttons.auction') }}</v-btn>
+    <v-btn block class="btn-green-radius-large" @click="bidModal = true">{{ $t('buttons.auction') }}</v-btn>
     <v-dialog :value="bidModal" transition="dialog-bottom-transition" persistent width="80vw">
       <v-card>
         <v-card-title>{{ $t('buttons.auction') }}</v-card-title>

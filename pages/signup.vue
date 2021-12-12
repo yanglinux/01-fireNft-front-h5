@@ -23,7 +23,7 @@
       ></v-text-field>
 
       <div class="d-flex justify-center">
-          <v-btn :disabled="!valid" block :loading="loading" color="primary" type="submit"  class="btn-blue-radius">
+          <v-btn :disabled="!valid" block :loading="loading" color="primary" type="submit"  class="btn-green-radius-large">
             {{ $t('buttons.signup') }}
           </v-btn>
       </div>

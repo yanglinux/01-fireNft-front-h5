@@ -1,28 +1,30 @@
 <template>
-  <v-row justify="center" align="center" class="index-main">
-    <v-col class="ml-0 mr-0 ma-0 search" cols="12">
-      <v-text-field solo dense flat hide-details rounded v-model="form.search" class="search-inp">
-        <template #append>
-          <img src="@/assets/img/svg/ss.svg" class="search-icon" @click="search" />
-        </template>
-      </v-text-field>
-    </v-col>
-    <v-col class="pa-0 ma-0" cols="12">
-      <Banner />
-    </v-col>
-    <v-col class="ma-0" cols="12">
-      <Trend :items="data.hot_products || []" />
-    </v-col>
-    <v-col class="ma-0" cols="12">
-      <Ad />
-    </v-col>
-    <v-col class="ma-0" cols="12">
-      <New :items="data.latest_products || []" />
-    </v-col>
-    <v-col class="ma-0" cols="12">
-      <Tab ref="tab" :tab1="data.fixed_price_products" :tab2="data.auction_products" />
-    </v-col>
-  </v-row>
+  <div class="pa-3">
+    <v-row justify="center" align="center" class="index-main">
+      <v-col class="ml-0 mr-0 ma-0 search" cols="12">
+        <v-text-field solo dense flat hide-details rounded v-model="form.search" class="search-inp">
+          <template #append>
+            <img src="@/assets/img/svg/ss.svg" class="search-icon" @click="search" />
+          </template>
+        </v-text-field>
+      </v-col>
+      <v-col class="pa-0 ma-0" cols="12">
+        <Banner />
+      </v-col>
+      <v-col class="ma-0" cols="12">
+        <Trend :items="data.hot_products || []" />
+      </v-col>
+      <v-col class="ma-0" cols="12">
+        <Ad />
+      </v-col>
+      <v-col class="ma-0" cols="12">
+        <New :items="data.latest_products || []" />
+      </v-col>
+      <v-col class="ma-0" cols="12">
+        <Tab ref="tab" :tab1="data.fixed_price_products" :tab2="data.auction_products" />
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>

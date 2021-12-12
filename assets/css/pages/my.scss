@@ -96,3 +96,19 @@
     bottom: 5px;
     z-index: 0;
 }
+
+.intro-user-head{
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+.intro-user-head img{
+    width: 48px;
+    height: 48px;
+}
+.intro-card{
+    box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+    background-color: #EFF0F2;
+    border-radius: 16px;
+}
