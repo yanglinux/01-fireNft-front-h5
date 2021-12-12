@@ -6,12 +6,11 @@
         @click="() => $router.push(`/products/${item.id}`)"
         v-for="(item, i) in items"
         :key="i"
-        src="/assets/img/banner1.jpg"        
+        :src="item.cover_image_url"      
         reverse-transition="fade-transition"
         transition="fade-transition"
         class="img-item"
       ></v-carousel-item>
-      <!-- :src="item.cover_image_url" -->
     </v-carousel>
   </div>
 </template>
