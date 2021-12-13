@@ -1,7 +1,6 @@
 <template>
   <v-card class="item mx-auto" max-width="374" @click="toDetailPage">
-    <v-img :src="item.cover_image_url"></v-img>
-    <img :src="product.cover_image_url ? product.cover_image_url : 'defaultCoverImage'" @error="replaceCoverImgByDefault" />
+    <v-img :src="item.cover_image_url ? item.cover_image_url : 'defaultCoverImage'" @error="replaceCoverImgByDefault"></v-img>
 
     <div class="pa-2">
       <div class="text-ellipsis" style="font-size:14px;">{{ item.title }}</div> 
@@ -61,6 +60,34 @@ export default {
     },   
     replaceHeadImgByDefault(event) {
       event.target.src = defaultHeadImage;
+    },
+    async setFavorites() {
+      if (this.currentUser.uid === undefined) {
+        this.$router.push('/login');
+        return;
+      }
+      if (this.product.favorited === true) {
+        this.$axios
+          .delete(`/v1/products/${this.product.id}/favorite`)
+          .then((response) => {
+            this.product.favorited = false;
+            this.product.favorites_count = this.product.favorites_count - 1;
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      } else {
+        this.$axios
+          .post(`/v1/products/${this.product.id}/favorite`)
+          .then((response) => {
+            this.product.favorited = true;
+            this.product.favorites_count = this.product.favorites_count + 1;
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      }
+
     },
   },
 };
