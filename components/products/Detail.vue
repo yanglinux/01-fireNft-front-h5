@@ -4,7 +4,7 @@
       <v-img max-height="50vh" :src="item.cover_image_url" />
       <div class="mt-2">
         <div class="text--h4 d-flex justify-start">
-          <div>{{ item.title }}</div>
+          <div class="text-ellipsis" style="width:80%">{{ item.title }}</div>
           <div class="ml-auto">
             <Like :count="item.favorites_count" :value="favorite" @change="likeChanged" :id="item.id" />
           </div>
