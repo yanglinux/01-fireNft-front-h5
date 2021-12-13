@@ -1,7 +1,7 @@
 const state = () => ({
   language: localStorage.getItem('shopLanguage') || 'ja',
   layout: {
-    title: 'AKIBANFT',
+    title: 'FIRE DIGITAL NFT',
     miniVariant: false,
     drawer: false,
     clipped: false,

@@ -50,3 +50,7 @@ export default {
   background: #FFFFFF;
 }
 </style>
+
+<style>
+@import '@/assets/css/pages/shop.scss';
+</style>
