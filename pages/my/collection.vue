@@ -1,8 +1,8 @@
 <template>
   <section>
     <Banner /> 
-    <div class="pa-3">
-      <v-tabs v-model="tab" class="my-tab">
+    <div class="py-3">
+      <v-tabs v-model="tab" class="my-tab px-3">
         <v-tabs-slider></v-tabs-slider>
         <v-tab>
           {{ $t('my.collection.collection') }}
@@ -13,7 +13,7 @@
       </v-tabs>
       <v-tabs-items v-model="tab" class="my-tab-items">
         <v-tab-item>
-          <v-tabs v-model="subtab" class="mytab my-sub-tab">
+          <v-tabs v-model="subtab" class="mytab my-sub-tab px-3">
             <v-tabs-slider></v-tabs-slider>
             <v-tab>
               {{ $t('my.collection.status.created') }}

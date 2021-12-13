@@ -22,7 +22,8 @@ export default {
   position: absolute;
   left: -4px;
   top: 8px;
-  width: 57px;
+  padding: 0 5px;
+  min-width: 57px;
   height: 22px;
   line-height: 22px;
   border-radius: 6px 0 5px 0;

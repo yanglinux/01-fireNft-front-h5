@@ -11,7 +11,7 @@
         </div>
         <div class="d-flex justify-start mt-2">
           <div class="intro-user-head" v-if="owner.owner_type == 'User'">
-            <img :src="owner.image_url ? owner.image_url : 'defaultHeadImage'" @error="replaceHeadImgByDefault" />
+            <img :src="owner.image_url ? owner.image_url : 'defaultHeadImage'" />
           </div>
           <div class="intro-user-head">
             <img src="@/assets/img/svg/shop.svg" v-if="!owner.image_url"/>

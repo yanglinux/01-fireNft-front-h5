@@ -22,7 +22,7 @@
       </v-img>
     </div>
     <section class="product-btn-group">
-      <v-btn small block @click="replacement" class="btn-white-radius-medium mt-4">{{ $t('sidebar.shop.replacement') }}</v-btn>
+      <v-btn small block @click="replacement" class="btn-white-radius-medium mt-4" v-if="false">{{ $t('sidebar.shop.replacement') }}</v-btn>
       <v-btn small block @click="showCreate" class="btn-green-radius-medium mt-2">{{ $t('buttons.create_sale_short') }}</v-btn>
     </section>
   </v-card>

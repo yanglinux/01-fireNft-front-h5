@@ -1,11 +1,11 @@
 <template>
   <v-card class="item mx-auto" max-width="374" @click="toDetailPage">
-    <v-img :src="item.cover_image_url ? item.cover_image_url : 'defaultCoverImage'" @error="replaceCoverImgByDefault"></v-img>
+    <v-img :src="item.cover_image_url ? item.cover_image_url : 'defaultCoverImage'"></v-img>
 
     <div class="pa-2">
       <div class="text-ellipsis" style="font-size:14px;">{{ item.title }}</div> 
       <section class="intro-user clearfix" v-if="item.owner.owner_type == 'User'">
-        <span class="intro-user-head"><img :src="item.owner.image_url ? item.owner.image_url : 'defaultHeadImage'" @error="replaceHeadImgByDefault" /></span>
+        <span class="intro-user-head"><img :src="item.owner.image_url ? item.owner.image_url : 'defaultHeadImage'" /></span>
         <p class="intro-user-info">{{ $t('product.detail.labels.owner_name') }}</p>
         <p class="intro-user-name text-ellipsis">
           <router-link :to="'/users/' + item.owner.name">{{ item.owner.name }}</router-link>

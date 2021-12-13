@@ -1,6 +1,6 @@
 <template>
   <div class="pt-4">
-    <v-row>
+    <v-row class="ma-0">
       <v-col cols="12" v-if="!items.length">
         <NoData />
       </v-col>
