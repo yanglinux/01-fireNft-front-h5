@@ -2,7 +2,7 @@
   <div class="personal-header">
     <div class="personal-header-img">
       <img v-if="currentUser.photoURL" :src="currentUser.photoURL" />
-      <img v-else src="@/assets/img/svg/user.svg" />
+      <img v-else src="@/assets/img/head.jpg" />
     </div>
     <div class="personal-header-info">
       <h2>{{ currentUser.displayName }}</h2>

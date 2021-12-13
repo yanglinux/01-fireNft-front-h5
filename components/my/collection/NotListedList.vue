@@ -4,7 +4,7 @@
       <v-col cols="12" v-if="!items.length">
         <NoData />
       </v-col>
-      <v-col cols="6" v-for="item in items1" :key="item.id">
+      <v-col cols="6" v-for="item in items" :key="item.id">
         <Product :item="item" :key="item.id" />
       </v-col>
       <v-col cols="12" v-if="items.length">

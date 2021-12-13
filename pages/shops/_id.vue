@@ -2,7 +2,7 @@
   <div>
     <v-card color="green" dark>
       <div class="d-flex flex-no-wrap justify-space-between pa-2">
-        <v-avatar class="ma-3" size="100" tile>
+        <v-avatar class="ma-3" size="60" tile>
           <v-img :src="profile.image || defaultImage"></v-img>
         </v-avatar>
         <div>
