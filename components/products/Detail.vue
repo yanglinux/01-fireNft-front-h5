@@ -10,8 +10,10 @@
           </div>
         </div>
         <div class="d-flex justify-start mt-2">
+          <div class="intro-user-head" v-if="owner.owner_type == 'User'">
+            <img :src="owner.image_url ? owner.image_url : 'defaultHeadImage'" @error="replaceHeadImgByDefault" />
+          </div>
           <div class="intro-user-head">
-            <!-- <span class="white--text text-body-2" v-if="!owner.image_url">{{ owner.name }}</span> -->
             <img src="@/assets/img/svg/shop.svg" v-if="!owner.image_url"/>
             <img v-else :src="owner.image_url" alt="owner.name" />
           </div>
@@ -39,7 +41,7 @@
           <v-card elevation="2" v-if="!isAuction" class="intro-card">
             <v-card-text>
               <div class="d-flex justify-start align-center">
-                <div>
+                <div class="text-ellipsis">
                   <span>{{ $t('product.detail.labels.price') }}</span>
                 </div>
                 <div class="ml-auto">{{ fixedPrice }}</div>
@@ -106,6 +108,7 @@ import Buy from '@/components/products/Buy.vue';
 import Bid from '@/components/products/Bid.vue';
 import AuctionHistory from '@/components/products/AuctionHistory.vue';
 import autoLink from 'autolink.js';
+import defaultHeadImage from "@/assets/img/head.jpg";
 
 export default {
   components: { Like, LikeTop, Auction, AuctionHistory, Buy, Bid },
@@ -152,6 +155,9 @@ export default {
     ...mapActions({
       request: 'api/user/product_detail/request',
     }),
+    replaceHeadImgByDefault(event) {
+      event.target.src = defaultHeadImage;
+    },
     likeChanged(value) {
       this.like = value;
     },

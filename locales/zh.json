@@ -483,6 +483,7 @@
     }
   },
   "sidebar": {
+    "artist_signup":"艺术家注册",
     "my": {
       "affiliate": "友人邀请",
       "collection": "收藏",

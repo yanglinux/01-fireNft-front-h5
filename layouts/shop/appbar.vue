@@ -10,7 +10,9 @@
     <v-btn icon @click.stop="setLayout(['fixed', !layout.fixed])" v-show="false">
       <v-icon>mdi-minus</v-icon>
     </v-btn>
-    <v-toolbar-title v-text="layout.title" />
+    <v-toolbar-title @click="() => $router.push('/')">
+        <img src="@/assets/img/logo.svg" style="width: 115px" />
+      </v-toolbar-title>   
     <v-spacer />
     <v-btn icon @click.stop="setLayout(['rightDrawer', !layout.rightDrawer])" v-show="false">
       <v-icon>mdi-menu</v-icon>

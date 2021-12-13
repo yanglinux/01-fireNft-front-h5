@@ -2,7 +2,7 @@
   <div class="pa-3">
     <v-row justify="center" align="center" class="index-main">
       <v-col class="ml-0 mr-0 ma-0 search" cols="12">
-        <v-text-field solo dense flat hide-details rounded v-model="form.search" class="search-inp">
+        <v-text-field solo dense flat hide-details rounded v-model="form.search" class="search-inp"  v-on:keyup.enter="search">
           <template #append>
             <img src="@/assets/img/svg/ss.svg" class="search-icon" @click="search" />
           </template>

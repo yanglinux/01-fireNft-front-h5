@@ -7,7 +7,7 @@
         <v-tab>
           {{ $t('my.collection.collection') }}
         </v-tab>
-        <v-tab>
+        <v-tab v-if="false">
           {{ $t('my.collection.exchange_list') }}
         </v-tab>
       </v-tabs>

@@ -1,19 +1,20 @@
 <template>
   <v-card class="item mx-auto" max-width="374" @click="toDetailPage">
     <v-img :src="item.cover_image_url"></v-img>
+    <img :src="product.cover_image_url ? product.cover_image_url : 'defaultCoverImage'" @error="replaceCoverImgByDefault" />
 
     <div class="pa-2">
       <div class="text-ellipsis" style="font-size:14px;">{{ item.title }}</div> 
       <section class="intro-user clearfix" v-if="item.owner.owner_type == 'User'">
         <span class="intro-user-head"><img :src="item.owner.image_url ? item.owner.image_url : 'defaultHeadImage'" @error="replaceHeadImgByDefault" /></span>
-        <p class="intro-user-info">オーナー</p>
+        <p class="intro-user-info">{{ $t('product.detail.labels.owner_name') }}</p>
         <p class="intro-user-name text-ellipsis">
           <router-link :to="'/users/' + item.owner.name">{{ item.owner.name }}</router-link>
         </p>
       </section>
       <section class="intro-user clearfix" v-else>
         <span class="intro-user-head"><img src="@/assets/img/svg/shop.svg" /></span>
-        <p class="intro-user-info">オーナー</p>
+        <p class="intro-user-info">{{ $t('product.detail.labels.owner_name') }}</p>
         <p class="intro-user-name text-ellipsis">
           <router-link :to="'/shops/' + item.owner.name">{{ item.owner.name }}</router-link>
         </p>
@@ -31,6 +32,7 @@
 </template>
 
 <script>
+import defaultCoverImage from "@/assets/img/img1.jpg";
 import defaultHeadImage from "@/assets/img/head.jpg";
 export default {
   props: {
@@ -53,7 +55,10 @@ export default {
     },
     toDetailPage() {
       this.$router.push(`/products/${this.item.id}`);
-    },    
+    }, 
+    replaceCoverImgByDefault(event) {
+      event.target.src = defaultCoverImage;
+    },   
     replaceHeadImgByDefault(event) {
       event.target.src = defaultHeadImage;
     },
@@ -100,6 +105,7 @@ export default {
 .intro-user-name a:active,
 .intro-user-name a:visited{
   color:#0E7868;
+  text-decoration: none;
 }
 .intro-tabs h3 {
   line-height: 20px;

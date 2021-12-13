@@ -6,19 +6,21 @@
     :clipped="layout.clipped"
     fixed
     app
-  >
-    <v-list>
-      <v-list-item v-for="(item, i) in items" :key="item.title" :to="item.to" router exact v-if="false">
+  > 
+    <v-list>      
+      <v-list-item to="/" router exact >
         <v-list-item-content>
-          <v-list-item-title v-text="$t(`header.${item.title}`)" />
+          <v-list-item-title v-text="$t('sidebar.artist_signup')" />
         </v-list-item-content>
-      </v-list-item>
-      <v-divider v-if="false" />
-      <v-list-item v-for="(item, i) in subItems" :key="item.title" :to="item.to" router exact>
-        <v-list-item-content>
-          <v-list-item-title v-text="$t(`${item.title}`)" />
-        </v-list-item-content>
-      </v-list-item>
+      </v-list-item>       
+      <template v-if="isLogin">
+        <v-divider />   
+        <v-list-item v-for="(item, i) in subItems" :key="item.title" :to="item.to" router exact>
+          <v-list-item-content>
+            <v-list-item-title v-text="$t(`${item.title}`)" />
+          </v-list-item-content>
+        </v-list-item>
+    </template>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -79,6 +81,7 @@ export default {
   computed: {
     ...mapState({
       layout: (state) => state.app.layout,
+      isLogin: (state) => !!state.user.currentUser.uid,
     }),
   },
   methods: {
