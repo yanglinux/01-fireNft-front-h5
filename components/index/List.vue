@@ -5,9 +5,9 @@
         <Product :item="item" :key="item.id" />
       </v-col>
     </v-row>
-    <v-row v-if="items.length >= 3">
+    <div v-if="items.length >= 3" class="mt-4">
       <v-btn @click="toProductPage()" block class="btn-white-radius">{{ $t('buttons.load_more') }}</v-btn>
-    </v-row>
+    </div>
   </section>
 </template>
 
@@ -36,7 +36,7 @@ export default {
 <style scoped>
 .btn-white-radius{
   height: 48px !important;
-  border-radius: 90px;
+  border-radius: 24px !important;
   border: 2px solid #0E7868;
   background: transparent;
   box-shadow: 0 0 0 rgba(0,0,0,0);
