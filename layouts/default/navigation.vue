@@ -8,13 +8,13 @@
     app
   > 
     <v-list>      
-      <v-list-item to="/" router exact >
+      <v-list-item to="/" router exact class="nobg">
         <v-list-item-content>
           <v-list-item-title v-text="$t('sidebar.artist_signup')" />
         </v-list-item-content>
       </v-list-item>       
       <template v-if="isLogin">
-        <v-divider />   
+        <v-divider class="mt-2 mb-2" />   
         <v-list-item v-for="(item, i) in subItems" :key="item.title" :to="item.to" router exact>
           <v-list-item-content>
             <v-list-item-title v-text="$t(`${item.title}`)" />
@@ -91,3 +91,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.nobg:before{
+  background: #fff !important;
+}
+</style>

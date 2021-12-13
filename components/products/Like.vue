@@ -1,5 +1,5 @@
 <template>
-  <div @click="favorite">
+  <div @click.stop="favorite">
     <v-icon>{{ icon }}</v-icon> {{ total }}
   </div>
 </template>
