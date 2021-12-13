@@ -16,7 +16,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn text @click="modal = false" class="btn-green-radius-large">{{ $t('buttons.cancel') }}</v-btn>
+              <v-btn text @click="modal = false" class="btn-gray-radius-large">{{ $t('buttons.cancel') }}</v-btn>
               <v-btn :loading="deleteLoading" @click="deleteCreditCard" class="btn-green-radius-large">
                 {{ $t('buttons.confirm') }}
               </v-btn>
