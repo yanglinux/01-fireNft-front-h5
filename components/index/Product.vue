@@ -1,11 +1,15 @@
 <template>
   <v-card class="item mx-auto" max-width="374" @click="toDetailPage">
-    <v-img :src="item.cover_image_url ? item.cover_image_url : 'defaultCoverImage'"></v-img>
+    <v-img :src="item.cover_image_url" v-if="item.cover_image_url"></v-img>
+    <v-img :src="defaultCoverImage" v-else></v-img>
 
     <div class="pa-2">
       <div class="text-ellipsis" style="font-size:14px;">{{ item.title }}</div> 
       <section class="intro-user clearfix" v-if="item.owner.owner_type == 'User'">
-        <span class="intro-user-head"><img :src="item.owner.image_url ? item.owner.image_url : 'defaultHeadImage'" /></span>
+        <span class="intro-user-head">
+          <img :src="defaultHeadImage" v-if="!item.owner.image_url" />
+          <img :src="item.owner.image_url" v-else />
+        </span>
         <p class="intro-user-info">{{ $t('product.detail.labels.owner_name') }}</p>
         <p class="intro-user-name text-ellipsis">
           <router-link :to="'/users/' + item.owner.name">{{ item.owner.name }}</router-link>
@@ -40,6 +44,9 @@ export default {
       default: () => {},
     },
   },
+  data() {
+    return { defaultHeadImage,defaultCoverImage};
+  },
   methods: {
     getPrice(currency) {
       let price = '';
@@ -55,12 +62,6 @@ export default {
     toDetailPage() {
       this.$router.push(`/products/${this.item.id}`);
     }, 
-    replaceCoverImgByDefault(event) {
-      event.target.src = defaultCoverImage;
-    },   
-    replaceHeadImgByDefault(event) {
-      event.target.src = defaultHeadImage;
-    },
     async setFavorites() {
       if (this.currentUser.uid === undefined) {
         this.$router.push('/login');

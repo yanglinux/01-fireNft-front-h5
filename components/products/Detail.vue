@@ -9,11 +9,12 @@
             <Like :count="item.favorites_count" :value="favorite" @change="likeChanged" :id="item.id" />
           </div>
         </div>
-        <div class="d-flex justify-start mt-2">
+        <div class="d-flex justify-start mt-2">          
           <div class="intro-user-head" v-if="owner.owner_type == 'User'">
-            <img :src="owner.image_url ? owner.image_url : 'defaultHeadImage'" />
+            <img :src="defaultHeadImage" v-if="!owner.image_url"/>
+            <img v-else :src="owner.image_url" alt="owner.name" />
           </div>
-          <div class="intro-user-head">
+          <div class="intro-user-head" v-else>
             <img src="@/assets/img/svg/shop.svg" v-if="!owner.image_url"/>
             <img v-else :src="owner.image_url" alt="owner.name" />
           </div>
@@ -118,7 +119,7 @@ export default {
     },
   },
   data() {
-    return { tab: null, like: null,};
+    return { tab: null, like: null,defaultHeadImage};
   },
   created() {
     this.request({ id: this.id });
@@ -154,10 +155,7 @@ export default {
   methods: {
     ...mapActions({
       request: 'api/user/product_detail/request',
-    }),
-    replaceHeadImgByDefault(event) {
-      event.target.src = defaultHeadImage;
-    },
+    }),    
     likeChanged(value) {
       this.like = value;
     },
