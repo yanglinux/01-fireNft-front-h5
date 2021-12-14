@@ -1,5 +1,12 @@
 <template>
   <div class="pa-3">
+    <v-col class="ma-0 pa-0 search" cols="12">
+      <v-text-field solo dense flat hide-details rounded v-model="form.search" class="search-inp"  v-on:keyup.enter="search">
+        <template #append>
+          <img src="@/assets/img/svg/ss.svg" class="search-icon" @click="search" />
+        </template>
+      </v-text-field>
+    </v-col>
     <v-tabs v-model="currentItem"  class="my-tab">
         <v-tabs-slider></v-tabs-slider>
         <v-tab>
@@ -75,6 +82,9 @@ export default {
       },
       tabInit: {},
       per: 6,
+      form: {
+        search: '',
+      },
     };
     data.sort = data.sorts[0];
     return data;
@@ -169,10 +179,19 @@ export default {
         sort_by: item.value,
       });
     },
+    search() {
+      this.$router.push(`/products?s=${this.form.search}`);
+    },
   },
 };
 </script>
 
 <style scoped>
 @import '@/assets/css/pages/my.scss';
+/deep/ .search-inp.theme--light.v-input input, .theme--light.v-input textarea{
+  color: #0E7868;
+}
+.search-icon {
+  margin-right: -12px;
+}
 </style>
