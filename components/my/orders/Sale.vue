@@ -57,7 +57,7 @@ export default {
         { value: 'buyer.name', text: this.$t('my.order.sale.fields.name') },
         { value: 'status', text: this.$t('my.order.sale.fields.status') },
         { value: 'amount', text: this.$t('my.order.sale.fields.amount') },
-      ],
+      ],      
     };
   },
   filters: {    
@@ -102,7 +102,7 @@ export default {
     },
     buyerlink({ item }) {
       const page = item.buyer.buyer_type === 'User' ? '/users/' : '/shops/';
-      return page + row.item.buyer.name;
+      return page + item.buyer.name;
     },
   },
 };
