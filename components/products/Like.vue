@@ -74,3 +74,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/deep/ .mdi-heart{
+  color: #FF5B98;
+}
+</style>

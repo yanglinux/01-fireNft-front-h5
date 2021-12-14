@@ -40,9 +40,9 @@
             :label="$t('my.profile.email')"
           ></v-text-field>
           <v-text-field class="mb-2" hide-details v-model="form.tel" :label="$t('my.profile.tel')"></v-text-field>
-          <v-text-field class="mb-2" hide-details v-model="form.twiter" label="twitter"></v-text-field>
-          <v-text-field class="mb-2" hide-details v-model="form.instagram" label="instagram"></v-text-field>
-          <v-text-field class="mb-2" hide-details v-model="form.facebook" label="facebook"></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.twiter" label="twitter（Account）"></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.instagram" label="instagram（Account）"></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.facebook" label="facebook（Account）"></v-text-field>
 
           <v-divider class="mt-5 mb-5" />
 
