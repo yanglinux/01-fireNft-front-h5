@@ -24,7 +24,7 @@
       </section>
       <section class="intro-tabs">
         <h3>JPY <span>¥{{ getPrice() }}</span></h3>
-        <div class="dz" :class="{'ydz': item.favorited}" style="cursor: unset;" @click="setFavorites">
+        <div class="dz" :class="{'ydz': item.favorited}" style="cursor: unset;" @click.stop="setFavorites">
           <img src="@/assets/img/svg/wdz.svg" v-if="!item.favorited"/>
           <img src="@/assets/img/svg/ydz.svg" v-if="item.favorited"/>{{ item.favorites_count }}
         </div>
@@ -35,14 +35,21 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import defaultCoverImage from "@/assets/img/img1.jpg";
 import defaultHeadImage from "@/assets/img/head.jpg";
+
 export default {
   props: {
     item: {
       type: Object,
       default: () => {},
     },
+  },
+  computed: {
+    ...mapState({
+      currentUser: (state) => state.user.currentUser,      
+    }),
   },
   data() {
     return { defaultHeadImage,defaultCoverImage};
@@ -67,22 +74,22 @@ export default {
         this.$router.push('/login');
         return;
       }
-      if (this.product.favorited === true) {
+      if (this.item.favorited === true) {
         this.$axios
-          .delete(`/v1/products/${this.product.id}/favorite`)
+          .delete(`/v1/products/${this.item.id}/favorite`)
           .then((response) => {
-            this.product.favorited = false;
-            this.product.favorites_count = this.product.favorites_count - 1;
+            this.item.favorited = false;
+            this.item.favorites_count = this.item.favorites_count - 1;
           })
           .catch((e) => {
             console.log(e);
           });
       } else {
         this.$axios
-          .post(`/v1/products/${this.product.id}/favorite`)
+          .post(`/v1/products/${this.item.id}/favorite`)
           .then((response) => {
-            this.product.favorited = true;
-            this.product.favorites_count = this.product.favorites_count + 1;
+            this.item.favorited = true;
+            this.item.favorites_count = this.item.favorites_count + 1;
           })
           .catch((e) => {
             console.log(e);
