@@ -1,5 +1,5 @@
 <template>
-  <v-dialog :value="visible" transition="dialog-bottom-transition" width="100%" persistent>
+  <v-dialog :value="visible" transition="dialog-bottom-transition"  width="80vw" persistent >
     <v-form ref="form" v-model="valid">
       <v-radio-group v-model="type">
         <v-card>

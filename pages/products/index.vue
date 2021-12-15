@@ -35,7 +35,7 @@
           </v-menu>
         </div>
       </v-tabs>
-      <v-tabs-items v-model="currentItem" class="my-tab-items">
+      <v-tabs-items v-model="currentItem" class="my-tab-items" touchless>
         <v-tab-item :value="0">
           <ProductList
             :loading="allLoading"
@@ -108,7 +108,7 @@ export default {
     currentItem(tab) {
       console.log(`tab index change`, tab, typeof tab);
       this.request();
-    },
+    },    
   },
   created() {
     const { tab = 0 } = this.$route.query;
@@ -181,6 +181,7 @@ export default {
     },
     search() {
       this.$router.push(`/products?s=${this.form.search}`);
+      this.request();
     },
   },
 };

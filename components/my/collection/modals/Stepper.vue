@@ -222,7 +222,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      getFee: 'api/shop/fee/request',
+      getFee: 'api/fee/request',
       setModal: 'my/produce/setModal',
       createItem: 'api/my/exhibit/request',
       getListingItems: 'api/my/listing/request',

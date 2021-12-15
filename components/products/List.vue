@@ -10,10 +10,7 @@
         <v-btn :loading="loading" @click="loadMore" block class="btn-green-radius-large">
           {{ loadMoreText || $t('buttons.load_more') }}
         </v-btn>
-      </v-col>
-      <v-col v-else class="d-flex justify-center align-center">
-        <span style="color: #cfd8dc">{{ $t('message.info_no_data') }}</span>
-      </v-col>
+      </v-col>     
     </v-row>
   </div>
 </template>

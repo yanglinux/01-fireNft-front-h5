@@ -122,7 +122,7 @@ export default {
   methods: {
     ...mapActions({
       getItems: 'api/shop/sales/items/request',
-      getFee: 'api/shop/fee/request',
+      getFee: 'api/fee/request',
       setModalCreate: 'shop/sales/setModalCreate',
       requestCreateSale: 'api/shop/sales/create/request',
       toast: 'toast/add',

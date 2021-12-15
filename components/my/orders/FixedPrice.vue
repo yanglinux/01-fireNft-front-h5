@@ -18,7 +18,12 @@
         {{ row.item.created_at | date }}
       </template>
       <template #item.status="row">
-        <span :class="row.item.status">{{ $t(`my.order.fixed_price.status.${row.item.status}`) }}</span>
+        <div class="d-flex align-center">
+          <span :class="row.item.status">{{ $t(`my.order.fixed_price.status.${row.item.status}`) }}</span>
+          <v-btn @click="showModal(row)" v-if="statusButtonVisible(row.item.status)" color="primary" small class="ml-2">
+            詳細
+          </v-btn>
+        </div>
       </template>
       <template #item.payment_due_at="row">
         {{ row.item.payment_due_at | date }}
@@ -34,6 +39,8 @@
       :value="paging.current_page || 1"
       :length="Math.ceil(paging.total_count / paging.per_page) || 1"
     ></v-pagination>
+    <MyOrdersModalsFixedPriceDetail :visible="!!modalDetail" @hide="modalDetail = null" :item="modalDetail" />
+    <MyOrdersModalsFixedPricePayment :visible="!!modalPayment" @hide="modalPayment = null" :item="modalPayment" />
   </div>
 </template>
 
@@ -52,9 +59,18 @@ export default {
         { value: 'payment_due_at', text: this.$t('my.order.fixed_price.fields.payment_due_at') },
         { value: 'amount', text: this.$t('my.order.fixed_price.fields.amount') },
       ],
+      modalDetail: null,
+      modalPayment: null,
     };
   },
-  watch: {},
+  watch: {
+    statusButtonVisible() {
+      const condition = ['waiting_confirm', 'waiting_payment', 'transferred', 'paid'];
+      return (status) => {
+        return condition.includes(status);
+      };
+    },
+  },
   computed: {
     ...mapState({
       items: (state) => state.api.my.orders.fixed_price.data?.result || [],
@@ -65,7 +81,7 @@ export default {
   created() {
     if (this.$nuxt.layoutName) {
       this.request();
-    }
+    }    
   },
   methods: {
     ...mapActions({
@@ -73,6 +89,11 @@ export default {
     }),
     updatePage(page) {
       this.request({ page });
+    },
+    showModal({ item }) {
+      if (['transferred', 'paid'].includes(item.status)) {
+        this.modalDetail = item;
+      } else this.modalPayment = item;
     },
   },
 };

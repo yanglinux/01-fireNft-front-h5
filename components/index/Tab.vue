@@ -25,7 +25,7 @@
         </v-menu>
       </div>
     </v-tabs>    
-    <v-tabs-items v-model="currentItem" class="mt-2 index-tab-box">
+    <v-tabs-items v-model="currentItem" class="mt-2 index-tab-box" touchless>
       <v-tab-item>
         <IndexList :items="tab1" :index="1" />
       </v-tab-item>
