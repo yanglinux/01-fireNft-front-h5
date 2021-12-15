@@ -1,6 +1,9 @@
 import colors from 'vuetify/es5/util/colors';
 
 export default {
+  googleAnalytics: {
+    id: 'UA-215418410-1'
+  },
   env: {
     ...process.env,
   },
@@ -50,6 +53,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
