@@ -48,6 +48,11 @@ export default {
       photoURL: (state) => state.user.currentUser.photoURL || defaultAvatarImage,
     }),
   },
+  watch:{
+    photoURL(val){
+      console.log('photoURL',val)
+    }
+  },
   methods: {
     ...mapActions({
       setLayout: 'app/setLayout',
