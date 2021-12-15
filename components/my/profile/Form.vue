@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapMutations, mapState, mapActions } from 'vuex';
 
 export default {
   data() {
@@ -131,6 +131,7 @@ export default {
       request: 'api/my/profile_update/request',
       toast: 'toast/add',
     }),
+    ...mapMutations('user', ['SET_AUTH_USER', 'SET_TWO_AUTH']),
     fireUpload() {
       this.$refs.file.value = '';
       this.$refs.file.click();
@@ -152,6 +153,13 @@ export default {
       const form = new FormData();
       Object.keys(this.form).forEach((key) => {
         if (this.form[key] && this.form.hasOwnProperty(key)) form.append(key, this.form[key]);
+      });
+     
+      const photoURL = this.form.image;
+      this.SET_AUTH_USER({
+        authUser: {
+          photoURL
+        },
       });
       this.request(form);
     },

@@ -151,7 +151,7 @@ export default {
     ...mapActions({
       request: 'api/shop/product/items/request',
       setModalEdit: 'shop/product/setModalEdit',
-      getFee: 'api/shop/fee/request',
+      getFee: 'api/fee/request',
       addProduct: 'api/shop/product/add/request',
       editProduct: 'api/shop/product/edit/request',
       getCategory: 'api/category/request',

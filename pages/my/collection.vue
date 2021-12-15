@@ -11,9 +11,9 @@
           {{ $t('my.collection.exchange_list') }}
         </v-tab>
       </v-tabs>
-      <v-tabs-items v-model="tab" class="my-tab-items">
+      <v-tabs-items v-model="tab" class="my-tab-items" touchless>
         <v-tab-item>
-          <v-tabs v-model="subtab" class="mytab my-sub-tab px-3">
+          <v-tabs v-model="subtab" class="mytab my-sub-tab px-3" >
             <v-tabs-slider></v-tabs-slider>
             <v-tab>
               {{ $t('my.collection.status.created') }}
@@ -25,7 +25,7 @@
               {{ $t('my.collection.status.sold') }}
             </v-tab>
           </v-tabs>
-          <v-tabs-items v-model="subtab" class="my-sub-tab-items">
+          <v-tabs-items v-model="subtab" class="my-sub-tab-items" touchless>
             <v-tab-item><NotListedList /></v-tab-item>
             <v-tab-item><ListingList /></v-tab-item>
             <v-tab-item><SoldList /></v-tab-item>
