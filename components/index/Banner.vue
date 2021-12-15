@@ -7,7 +7,7 @@
       reverse-transition="fade-transition"
       transition="fade-transition"
     >
-    <p class="t1">FireDigital NFT<br>MarketPlace</p>
+    <p class="t1">FireDigital NFT<br>MarketPlace<span style="color: rgb(255, 69, 0);"><b>(testnet)</b></span></p>
     <p class="t2">PlatForm Version</p>
   </v-carousel-item>
   </v-carousel>
@@ -18,19 +18,19 @@ export default {
   data() {
     return {
       items: [
-        {          
+        {
           src: require('@/assets/img/banner1.jpg'),
         },
-        {          
+        {
           src: require('@/assets/img/banner1.jpg'),
         },
-        {         
+        {
           src: require('@/assets/img/banner1.jpg'),
         },
-        {         
+        {
           src: require('@/assets/img/banner1.jpg'),
         },
-        {         
+        {
           src: require('@/assets/img/banner1.jpg'),
         },
       ],
@@ -43,7 +43,7 @@ export default {
 .banner /deep/ .v-carousel__controls{
   display: none !important;
 }
-.banner /deep/ .v-window__prev, 
+.banner /deep/ .v-window__prev,
 .banner /deep/.v-window__next{
   top: calc(50% + 25px);
 }
