@@ -107,23 +107,6 @@
     "transaction_platform": "Specified Commercial Transactions Act (Platform)",
     "transaction_producer": "Specified Commercial Transactions Act (Shop)"
   },
-  "guide":{
-    "aprex_con1":"APREX is a new trading platform which using blockchain",
-    "aprex_con2":"APREX is a platform which separates actual items from its value so that users could trade only by the value.The value (ownership) of all items will be change to NFTs, and the actual items are strictly stored in APREX. We will build a world which the value of items do not change anywhere just by trading it. ",
-    "aprex_con3":"There is nothing you need to get started with APREX. Just  go exploring your favorite items in marketplace.",
-    "aprex_title":"What is the APREX",
-    "feature_con1":"We support Japanese, English and Chinese so that you can do business with users from all over the world.",
-    "feature_con2":"We support payment by credit card, bank transfer and virtual currency payment (more than 50 types of virtual currency such as BTC / ETH) .",
-    "feature_con3":"You can use APREX smoothly like a normal EC site without specialized knowledge of blockchain, wallet and virtual currency.",
-    "feature_con4":"By adopting the latest fingerprint technology, it is possible to link actual items and NFTs so that improving the value and credibility of NFTs.And it is not necessary to worry about the authenticity.",
-    "feature_con5":"Since there is no deliberation of actual items, the burden on the environment is reduced.<br>We could improve market liquidity only by the transaction of NFTs.",
-    "feature_explain":"※Glossary",
-    "feature_block_label":"Blockchain:",
-    "feature_block_con":"A blockchain is a distributed database that is shared among the nodes of a computer network. The innovation with a blockchain is that it guarantees the fidelity and security of a record of data and generates trust without the need for a trusted third party. ",
-    "feature_nft_label":"NFT：",
-    "feature_nft_con":"NFT also called non-fungible token which is unique, provably scarce, tradeable, and usable across multiple applications. ",
-    "feature_title":"Aprex features"
-  },
   "header": {
     "guide": "Guide",
     "login": "login",
