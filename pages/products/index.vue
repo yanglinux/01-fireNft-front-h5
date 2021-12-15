@@ -3,7 +3,7 @@
     <v-col class="ma-0 pa-0 search" cols="12">
       <v-text-field solo dense flat hide-details rounded v-model="form.search" class="search-inp"  v-on:keyup.enter="search">
         <template #append>
-          <img src="@/assets/img/svg/ss.svg" class="search-icon" @click="search" />
+          <img src="@/assets/img/svg/ss.svg" class="search-icon" @click.stop="search" />
         </template>
       </v-text-field>
     </v-col>
@@ -146,7 +146,7 @@ export default {
       getAuctionProducts: 'api/user/products_auction/request',
       getProducts: 'api/user/products/request',
     }),
-    request(data = {}) {
+    request(data = {}) {            
       const requestList = [this.getProducts, this.getFixedPriceProducts, this.getAuctionProducts];
       const { order, s } = this.$route.query;
       const request = requestList[this.currentItem];
@@ -171,17 +171,18 @@ export default {
       this.request({ page: current_page + 1 });
     },
     updateSort(item) {
+      debugger
       const listKey = ['all', 'fixed_price', 'auction'];
       this.items[listKey[this.currentItem]] = [];
       this.sort = item;
       this.request({
         page: 1,
+        'q[title_cont]': this.form.search,
         sort_by: item.value,
       });
     },
     search() {
-      this.$router.push(`/products?s=${this.form.search}`);
-      this.request();
+     this.updateSort(this.sort);
     },
   },
 };
