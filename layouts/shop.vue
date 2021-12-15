@@ -3,7 +3,7 @@
     <Navigation v-if="isLogin" />
     <Appbar v-if="isLogin" />
     <AppbarBlank v-else />
-    <v-main>
+    <v-main class="main">
       <v-container>
         <Nuxt />
       </v-container>
@@ -16,7 +16,7 @@
 import Appbar from '@/layouts/shop/appbar.vue';
 import AppbarBlank from '@/layouts/shop/appbar-blank.vue';
 import Navigation from '@/layouts/shop/navigation.vue';
-import Footer from '@/layouts/shop/footer.vue';
+import Footer from '@/layouts/default/footer.vue';
 import toastedMixin from '@/plugins/vue-toasted';
 import { mapGetters } from 'vuex';
 
@@ -35,3 +35,22 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.main{
+  background: #F2F2F2;
+}
+.main /deep/ .v-main__wrap{
+  padding-bottom: 10px
+}
+.main .container{
+  height: 100%;
+  padding: 20px;
+  border-radius: 16px;  
+  background: #FFFFFF;
+}
+</style>
+
+<style>
+@import '@/assets/css/pages/shop.scss';
+</style>

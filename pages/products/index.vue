@@ -1,63 +1,66 @@
 <template>
-  <div>
-    <div class="mytab mb-2">
-      <v-card>
-        <v-tabs v-model="currentItem" class="mytab">
-          <v-tabs-slider></v-tabs-slider>
-          <v-tab class="pa-1">
-            {{ $t('titles.all') }}
-          </v-tab>
-          <v-tab>
-            {{ $t('product.type.fixed_price') }}
-          </v-tab>
-          <v-tab>
-            {{ $t('product.type.auction') }}
-          </v-tab>
-          <div class="d-flex justify-center align-center pr-1">
-            <v-menu bottom left>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn text class="align-self-right pr-0" v-bind="attrs" v-on="on">
-                  {{ sort.title }}
-                  <v-icon right class="ml-0">mdi-menu-down</v-icon>
-                </v-btn>
-              </template>
+  <div class="pa-3">
+    <v-col class="ma-0 pa-0 search" cols="12">
+      <v-text-field solo dense flat hide-details rounded v-model="form.search" class="search-inp"  v-on:keyup.enter="search">
+        <template #append>
+          <img src="@/assets/img/svg/ss.svg" class="search-icon" @click="search" />
+        </template>
+      </v-text-field>
+    </v-col>
+    <v-tabs v-model="currentItem"  class="my-tab">
+        <v-tabs-slider></v-tabs-slider>
+        <v-tab>
+          {{ $t('titles.all') }}
+        </v-tab>
+        <v-tab>
+          {{ $t('product.type.fixed_price') }}
+        </v-tab>
+        <v-tab>
+          {{ $t('product.type.auction') }}
+        </v-tab>
+        <div class="d-flex justify-center align-center pr-1">
+          <v-menu bottom left>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn text class="align-self-right pr-0" v-bind="attrs" v-on="on">
+                {{ sort.title }}
+                <v-icon right class="ml-0">mdi-menu-down</v-icon>
+              </v-btn>
+            </template>
 
-              <v-list class="grey lighten-3">
-                <v-list-item @click="updateSort(item)" v-for="item in sorts" :key="item.value">
-                  {{ item.title }}
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </div>
-        </v-tabs>
-      </v-card>
-    </div>
-    <v-tabs-items v-model="currentItem">
-      <v-tab-item :value="0">
-        <ProductList
-          :loading="allLoading"
-          :items="items.all"
-          @onLoadMore="onLoadMore"
-          :showLoadMore="showLoadMore('all')"
-        />
-      </v-tab-item>
-      <v-tab-item :value="1">
-        <ProductList
-          :loading="fixedPriceLoading"
-          :items="items.fixedPrice"
-          @onLoadMore="onLoadMore"
-          :showLoadMore="showLoadMore('fixedPrice')"
-        />
-      </v-tab-item>
-      <v-tab-item :value="2">
-        <ProductList
-          :loading="auctionLoading"
-          :items="items.auction"
-          @onLoadMore="onLoadMore"
-          :showLoadMore="showLoadMore('auction')"
-        />
-      </v-tab-item>
-    </v-tabs-items>
+            <v-list class="grey lighten-3">
+              <v-list-item @click="updateSort(item)" v-for="item in sorts" :key="item.value">
+                {{ item.title }}
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </div>
+      </v-tabs>
+      <v-tabs-items v-model="currentItem" class="my-tab-items">
+        <v-tab-item :value="0">
+          <ProductList
+            :loading="allLoading"
+            :items="items.all"
+            @onLoadMore="onLoadMore"
+            :showLoadMore="showLoadMore('all')"
+          />
+        </v-tab-item>
+        <v-tab-item :value="1">
+          <ProductList
+            :loading="fixedPriceLoading"
+            :items="items.fixedPrice"
+            @onLoadMore="onLoadMore"
+            :showLoadMore="showLoadMore('fixedPrice')"
+          />
+        </v-tab-item>
+        <v-tab-item :value="2">
+          <ProductList
+            :loading="auctionLoading"
+            :items="items.auction"
+            @onLoadMore="onLoadMore"
+            :showLoadMore="showLoadMore('auction')"
+          />
+        </v-tab-item>
+      </v-tabs-items>
   </div>
 </template>
 
@@ -79,6 +82,9 @@ export default {
       },
       tabInit: {},
       per: 6,
+      form: {
+        search: '',
+      },
     };
     data.sort = data.sorts[0];
     return data;
@@ -173,12 +179,19 @@ export default {
         sort_by: item.value,
       });
     },
+    search() {
+      this.$router.push(`/products?s=${this.form.search}`);
+    },
   },
 };
 </script>
 
 <style scoped>
-::v-deep .v-tab {
-  min-width: unset !important;
+@import '@/assets/css/pages/my.scss';
+/deep/ .search-inp.theme--light.v-input input, .theme--light.v-input textarea{
+  color: #0E7868;
+}
+.search-icon {
+  margin-right: -12px;
 }
 </style>

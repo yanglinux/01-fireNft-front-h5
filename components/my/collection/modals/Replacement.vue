@@ -1,5 +1,5 @@
 <template>
-  <v-dialog :value="visible" transition="dialog-bottom-transition" persistent>
+  <v-dialog :value="visible" transition="dialog-bottom-transition" width="100%" persistent>
     <v-form ref="form" v-model="valid">
       <v-radio-group v-model="type">
         <v-card>
@@ -31,10 +31,9 @@
             ></v-text-field>
             <v-text-field :rules="rule" hide-details v-model="form.tel" :label="$t('titles.phone')"></v-text-field>
           </v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn text @click="close">{{ $t('buttons.cancel') }}</v-btn>
-            <v-btn :disabled="disabled" color="primary" @click.prevent.stop="onOk">OK</v-btn>
+          <v-card-actions class="dialog-cancle-foot justify-center">
+            <v-btn class="btn-gray-radius-large" @click="close">{{ $t('buttons.cancel') }}</v-btn>
+            <v-btn :disabled="disabled" class="btn-green-radius-large" @click.prevent.stop="onOk">OK</v-btn>
           </v-card-actions>
         </v-card>
       </v-radio-group>

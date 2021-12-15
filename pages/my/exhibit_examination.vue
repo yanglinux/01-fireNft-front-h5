@@ -1,21 +1,22 @@
 <template>
-  <div>
-    <div class="text-h6 mb-2">{{ $t('my.exhibitExamination.title') }}</div>
+  <section> 
+    <Banner />  
     <div v-if="loading" class="d-flex justify-center align-center">
       <v-progress-circular :size="50" color="primary" indeterminate></v-progress-circular>
     </div>
     <Unapplied v-if="loaded && !examination.status" />
     <Requested v-else-if="loaded && examination.status" />
-  </div>
+  </section>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import Banner from '@/layouts/my/Banner';
 import Unapplied from '@/components/my/exhibit_examination/Unapplied.vue';
 import Requested from '@/components/my/exhibit_examination/Requested.vue';
 
 export default {
-  components: { Unapplied, Requested },
+  components: { Unapplied, Requested,Banner },
   data() {
     return {
       init: false,
@@ -47,3 +48,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+    @import '@/assets/css/pages/my.scss';
+    </style>

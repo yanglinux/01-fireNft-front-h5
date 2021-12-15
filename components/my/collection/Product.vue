@@ -1,7 +1,7 @@
 <template>
-  <v-card>
+  <v-card class="product-items">
     <Label :text="$t('product.status.created')" />
-    <div class="d-flex flex-no-wrap justify-space-between">
+    <div class="d-flex flex-no-wrap justify-space-between product-img">
       <v-img
         :src="item.cover_image_url"
         class="white--text align-end"
@@ -9,24 +9,22 @@
         height="200px"
         @click.prevent="showDetail"
       >
-        <v-card-title class="pb-1 text-body-2" v-text="item.title"></v-card-title>
-        <v-card-text class="pa-1 d-flex justify-end">
-          <v-btn
-            dark
-            outlined
-            x-small
-            @click.stop.prevent="() => setEditModal({ visible: true, description: item.description, id: item.id })"
-          >
-            {{ $t('buttons.edit') }}
-          </v-btn>
-        </v-card-text>
+        <v-card-title class="pb-1 text-body-2" v-text="item.title"></v-card-title>        
+        <v-btn
+          dark
+          outlined
+          x-small
+          @click.stop.prevent="() => setEditModal({ visible: true, description: item.description, id: item.id })"
+          class="product-edit"
+        >
+          {{ $t('buttons.edit') }}
+        </v-btn>       
       </v-img>
     </div>
-    <v-card-actions>
-      <v-spacer />
-      <v-btn color="primary" small @click="replacement">{{ $t('sidebar.shop.replacement') }}</v-btn>
-      <v-btn color="primary" small @click="showCreate">{{ $t('buttons.create_sale_short') }}</v-btn>
-    </v-card-actions>
+    <section class="product-btn-group">
+      <v-btn small block @click="replacement" class="btn-white-radius-medium mt-4" v-if="false">{{ $t('sidebar.shop.replacement') }}</v-btn>
+      <v-btn small block @click="showCreate" class="btn-green-radius-medium mt-2">{{ $t('buttons.create_sale_short') }}</v-btn>
+    </section>
   </v-card>
 </template>
 

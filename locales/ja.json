@@ -485,6 +485,7 @@
     }
   },
   "sidebar": {
+    "artist_signup":"新規アーテイスト登録",
     "my": {
       "affiliate": "友達招待",
       "collection": "コレクション",

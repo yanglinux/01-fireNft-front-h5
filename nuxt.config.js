@@ -16,8 +16,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - akiba-front-mobile',
-    title: 'akiba-front-mobile',
+    titleTemplate: '%s - fire-digital-front-mobile',
+    title: 'fire-digital-front-mobile',
     htmlAttrs: {
       lang: 'en',
     },

@@ -1,43 +1,52 @@
 <template>
-  <v-card>
-    <v-card-title>
-      {{ $t('my.contacts.title') }}
-    </v-card-title>
-    <v-card-text>
-      <v-form v-model="valid" ref="form">
-        <v-text-field
-          hide-details
-          :rules="[...rule, ruleEmail]"
-          type="email"
-          v-model="form.email"
-          :label="$t('my.contacts.from_email')"
-        ></v-text-field>
-        <v-text-field
-          hide-details
-          :rules="rule"
-          v-model="form.title"
-          :label="$t('my.contacts.from_title')"
-        ></v-text-field>
-        <v-textarea
-          hide-details
-          :rules="rule"
-          v-model="form.body"
-          :label="$t('my.contacts.from_contents')"
-        ></v-textarea>
-      </v-form>
-    </v-card-text>
-    <v-card-actions>
-      <v-btn color="primary" block @click="() => request(form)" :disabled="!valid">
-        {{ $t('buttons.sent') }}
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+  <section>
+    <Banner />  
+    <v-card class="my-profile-box">
+      <v-card-title>
+        {{ $t('my.contacts.title') }}
+      </v-card-title>
+      <v-card-text>
+        <v-form v-model="valid" ref="form" class="my-profile-form">
+          <v-text-field
+            hide-details
+            :rules="[...rule, ruleEmail]"
+            type="email"
+            v-model="form.email"
+            :label="$t('my.contacts.from_email')"
+            class="mb-3"
+          ></v-text-field>
+          <v-text-field
+            hide-details
+            :rules="rule"
+            v-model="form.title"
+            :label="$t('my.contacts.from_title')"
+            class="mb-3"
+          ></v-text-field>
+          <v-textarea
+            hide-details
+            :rules="rule"
+            v-model="form.body"
+            :label="$t('my.contacts.from_contents')"
+          ></v-textarea>
+        </v-form>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn block @click="() => request(form)" :disabled="!valid" class="btn-green-radius-large mb-4">
+          {{ $t('buttons.sent') }}
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </section>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import Banner from '@/layouts/my/Banner';
 
 export default {
+  components: {
+    Banner,    
+  },
   data() {
     return {
       valid: true,
@@ -79,3 +88,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '@/assets/css/pages/my.scss';
+</style>

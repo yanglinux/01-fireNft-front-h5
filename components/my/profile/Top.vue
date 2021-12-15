@@ -1,11 +1,11 @@
 <template>
-  <v-card>
+  <v-card class="my-profile-box">
     <v-card-text>
-      <v-btn block color="primary" v-if="twoauth.actived" @click="deleteTwoAuthModal = true">
+      <v-btn block v-if="twoauth.actived" @click="deleteTwoAuthModal = true" class="btn-green-radius-medium">
         {{ $t('my.profile.two_auth_completed') }}
       </v-btn>
-      <v-btn @click="twoAuthModal = true" block color="primary" v-else>{{ $t('my.profile.set_two_auth') }}</v-btn>
-      <v-btn @click="passwordModal = true" block color="primary" class="mt-2">
+      <v-btn @click="twoAuthModal = true" block v-else class="btn-green-radius-medium">{{ $t('my.profile.set_two_auth') }}</v-btn>
+      <v-btn @click="passwordModal = true" block class="btn-white-radius-medium mt-2">
         {{ $t('my.profile.password_change') }}
       </v-btn>
 

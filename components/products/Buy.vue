@@ -1,6 +1,6 @@
 <template>
   <div class="mt-2">
-    <v-btn block color="primary" @click="onBuy">{{ $t('buttons.buy') }}</v-btn>
+    <v-btn block class="btn-green-radius-large" @click="onBuy">{{ $t('buttons.buy') }}</v-btn>
     <v-dialog :value="modal" transition="dialog-bottom-transition" persistent>
       <v-card>
         <v-card-text>

@@ -3,7 +3,7 @@
     <div class="mt-4 mb-4 d-flex justify-center align-center">
       <span class="text-h6">{{ $t('signup.title') }}</span>
     </div>
-    <v-form v-model="valid" ref="form" @submit.prevent="onSubmit" :disabled="loading">
+    <v-form v-model="valid" ref="form" @submit.prevent="onSubmit" :disabled="loading" class="register-form">
       <v-text-field v-model="email" :rules="rules.email" :label="$t('signup.email')" required></v-text-field>
 
       <v-text-field
@@ -22,30 +22,30 @@
         required
       ></v-text-field>
 
-      <v-row align="center" justify="center" class="mt-2">
-        <v-col cols="12">
-          <v-btn :disabled="!valid" block :loading="loading" color="primary" type="submit">
+      <div class="d-flex justify-center">
+          <v-btn :disabled="!valid" block :loading="loading" color="primary" type="submit"  class="btn-green-radius-large">
             {{ $t('buttons.signup') }}
           </v-btn>
-        </v-col>
-      </v-row>
-      <v-row align="center" justify="center" class="mt-2">
-        <v-col cols="12">
-          <v-btn block outlined @click="redirectTo('facebook')">
-            <img height="26px" src="@/assets/img/svg/share-icon1.svg" alt="" />
-            <span class="ml-2">FACEBOOK</span>
-          </v-btn>
-          <v-btn block class="mt-2" outlined @click="redirectTo('twitter')">
-            <img height="26px" src="@/assets/img/svg/share-icon2.svg" alt="" />
-            <span class="ml-2">TWITTER</span>
-          </v-btn>
-          <v-btn block class="mt-2" outlined @click="redirectTo('line')">
-            <img height="26px" src="@/assets/img/svg/share-icon3.svg" alt="" />
-            <span class="ml-2">LINE</span>
-          </v-btn>
-        </v-col>
-      </v-row>
+      </div>
     </v-form>
+    <div class="register-lines"><p>Or Sign Up With</p></div>
+    <div class="register-share">
+      <div class="register-share-box">
+        <a @click="redirectTo('facebook')">
+          <img src="@/assets/img/svg/share-icon1.svg" alt="" />
+        </a>
+      </div>
+      <div class="register-share-box">
+        <a @click="redirectTo('twitter')">
+          <img src="@/assets/img/svg/share-icon2.svg" alt="" />
+        </a>
+      </div>
+      <div class="register-share-box">
+        <a @click="redirectTo('line')">
+          <img src="@/assets/img/svg/share-icon3.svg" alt="" />
+        </a>
+      </div>
+    </div>    
   </div>
 </template>
 
@@ -129,3 +129,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '@/assets/css/pages/login.scss';
+</style>

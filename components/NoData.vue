@@ -1,7 +1,14 @@
 <template>
-  <v-card>
-    <v-card-text style="min-height: 30vh" class="d-flex justify-center align-center">
-      {{ $t('titles.no_data') }}
-    </v-card-text>
-  </v-card>
+  <section class="d-flex justify-center align-center no-data">
+    {{ $t('titles.no_data') }}
+  </section>
 </template>
+
+<style scoped>
+  .no-data{
+    width: 100%;
+    min-height: 30vh;
+    background: #fff;
+    border-radius: 16px;
+  }
+</style>

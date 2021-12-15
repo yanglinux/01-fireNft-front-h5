@@ -1,7 +1,7 @@
 <template>
   <v-menu left bottom>
     <template v-slot:activator="{ on, attrs }">
-      <v-btn text v-bind="attrs" v-on="on" size="24">
+      <v-btn text v-bind="attrs" v-on="on" size="24" class="language-btn">
         {{ currentLanuage.title }}
         <v-icon right>mdi-chevron-down</v-icon>
       </v-btn>
@@ -95,3 +95,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.language-btn{
+  padding: 0 10px !important;
+  font-size: 12px;  
+}
+</style>

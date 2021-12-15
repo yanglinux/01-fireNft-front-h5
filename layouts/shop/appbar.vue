@@ -1,5 +1,9 @@
 <template>
-  <v-app-bar :clipped-left="layout.clipped" fixed app>
+  <v-app-bar :clipped-left="layout.clipped" fixed app>    
+    <v-toolbar-title @click="() => $router.push('/')">
+        <img src="@/assets/img/logo.svg" style="width: 115px" />
+      </v-toolbar-title>   
+    <v-spacer />
     <v-app-bar-nav-icon @click.stop="setLayout(['drawer', !layout.drawer])" />
     <v-btn v-show="false" icon @click.stop="setLayout(['miniVariant', !layout.miniVariant])">
       <v-icon>mdi-{{ `chevron-${layout.miniVariant ? 'right' : 'left'}` }}</v-icon>
@@ -10,8 +14,6 @@
     <v-btn icon @click.stop="setLayout(['fixed', !layout.fixed])" v-show="false">
       <v-icon>mdi-minus</v-icon>
     </v-btn>
-    <v-toolbar-title v-text="layout.title" />
-    <v-spacer />
     <v-btn icon @click.stop="setLayout(['rightDrawer', !layout.rightDrawer])" v-show="false">
       <v-icon>mdi-menu</v-icon>
     </v-btn>

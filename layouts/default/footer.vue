@@ -1,6 +1,6 @@
 <template>
-  <v-footer dark :absolute="!layout.fixed" class="d-flex justify-center pa-5 mt-5" app>
-    <img src="@/assets/img/logo1.png" style="width: 63px" />
+  <v-footer :absolute="!layout.fixed" class="d-flex justify-center footer" app>
+    <img src="@/assets/img/logo1.svg" style="width: 97px" />
   </v-footer>
 </template>
 
@@ -19,3 +19,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.footer{
+  height: 72px;
+  background: linear-gradient(214deg, #0E7868 0%, #369465 100%);
+}
+</style>

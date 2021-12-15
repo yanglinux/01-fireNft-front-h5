@@ -1,12 +1,9 @@
 <template>
   <div>
-    <v-form v-model="valid">
-      <v-card>
-        <div class="pa-2 text-subtitle-1">
-          <b>{{ $t('forgot.password') }}</b>
+      <div class="mt-4 mb-4 d-flex justify-center align-center">
+          <span class="text-h6">{{ $t('forgot.password') }}</span>
         </div>
-
-        <v-card-text>
+    <v-form v-model="valid" class="register-form">      
           <v-text-field
             type="password"
             :rules="rules.password"
@@ -20,12 +17,10 @@
             v-model="password_confirmation"
             :label="$t('forgot.password_confirmation')"
           ></v-text-field>
-        </v-card-text>
-
-        <v-card-actions>
-          <v-btn block color="primary">{{ $t('buttons.ok') }}</v-btn>
-        </v-card-actions>
-      </v-card>
+        
+        <div class="d-flex justify-center mt-2">
+          <v-btn block class="btn-green-radius-large">{{ $t('buttons.ok') }}</v-btn>
+        </div>
     </v-form>
   </div>
 </template>
@@ -93,3 +88,6 @@ export default {
   },
 };
 </script>
+<style scoped>
+    @import '@/assets/css/pages/login.scss';
+    </style>

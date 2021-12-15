@@ -38,10 +38,10 @@ export default {
         title: 'earnings_manager',
         to: '/shop/earnings/manager',
       },
-      {
-        title: 'replacement',
-        to: '/shop/replacement/manager',
-      },
+      // {
+      //   title: 'replacement',
+      //   to: '/shop/replacement/manager',
+      // },
       {
         title: 'setting',
         to: '/shop/setting',

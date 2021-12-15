@@ -1,37 +1,38 @@
 <template>
-  <div>
-    <v-card color="black" dark>
-      <div class="d-flex flex-no-wrap justify-space-between pa-2">
-        <v-avatar class="ma-3" size="100" tile>
-          <v-img :src="profile.image || defaultImage"></v-img>
-        </v-avatar>
-        <div>
-          <v-card-title class="text-h6">{{ profile.nick_name }}</v-card-title>
-          <v-card-subtitle v-html="autoLink(profile.introduction || '')"></v-card-subtitle>
-        </div>
+  <section>    
+    <div class="personal-header">
+      <div class="personal-header-img">
+          <v-avatar size="60" tile>
+            <v-img :src="profile.image || defaultImage"></v-img>
+          </v-avatar>
       </div>
-    </v-card>
-
-    <div class="mt-4 mb-4 text-h6">{{ $t('titles.shop_listing_product') }}</div>
-    <v-row>
-      <v-col cols="6" v-for="item in items" :key="item.id">
-        <IndexProduct :item="item" :key="item.id" />
-      </v-col>
-      <v-col cols="12">
-        <v-pagination
-          circle
-          :disabled="loading"
-          @input="updatePage"
-          :value="paging.current_page || 1"
-          :length="Math.ceil(paging.total_count / paging.per_page) || 1"
-        ></v-pagination>
-      </v-col>
-    </v-row>
-  </div>
+      <div class="personal-header-info">
+        <h2>{{ profile.nick_name }}</h2>
+        <div class="info-con" style="white-space: pre-wrap; word-wrap:break-word;" v-html="autoLink(profile.introduction || '')"></div>
+      </div>
+    </div>
+    <div class="pa-3">
+      <div class="mb-4 text-h6">{{ $t('titles.user_listing_product') }}</div>
+      <v-row>
+        <v-col cols="6" v-for="item in items" :key="item.id">
+          <IndexProduct :item="item" :key="item.id" />
+        </v-col>
+        <v-col cols="12" v-if="items.length>paging.per_page">
+          <v-pagination
+            circle
+            :disabled="loading"
+            @input="updatePage"
+            :value="paging.current_page || 1"
+            :length="Math.ceil(paging.total_count / paging.per_page) || 1"
+          ></v-pagination>
+        </v-col>
+      </v-row>
+    </div>
+  </section>
 </template>
 
 <script>
-import defaultImage from '@/assets/img/svg/shop.svg';
+import defaultImage from "@/assets/img/head.jpg";
 import autoLink from 'autolink.js';
 
 import { mapState, mapActions } from 'vuex';

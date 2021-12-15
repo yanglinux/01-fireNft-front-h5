@@ -1,5 +1,5 @@
 <template>
-  <div @click="favorite">
+  <div @click.stop="favorite">
     <v-icon>{{ icon }}</v-icon> {{ total }}
   </div>
 </template>
@@ -74,3 +74,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/deep/ .mdi-heart{
+  color: #FF5B98;
+}
+</style>

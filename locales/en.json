@@ -483,6 +483,7 @@
     }
   },
   "sidebar": {
+    "artist_signup":"Artist Signup",
     "my": {
       "affiliate": "Affiliate",
       "collection": "Collection",

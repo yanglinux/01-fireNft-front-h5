@@ -15,19 +15,19 @@
         {{ $t('titles.no_data') }}
       </template>
       <template #item.created_at="row">
-        {{ row.item.created_at | date }}
+        {{ row.item.created_at | formatDateTime }}
       </template>
       <template #item.buyer.name="row">
         <nuxt-link :to="buyerlink(row)">{{ row.item.buyer.name }}</nuxt-link>
       </template>
       <template #item.price_type="row">
-        {{ $t(`my.order.labels.price_type_${data.item.price_type}`) }}
+        {{ $t(`my.order.labels.price_type_${row.item.price_type}`) }}
       </template>
       <template #item.status="row">
         <span :class="row.item.status">{{ $t(`my.order.sale.status.${row.item.status}`) }}</span>
       </template>
       <template #item.payment_due_at="row">
-        {{ row.item.payment_due_at | date }}
+        {{ row.item.payment_due_at | formatDateTime }}
       </template>
       <template #item.amount="row">
         {{ row.item.amount | money($t('my.order.append.amount_unit')) }}
@@ -57,8 +57,28 @@ export default {
         { value: 'buyer.name', text: this.$t('my.order.sale.fields.name') },
         { value: 'status', text: this.$t('my.order.sale.fields.status') },
         { value: 'amount', text: this.$t('my.order.sale.fields.amount') },
-      ],
+      ],      
     };
+  },
+  filters: {    
+    formatDateTime: function(value) {
+      if (value == null) {
+        return '';
+      }
+      let date = new Date(value);
+      let y = date.getFullYear();
+      let MM = date.getMonth() + 1;
+      MM = MM < 10 ? '0' + MM : MM;
+      let d = date.getDate();
+      d = d < 10 ? '0' + d : d;
+      let h = date.getHours();
+      h = h < 10 ? '0' + h : h;
+      let m = date.getMinutes();
+      m = m < 10 ? '0' + m : m;
+      let s = date.getSeconds();
+      s = s < 10 ? '0' + s : s;
+      return y + '/' + MM + '/' + d + ' ' + h + ':' + m + ':' + s;
+    },
   },
   watch: {},
   computed: {
@@ -82,7 +102,7 @@ export default {
     },
     buyerlink({ item }) {
       const page = item.buyer.buyer_type === 'User' ? '/users/' : '/shops/';
-      return page + row.item.buyer.name;
+      return page + item.buyer.name;
     },
   },
 };

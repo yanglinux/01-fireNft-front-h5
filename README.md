@@ -1,4 +1,4 @@
-# akiba-front-mobile
+# fire-digital-front-mobile
 
 ## Build Setup
 

@@ -1,8 +1,8 @@
 <template>
-  <div v-if="loaded">
-    <div class="text-h6 mb-2">{{ $t('my.credit_card.title') }}</div>
+  <div v-if="loaded">   
+    <Banner />  
     <Register v-if="!mycard.persisted" />
-    <v-card v-else>
+    <v-card class="my-profile-box" v-else>
       <v-card-text>
         <div class="subtitle-2">{{ $t('my.credit_card.created') }}</div>
         <v-divider />
@@ -16,8 +16,8 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn text @click="modal = false">{{ $t('buttons.cancel') }}</v-btn>
-              <v-btn :loading="deleteLoading" color="primary" @click="deleteCreditCard">
+              <v-btn text @click="modal = false" class="btn-gray-radius-large">{{ $t('buttons.cancel') }}</v-btn>
+              <v-btn :loading="deleteLoading" @click="deleteCreditCard" class="btn-green-radius-large">
                 {{ $t('buttons.confirm') }}
               </v-btn>
             </v-card-actions>
@@ -31,9 +31,10 @@
 <script>
 import { mapActions, mapState } from 'vuex';
 import Register from '@/components/my/credit_card/Register.vue';
+import Banner from '@/layouts/my/Banner';
 
 export default {
-  components: { Register },
+  components: { Register,Banner },
   data() {
     return {
       modal: false,
@@ -74,6 +75,7 @@ export default {
 </script>
 
 <style scoped>
+@import '@/assets/css/pages/my.scss';
 .card-field {
   height: 30px;
   border-bottom: 1px solid gray;

@@ -1,5 +1,6 @@
 <template>
-  <v-card elevation="24" class="mx-auto">
+  <section>
+    <div class="text-h6">{{ $t('index.titles.latest_products') }}</div>
     <v-carousel
       :continuous="false"
       :cycle="cycle"
@@ -14,25 +15,14 @@
         v-for="(item, i) in items"
         :key="i"
         :src="item.cover_image_url"
+        class="img-item"
       ></v-carousel-item>
     </v-carousel>
-    <v-list two-line v-if="current">
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>
-            {{ current.title }}
-            <br />
-            JPY ¥ {{ getPrice() }}
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            ≈ CNY ¥{{ getPrice('cny') }}
-            <br />
-            ≈ USD ${{ getPrice('usd') }}
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
-  </v-card>
+    <div class="news-info pa-3" v-if="current">
+        <p class="text-ellipsis" :title="current.title">{{ current.title }}</p>        
+        <p>JPY <span>¥{{ getPrice() }}</span></p>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -69,3 +59,22 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .img-item{
+    border-radius: 16px 16px 0 0;  
+    overflow: hidden;
+  }
+  .news-info{
+    background: #fff;
+    border-radius: 0 0 16px 16px; 
+  }
+  .news-info p{
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  .news-info p span{
+    font-size: 16px;
+    font-weight: bold;
+  }
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="my-profile-box">
     <v-card-title>{{ $t('my.credit_card.title') }}</v-card-title>
     <v-card-text>
       <div ref="cardNumber" id="card-number" class="card-field mt-4"></div>
@@ -8,7 +8,7 @@
     </v-card-text>
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn :loading="loadingPayjp" block color="primary" @click="registerCreditCard">
+      <v-btn :loading="loadingPayjp" block  @click="registerCreditCard"  class="btn-green-radius-large">
         {{ $t('buttons.credit_card_register') }}
       </v-btn>
     </v-card-actions>

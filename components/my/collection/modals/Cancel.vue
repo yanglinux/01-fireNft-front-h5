@@ -1,15 +1,14 @@
 <template>
   <v-dialog :value="modal.visible" transition="dialog-bottom-transition" persistent>
-    <v-card>
-      <v-card-text class="pt-2">
+    <v-card class="pa-3">
+      <v-card-text class="py-3">
         {{ $t('titles.ask_for_cancel_sale') }}
       </v-card-text>
-      <v-card-actions>
-        <v-spacer></v-spacer>
-        <v-btn text @click="close">
+      <v-card-actions class="dialog-cancle-foot justify-center">        
+        <v-btn class="btn-gray-radius-large" @click="close">
           {{ $t('buttons.cancel') }}
         </v-btn>
-        <v-btn :loading="loading" color="primary" @click="onCancel">OK</v-btn>
+        <v-btn :loading="loading" class="btn-green-radius-large" @click="onCancel">OK</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

@@ -1,12 +1,12 @@
 <template>
   <v-app-bar :clipped-left="layout.clipped" fixed app class="myappbar">
     <v-toolbar-title @click="() => $router.push('/')">
-      <img src="@/assets/img/logo.png" style="width: 93px" />
-    </v-toolbar-title>
-    <v-app-bar-nav-icon @click.stop="setLayout(['drawer', !layout.drawer])" />
+      <img src="@/assets/img/logo.svg" style="width: 115px" />
+    </v-toolbar-title>    
+    <v-app-bar-nav-icon @click.stop="setLayout(['drawer', !layout.drawer])" class="nav-icon" />
     <v-spacer />
-    <v-btn small v-if="!isLogin" @click="$router.push('/signup')">{{ $t('header.signup') }}</v-btn>
-    <v-btn small v-if="!isLogin" @click="$router.push('/login')" dark color="black" class="ml-2">
+    <v-btn small v-if="!isLogin" @click="$router.push('/signup')" class="btn-white-radius">{{ $t('header.signup') }}</v-btn>
+    <v-btn small v-if="!isLogin" @click="$router.push('/login')" class="ml-2 btn-green-radius">
       {{ $t('header.login') }}
     </v-btn>
     <Language />
@@ -16,7 +16,6 @@
           <img :src="photoURL" />
         </v-avatar>
       </template>
-
       <v-list dense>
         <v-list-item>
           {{ displayName }}
@@ -67,8 +66,44 @@ export default {
 
 <style lang="scss" scoped>
 .myappbar {
+  background: rgba(255,255,255,0.8) !important;
+  box-shadow: 0 0 0 rgba(0,0,0,0) !important;
   ::v-deep .v-toolbar__content {
     padding-right: 0;
+    padding-left: 10px;
   }
+}
+.nav-icon{
+  width: 24px !important;
+  .mdi-menu{
+    background: url(../../assets/img/svg/icon-menu.svg) no-repeat;
+    background-size: 100% 100%;
+  }
+  .mdi-menu::before{
+    content: '';    
+  }
+}
+.btn-white-radius{
+  padding: 0 5px !important;
+  height: 32px !important;
+  line-height: 30px !important;
+  background: #fff !important;
+  border:solid 1px #0E7868;
+  border-radius: 16px;
+  color: #0E7868;  
+}
+.btn-white-radius.v-btn--is-elevated{
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0)
+}
+.btn-green-radius{
+  padding: 0 5px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  background: #0E7868 !important;
+  border-radius: 16px;
+  color: #fff;  
+}
+.btn-green-radius.v-btn--is-elevated{
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0)
 }
 </style>
