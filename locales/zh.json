@@ -164,7 +164,8 @@
     "info_twoauth_qrcode_wrong": "二次认证验证码错误",
     "info_twoauth_set_success": "二次认证设定成功",
     "info_user_update_success": "用户设置成功",
-    "login_successed": "登录成功"
+    "login_successed": "登录成功",
+    "info_artist_signup_stop": "暂停店铺注册"
   },
   "my": {
     "affiliate": {

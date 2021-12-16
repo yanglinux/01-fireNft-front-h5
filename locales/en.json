@@ -164,7 +164,8 @@
     "info_twoauth_qrcode_wrong": "two-factor authentication code failed",
     "info_twoauth_set_success": "complete to setting two-facor verification",
     "info_user_update_success": "user setting completed",
-    "login_successed": "login completed"
+    "login_successed": "login completed",
+    "info_artist_signup_stop": "Suspend store registration"
   },
   "my": {
     "affiliate": {
