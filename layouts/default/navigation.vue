@@ -6,15 +6,15 @@
     :clipped="layout.clipped"
     fixed
     app
-  > 
-    <v-list>      
+  >
+    <v-list>
       <v-list-item to="/" router exact class="nobg">
         <v-list-item-content>
-          <v-list-item-title v-text="$t('sidebar.artist_signup')" />
+          <v-list-item-title v-text="$t('sidebar.artist_signup')" @click="artistSignup()" />
         </v-list-item-content>
-      </v-list-item>       
+      </v-list-item>
       <template v-if="isLogin">
-        <v-divider class="mt-2 mb-2" />   
+        <v-divider class="mt-2 mb-2" />
         <v-list-item v-for="(item, i) in subItems" :key="item.title" :to="item.to" router exact>
           <v-list-item-content>
             <v-list-item-title v-text="$t(`${item.title}`)" />
@@ -87,7 +87,12 @@ export default {
   methods: {
     ...mapActions({
       setLayout: 'app/setLayout',
+      toast: 'toast/add',
     }),
+
+    artistSignup: function() {
+      this.toast({ text: this.$t('message.info_artist_signup_stop'), type: 'error' });
+    },
   },
 };
 </script>

@@ -164,7 +164,8 @@
     "info_twoauth_qrcode_wrong": "二段階認証コードが正しくありません。",
     "info_twoauth_set_success": "二段階認証設定成功",
     "info_user_update_success": "ユーザ設定成功",
-    "login_successed": "ログインしました"
+    "login_successed": "ログインしました",
+    "info_artist_signup_stop": "店舗登録を一時停止する"
   },
   "my": {
     "affiliate": {
