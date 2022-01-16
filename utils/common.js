@@ -1,16 +1,24 @@
 const sorts = function () {
   return [
     {
-      title: this.$t('index.sorts.hot'),
+      title: 'index.sorts.hot',
       value: 'hot_desc',
     },
     {
-      title: this.$t('index.sorts.date'),
+      title: 'index.sorts.dateDesc',
       value: 'sale_start_desc',
     },
     {
-      title: this.$t('index.sorts.price'),
+      title: 'index.sorts.dateAsc',
+      value: 'sale_start_asc',
+    },
+    {
+      title: 'index.sorts.priceDesc',
       value: 'price_desc',
+    },
+    {
+      title: 'index.sorts.priceAsc',
+      value: 'price_asc',
     },
   ];
 };

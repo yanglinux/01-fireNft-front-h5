@@ -1,31 +1,27 @@
 <template>
   <section>
     <div class="text-h6 d-flex">
-      {{ $t('index.titles.latest_products') }}
-      <v-btn color="primary" small class="ml-auto" rounded @click="$router.push('/products?tab=0&order=sale_start_desc')">
+      {{ $t('index.titles.recommend_products') }}
+      <v-btn color="primary" small class="ml-auto" rounded @click="$router.push('/products?tab=0&order=price_desc')">
         See all
       </v-btn>
     </div>
-    <v-carousel
-      :continuous="false"
-      :cycle="cycle"
-      :show-arrows="false"
-      hide-delimiter-background
-      delimiter-icon="mdi-minus"
-      height="300"
-      v-model="index"
-    >
+    <v-carousel 
+      :show-arrows="false" 
+      hide-delimiter-background 
+      height="300" 
+      v-model="index" 
+      :interval="3000">
       <v-carousel-item
         @click="() => $router.push(`/products/${item.id}`)"
-        v-for="(item, i) in items"
+        v-for="(item, i) in items.slice(0, 5)"
         :key="i"
         :src="item.cover_image_url"
-        class="img-item"
       ></v-carousel-item>
     </v-carousel>
     <div class="news-info pa-3" v-if="current">
-        <p class="text-ellipsis" :title="current.title">{{ current.title }}</p>        
-        <p>JPY <span>¥{{ getPrice() }}</span></p>
+      <p class="text-ellipsis" :title="current.title">{{ current.title }}</p>        
+      <p>JPY <span>¥{{ getPrice() }}</span></p>
     </div>
   </section>
 </template>
@@ -48,6 +44,19 @@ export default {
     current() {
       return this.items[this.index];
     },
+    startPrice() {
+      const { start_price = 0 } = this.current?.exhibit || {};
+      return start_price.toLocaleString();
+    },
+    currentPrice() {
+      const { fixed_price = 0, current_price = 0, price_type } = this.current?.exhibit || {};
+      const price = price_type === 'auction' ? current_price : fixed_price;
+      return price.toLocaleString();
+    },
+    priceType() {
+      const { price_type = '' } = this.current?.exhibit || {};
+      return price_type;
+    },
   },
   methods: {
     getPrice(currency) {
@@ -64,7 +73,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
   .img-item{
     border-radius: 16px 16px 0 0;  

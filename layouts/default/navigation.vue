@@ -10,7 +10,7 @@
     <v-list>
       <v-list-item to="/" router exact class="nobg">
         <v-list-item-content>
-          <v-list-item-title v-text="$t('sidebar.artist_signup')" @click="artistSignup()" />
+          <v-list-item-title v-text="$t('header.artist_signup')" @click="artistSignup()" />
         </v-list-item-content>
       </v-list-item>
       <template v-if="isLogin">

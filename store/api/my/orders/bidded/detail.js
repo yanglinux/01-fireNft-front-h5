@@ -1,11 +1,11 @@
 import { vueAjaxManager as ajaxManager } from '@/plugins/axios';
 
 export default ajaxManager.create({
-  name: `USERS DETAIL`,
+  name: `MY ORDERS BIDDED DETAIL`,
   defaultValue: {},
   axiosConfig: {
     method: 'get',
-    url: '/v1/users/{id}',
+    url: '/v1/my/orders/bidded/{id}',
   },
   handlers: {
     combineParams({ id, ...params }, { url, ...axiosConfig }) {
