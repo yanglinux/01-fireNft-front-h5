@@ -43,8 +43,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/i18n.js' },
+    { src: '@/plugins/axios.js' },
     { src: '@/plugins/vue-toasted.js' },
-    { src: '@/plugins/payjp.js' },
+    // { src: '@/plugins/payjp.js' },
     { src: '@/plugins/vue-masonry', ssr: false },
     { src: '@/plugins/filters.js' },
   ],
@@ -56,11 +57,10 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/proxy'],
   router: {
     middleware: 'auth',
   },

@@ -2,7 +2,7 @@
   <section>
     <v-card class="my-profile-box">
       <v-card-text>
-        <v-form :disabled="loading || error" class="my-profile-form">
+        <v-form :disabled="loading || error" class="my-profile-form"  ref="form">
           <v-text-field
             class="mb-2"
             hide-details
@@ -39,10 +39,22 @@
             hide-details
             :label="$t('my.profile.email')"
           ></v-text-field>
-          <v-text-field class="mb-2" hide-details v-model="form.tel" :label="$t('my.profile.tel')"></v-text-field>
-          <v-text-field class="mb-2" hide-details v-model="form.twiter" label="twitter（Account）"></v-text-field>
-          <v-text-field class="mb-2" hide-details v-model="form.instagram" label="instagram（Account）"></v-text-field>
-          <v-text-field class="mb-2" hide-details v-model="form.facebook" label="facebook（Account）"></v-text-field>
+          <v-text-field class="mb-2" hide-details v-model="form.tel" :label="$t('my.profile.tel')"></v-text-field>          
+          <v-text-field class="mb-2 d-flex align-center form-account" hide-details v-model="form.twitter" label="twitter（Account）">
+              <template #prepend>
+                <div>https://twitter.com/</div>
+              </template>
+            </v-text-field>
+            <v-text-field class="mb-2 d-flex align-center form-account" hide-details v-model="form.instagram" label="instagram（Account）">
+              <template #prepend>
+                <div>https://www.instagram.com/</div>
+              </template>
+            </v-text-field>
+            <v-text-field class="mb-2 d-flex align-center form-account" hide-details v-model="form.facebook" label="facebook（Account）">
+              <template #prepend>
+                <div>https://www.facebook.com/</div>
+              </template>
+            </v-text-field>
 
           <v-divider class="mt-5 mb-5" />
 
@@ -67,18 +79,19 @@
 </template>
 
 <script>
-import { mapMutations, mapState, mapActions } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   data() {
     return {
       image_tmp: '',
+      model: true,
       form: {
         nick_name: '',
         introduction: '',
         image: null,
         tel: '',
-        twiter: '',
+        twitter: '',
         instagram: '',
         facebook: '',
         name: '',
@@ -99,6 +112,14 @@ export default {
               this.form[key] = this.profile[key];
             }
           });
+
+          const { nick_name: displayName, image: photoURL, ...profile } = this.profile;
+          this.setAuthUser({
+            ...this.currentUser,
+            ...profile,
+            displayName,
+            photoURL,
+          });
         }
       }
     },
@@ -106,8 +127,9 @@ export default {
       if (next === false && prev === true) {
         if (!this.updateError) {
           this.toast({ text: this.$t('message.info_user_update_success'), type: 'success' });
+          this.getProfile();
         } else {
-          this.toast({ text: this.$t('message.error_user_update_failure'), type: 'error' });
+          this.toast({ text: this.updateData.errors[0], type: 'error' });
         }
       }
     },
@@ -123,6 +145,7 @@ export default {
       profile: (state) => state.api.my.profile.data,
       updateLoading: (state) => state.api.my.profile_update.onFetch,
       updateError: (state) => state.api.my.profile_update.error,
+      updateData: (state) => state.api.my.profile_update.data,
     }),
   },
   methods: {
@@ -130,8 +153,8 @@ export default {
       getProfile: 'api/my/profile/request',
       request: 'api/my/profile_update/request',
       toast: 'toast/add',
+      setAuthUser: 'user/setAuthUser',
     }),
-    ...mapMutations('user', ['SET_AUTH_USER', 'SET_TWO_AUTH']),
     fireUpload() {
       this.$refs.file.value = '';
       this.$refs.file.click();
@@ -154,15 +177,46 @@ export default {
       Object.keys(this.form).forEach((key) => {
         if (this.form[key] && this.form.hasOwnProperty(key)) form.append(key, this.form[key]);
       });
-     
-      const photoURL = this.form.image;
-      this.SET_AUTH_USER({
-        authUser: {
-          photoURL
-        },
-      });
-      this.request(form);
+      const valid = this.$refs.form.validate();
+      if (valid) this.request(form);
+    },
+    checkFile(v) {
+      if (!v) return true;
+      return /\.(png|gif|jpg|jpeg)$/i.test(v) || this.$t('message.error_image_file_type');
     },
   },
 };
 </script>
+
+<style lang="scss">
+  .form-account{
+    position: relative;
+      z-index: 0;
+  }
+  .form-account .v-input__prepend-outer{
+      margin: 0 !important;
+      height: 50px !important;
+      line-height: 33px;
+      max-height: 50px !important;
+      border-radius: 6px;
+      padding: 8px 10px;  
+      font-size: 12px;
+      border: 1px solid #cacaca;
+      background-color: #e9ecef;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;      
+  }
+  .form-account input{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  .form-account .v-label{
+    top:0 !important;
+  }
+  .form-account .v-input__slot,
+  .form-account .v-text-field__slot{
+    position: inherit !important;
+  }
+</style>
+    

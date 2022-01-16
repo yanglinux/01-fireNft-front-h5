@@ -1,13 +1,13 @@
 <template>
-  <v-card class="my-profile-box" >
+  <v-card>
     <v-card-text>
-      <v-alert type="error">
+      <v-alert v-show="false" type="primary" icon="mdi-alert-circle-outline">
         <v-row align="center">
           <v-col class="grow">
             {{ $t('my.exhibitExamination.pay_procedures') }}
           </v-col>
           <v-col class="shrink">
-            <v-btn @click="redirectTenant" color="warning" small class="ml-auto">
+            <v-btn @click="redirectTenant" small class="ml-auto" text>
               {{ $t('my.exhibitExamination.tenant_url') }}
             </v-btn>
           </v-col>
