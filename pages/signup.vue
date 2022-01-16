@@ -22,10 +22,20 @@
         required
       ></v-text-field>
 
+      <v-checkbox :rules="[(v) => !!v]" v-model="checkbox">
+        <template #label>
+          <div ref="privary" @click.prevent="onPrivaryPolicy" v-html="$t('signup.privacy_policy')" />
+        </template>
+      </v-checkbox>
+
       <div class="d-flex justify-center">
           <v-btn :disabled="!valid" block :loading="loading" color="primary" type="submit"  class="btn-green-radius-large">
             {{ $t('buttons.signup') }}
           </v-btn>
+      </div>
+
+      <div class="d-flex justify-end mt-4">
+        <NuxtLink to="/login">{{ $t('buttons.login') }}</NuxtLink>
       </div>
     </v-form>
     <div class="register-lines"><p>Or Sign Up With</p></div>
@@ -74,6 +84,7 @@ export default {
       email: '',
       password: '',
       password_confirmation: '',
+      checkbox: '',
       valid: true,
     };
   },
@@ -124,6 +135,12 @@ export default {
           password_confirmation: this.password_confirmation,
           invite_code: this.$route.query.c || null,
         });
+      }
+    },
+    onPrivaryPolicy(e) {
+      const isClickOnPrivary = this.$refs.privary.querySelector('a') === e.target;
+      if (isClickOnPrivary) {
+        window.open('#', '__blank');
       }
     },
   },

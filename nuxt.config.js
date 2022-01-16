@@ -5,6 +5,9 @@ export default {
     id: 'UA-215418410-1'
   },
   env: {
+    PAYJP_KEY: 'pk_test_9667f2e2e7f32f44bc8c4726',
+    PAYJP_KEY_C2C: 'pk_test_4d03e6598aa936718b4929e4',
+    PAYJP_KEY_B2C: 'pk_test_9667f2e2e7f32f44bc8c4726',
     ...process.env,
   },
   publicRuntimeConfig: {

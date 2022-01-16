@@ -5,7 +5,7 @@ console.log(process.env.BASE_URL);
 
 const TIMEOUT = 600000;
 const axiosConfig = {
-  baseURL: process.env.BASE_URL,
+  baseURL: process.env.BASE_URL || 'http://localhost:4000',
   timeout: TIMEOUT,
 };
 
