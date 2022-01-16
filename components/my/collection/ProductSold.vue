@@ -7,6 +7,7 @@
         class="white--text align-end"
         gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
         height="200px"
+        @click="onClick"
       >
         <v-card-title class="pb-1 text-body-2" v-text="item.product.title"></v-card-title>
       </v-img>
@@ -22,6 +23,14 @@ export default {
     item: {
       type: Object,
       default: () => ({}),
+    },
+    onClickDetail: {
+      type: Function,
+    },
+  },
+  methods: {
+    onClick() {
+      this.$emit('onClickDetail', this.item);
     },
   },
 };

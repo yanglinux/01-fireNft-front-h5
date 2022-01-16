@@ -7,6 +7,7 @@
         class="white--text align-end"
         gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
         height="200px"
+        @click="$router.push('/products/' + item.id)"
       >
         <v-card-title class="pb-1 text-body-2" v-text="item.title"></v-card-title>
       </v-img>
