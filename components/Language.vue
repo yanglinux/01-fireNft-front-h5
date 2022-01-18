@@ -8,7 +8,7 @@
     </template>
 
     <v-list dense>
-      <v-list-item v-for="language in languages" :key="language.id" @click="updateLanguage(language.id)">
+      <v-list-item v-for="language in languages" :key="language.id" @click="updateLanguage(language.type)">
         <v-list-item-title class="d-flex align-center">
           <img :src="language.image" class="mr-2" />
           {{ language.title }}
@@ -32,16 +32,19 @@ export default {
         title: '日本語',
         image: ry,
         id: 'ja',
+        type: 'ja',
       },
       {
         title: '中文',
         image: zw,
         id: 'zh',
+        type: 'zh-CN',
       },
       {
         title: 'English',
         image: yy,
         id: 'en',
+        type: 'en',
       },
     ],
   }),
@@ -57,7 +60,7 @@ export default {
     currentLanuage() {
       const isShop = /^\/shop\//.test(this.$route.path);
       const lang = isShop ? this.shopLanguage : this.language;
-      const [langObj] = this.languages.filter((x) => x.id === lang);
+      const [langObj] = this.languages.filter((x) => x.type === lang);
       return langObj;
     },
   },

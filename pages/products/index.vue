@@ -22,14 +22,14 @@
           <v-menu bottom left>
             <template v-slot:activator="{ on, attrs }">
               <v-btn text class="align-self-right pr-0" v-bind="attrs" v-on="on">
-                {{ sort.title }}
+                {{ $t(sort.title) }}
                 <v-icon right class="ml-0">mdi-menu-down</v-icon>
               </v-btn>
             </template>
 
             <v-list class="grey lighten-3">
               <v-list-item @click="updateSort(item)" v-for="item in sorts" :key="item.value">
-                {{ item.title }}
+                {{ $t(item.title) }}
               </v-list-item>
             </v-list>
           </v-menu>

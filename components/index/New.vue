@@ -7,17 +7,15 @@
       </v-btn>
     </div>
     <v-carousel
-      :continuous="false"
-      :cycle="cycle"
-      :show-arrows="false"
-      hide-delimiter-background
-      delimiter-icon="mdi-minus"
-      height="300"
-      v-model="index"
+    :show-arrows="false" 
+    hide-delimiter-background 
+    height="300" 
+    v-model="index" 
+    :interval="3000"
     >
       <v-carousel-item
         @click="() => $router.push(`/products/${item.id}`)"
-        v-for="(item, i) in items"
+        v-for="(item, i) in items.slice(0, 5)"
         :key="i"
         :src="item.cover_image_url"
         class="img-item"

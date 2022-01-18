@@ -70,6 +70,7 @@ export default {
       this.$router.push(`/products/${this.item.id}`);
     }, 
     async setFavorites() {
+      debugger
       if (this.currentUser.uid === undefined) {
         this.$router.push('/login');
         return;
