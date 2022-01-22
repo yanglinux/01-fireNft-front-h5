@@ -8,6 +8,14 @@
       </div>
       <div class="personal-header-info">
         <h2>{{ profile.nick_name }}</h2>
+        <div class="share">
+          <a :href="'https://www.facebook.com/' + profile.facebook" target="_blank" v-if="profile.facebook"><img src="@/assets/img/svg/share-icon1.svg" alt=""></a>
+          <img src="@/assets/img/svg/share-icon1.svg" alt="" v-else>
+          <a :href="'https://twitter.com/' + profile.twitter" target="_blank" v-if="profile.twitter"><img src="@/assets/img/svg/share-icon2.svg" alt=""></a>
+          <img src="@/assets/img/svg/share-icon2.svg" alt="" v-else>
+          <a :href="'https://www.instagram.com/' + profile.instagram" target="_blank" v-if="profile.instagram"><img src="@/assets/img/svg/share-icon3.svg" alt=""></a>
+          <img src="@/assets/img/svg/share-icon3.svg" alt="" v-else>
+        </div>
         <div class="info-con" style="white-space: pre-wrap; word-wrap:break-word;" v-html="autoLink(profile.introduction || '')"></div>
       </div>
     </div>
@@ -66,3 +74,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .share {
+    height: 24px;
+  }
+  .share img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+  }
+  </style>

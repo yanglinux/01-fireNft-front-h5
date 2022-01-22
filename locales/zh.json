@@ -66,6 +66,8 @@
     "can_not_get_two_auth": "未能取得二次认证信息",
     "common": "发生错误",
     "current_password_required": "输入现在的密码",
+    "email_format_invalid": "邮件地址无效",
+    "email_required": "邮件地址是必须的",
     "otp_must_number": "二次验证码只能是数字",
     "otp_required": "请输入二次验证码",
     "otp_invalid": "二次验证码不正确",
@@ -75,8 +77,7 @@
     "product_image_required": "请上传商品图片",
     "product_name_required": "请输入商品名",
     "deliver_company_required": "请输入快递公司",
-    "deliver_no_required": "请输入快递号",
-    "email_format_invalid": "邮件地址无效",
+    "deliver_no_required": "请输入快递号",    
     "shop_login": "店铺ID或用户名或密码错误",
     "shop_login_otp": "验证码错误"
   },

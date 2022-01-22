@@ -1,7 +1,7 @@
 <template>
   <v-dialog :value="modal.visible" transition="dialog-bottom-transition" persistent width="90vw">
     <v-card>
-      <v-card-text class="pa-4">
+      <v-card-text class="pa-4" v-if="showDetail">
         <ListItem :left="$t('titles.price_type')" :right="$t(`product.type.${detail.price_type}`)" />
         <template v-if="isFixedPrice">
           <ListItem :left="$t('titles.sale_price')" :right="detail.fixed_price + $t('append.amount_unit')" />
@@ -61,6 +61,9 @@ export default {
       return [...this.fields].map(({ value, text }) => {
         return { value, text: text ? this.$t(`titles.${text}`) : '' };
       });
+    },
+    showDetail() {
+      return JSON.stringify(this.detail) != "{}";
     },
   },
   methods: {

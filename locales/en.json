@@ -67,6 +67,7 @@
     "common": "An Error Occured",
     "current_password_required": "Please enter your current password",
     "email_format_invalid": "The Email not a valid address",
+    "email_required": "The Email field is required",
     "otp_invalid": "The verification code is invalid",
     "otp_must_number": "Two-step verification code can only contain numbers",
     "otp_required": "Please enter the Two-Factor authentication code",
