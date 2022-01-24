@@ -18,6 +18,9 @@
               <v-card-title class="pb-1 text-body-2" v-text="item.product.title"></v-card-title>             
             </v-img>
           </div>
+          <div class="dz"  style="cursor: unset;" @click.stop="setFavorites(item)" v-if="item.favorite != false">
+            <img src="@/assets/img/svg/ydz.svg"  />
+          </div>
         </v-col>
         <v-col cols="12" v-if="items.length">
           <v-pagination
@@ -61,31 +64,24 @@ export default {
     updatePage(page) {
       this.getItems({ page });
     },
-    async setFavorites() {      
-      if (this.currentUser.uid === undefined) {
-        this.$router.push('/login');
-        return;
-      }
-      if (this.item.favorited === true) {
-        this.$axios
-          .delete(`/v1/products/${this.item.product.id}/favorite`)
-          .then((response) => {
-            this.item.favorited = false;            
+    async setFavorites(item) {      
+      if (this.item.favorited === false) {
+        this.$axios.delete(`/v1/products/${this.item.product.id}/favorite`)
+          .then(response => {
+            this.item.favorited = false
           })
-          .catch((e) => {
-            console.log(e);
+          .catch(e => {
+            console.log(e)
           });
       } else {
-        this.$axios
-          .post(`/v1/products/${this.product.item.id}/favorite`)
-          .then((response) => {
-            this.item.favorited = true;
+        this.$axios.post(`/v1/products/${this.item.product.id}/favorite`)
+          .then(response => {
+            this.item.favorited = true
           })
-          .catch((e) => {
-            console.log(e);
+          .catch(e => {
+            console.log(e)
           });
       }
-
     },
   },
 };
@@ -96,10 +92,13 @@ export default {
 .dz {
   position: absolute;
   z-index: 20;
-  bottom: 20px;
+  top: 15px;
   right: 26px;
   width: 13px;
+  height: 13px; 
+}
+.dz img{
+  width: 13px;
   height: 13px;
-  background-size: 100%; 
 }
 </style>
