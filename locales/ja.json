@@ -66,14 +66,18 @@
     "can_not_get_two_auth": "二段階情報の取得は失敗しました",
     "common": "エラーが起こりました！",
     "current_password_required": "現在のパスワードを入力してください",
+    "email_format_invalid": "メールアドレスは有効なメールアドレスではありません",
+    "email_required": "メールアドレスは必須項目です",
     "otp_must_number": "二段階認証コードは数字のみとなります",
     "otp_required": "二段階認証コードを入力してください",
+    "otp_invalid": "二段階認証コードが正しくありません",
     "password_confirm_required": "新しいパスワードの確認を入力してください",
     "password_confirm_to_password": "新しいパスワードの確認は一致していません",
     "password_required": "新しいパスワードを入力してください",
     "product_image_required": "商品写真をアップロードしてください",
     "product_name_required": "商品名を入力してください",
-    "email_required": "メールアドレスは有効なメールアドレスではありません",
+    "deliver_company_required": "配送業者を入力してください",
+    "deliver_no_required": "追跡番号を入力してください",    
     "shop_login": "ショップIDまたはユーザ名またはパスワードが間違っています！",
     "shop_login_otp": "認証コードが間違えています！"
   },
@@ -96,7 +100,7 @@
     "verified": "パスワードがリセットできました。"
   },
   "footer": {
-    "about": "APREについて",
+    "about": "FireDigitalについて",
     "company_overview": "会社概要",
     "help_guide": "ヘルプ＆ガイド",
     "inquiry": "お問い合わせ",
@@ -107,27 +111,136 @@
     "transaction_platform": "特定商取引法に基づく表示（プラットフォーム）",
     "transaction_producer": "特定商取引法に基づく表示（出品者）"
   },
+  "guide":{
+    "banner_txt1":"FireDigitalの使い方",
+    "banner_txt2":"株式会社アプレが運営するFireDigital（アプレエックス）は、アプレの鑑定技術と査定技術を活用して安心した取引を実現しております。<br>高額商品・希少な商品をNFT化（デジタル所有権）して、保管はアプレが行い、価値だけを売買できる取引ができるプラットフォームです。",
+    "banner_txt3":"アプレのリソース",
+    "banner_txt4":"真贋鑑定技術",
+    "banner_txt5":"査定",
+    "banner_txt6":"オークション",
+
+    "img1":"banner-img1-ja.png",
+    "img2":"img1-ja.jpg",
+    "img3":"img2-ja.jpg",
+    "img4":"img5-ja.png",
+    "img5":"img3-ja.jpg",
+    "img6":"img6-ja.png",
+    "img7":"img1-ja.jpg",
+    "img8":"img4-ja.png",
+    "img_account":"account-ja.png",
+    "img_collection":"collection-ja.png",
+    "img_conditions_left":"conditions-left-ja.png",
+    "img_conditions_right":"conditions-right-ja.png",
+    "img_execution":"execution-ja.png",
+    "img_features1": "features1-ja.jpg",
+    "img_features2": "features2-ja.jpg",
+    "img_features3": "features3-ja.jpg",
+    "img_features4": "features4-ja.jpg",
+    "img_features5": "features5-ja.jpg",
+    "img_features6": "features6-ja.jpg",
+    "img_flow": "flow-ja.png",
+    "img_flow6": "flow-6-ja.jpg",
+    "img_selection":"selection-ja.png",
+
+    "fqa_txt1":"FAQ",
+    "fqa_txt2":"FireDigital とはなんですか？",
+    "fqa_txt3":"ブロックチェーンを使ったあたらしい流通のインフラです。<br>FireDigital はモノとその価値を分離させ、その価値だけを売買できるプラットフォームです。<br>あらゆるモノの価値（所有権）をNFTにして、実際のモノは厳重にFireDigitalで保管します。<br>そうしてモノの価値（NFT）だけ流通させることで、どこでもモノの価値が変わらない世界を構築します。",
+    "fqa_txt4":"ブロックチェーンとはなんですか？",
+    "fqa_txt5":"日本語では「分散型台帳技術」と呼ばれます。取引データをブロックチェーンを利用する全てのユーザーのコンピューターに保存することで、「誰が、いつ、どのような取引を行ったか」を理論上偽造できないような形で管理、保存することができます。",
+    "fqa_txt7":"NFTとはなんですか？",
+    "fqa_txt8":"Non Fungible Token（ノン ファンジブル トークン）を省略した言葉で、日本語では「代替不可能なトークン」という意味です。デジタルデータが代替不可能となることで、唯一無二の価値を持てるようになります。",
+    "fqa_txt9":"支払い方法",
+    "fqa_txt10":"クレジットカード決済・銀行振込・仮想通貨決済（BTC/ETH等50種類以上の仮想通貨）での決済が可能.",
+    "fqa_txt11":"年会費や利用料はありますか？",
+    "fqa_txt12":"年会費や利用料,登録料は一切ございません。",
+    "fqa_txt13":"登録のために必要なものはありますか？",
+    "fqa_txt14":"何も必要ございません。メールアドレスをご記入いただくだけで登録可能です。",
+    "fqa_txt15":"クレジットカード",
+    "fqa_txt16":"FireDigital",
+    "fqa_txt17":"メールアドレス登録で最新ニュースをお届けします",
+
+    "part1_flow_title":"FireDigital Business Flow",
+    "part1_flow_div6":"消",
+    "part1_flow_h1":"NFT発行・出品",
+    "part1_flow_h2":"NFT現物保管",
+    "part1_flow_h3":"NFT売買",
+    "part1_flow_h4":"NFT転売",
+    "part1_flow_h5":"物体指紋データ",
+    "part1_flow_h6":"NFTの消却",
+    "part1_flow_txt1":"アプレが所有・管理する商品を対象としたNFTを発行します。",
+    "part1_flow_txt2":"NFT対象の現物商品はアプレが厳重に保管いたします。",
+    "part1_flow_txt3":"FireDigitalに出品されているNFTをBuyer_Aが購入する。",
+    "part1_flow_txt4":"Buyer_Aは購入したNFTをFireDigital上に出品。<br>Buyer_BがそのNFTを購入する。",
+    "part1_flow_txt5":"アプレが保管するNFT対象現物商品の物体指紋データを収集",
+    "part1_flow_txt6":"Buyer_BがNFTに加えて現物自体も欲しいという申し出があった場合、現物が倉庫から出た瞬間に、NFTは消滅します。",
+
+    "part1_txt1":"FireDigital 6つの特徴",
+    "part1_txt2":"株式会社アプレの事業リソースを活かして安心と信頼のNFT取引を実現しております。",
+
+    "part2_title":"Buying NFT / 購入方法",
+    "part2_txt1":"NFTを購入する方法",
+    "part2_txt2":"FireDigitalでNFTを購入することはとても簡単です⼀般的なECサイト<br>で商品を購入するようにNFTを購入することができます",
+    "part2_txt3":"メールアドレス登録",
+    "part2_txt4":"アカウント作成",
+    "part2_txt8":"出品NFT選択",
+    "part2_txt12":"NFT購入",
+    "part2_txt13":"決済方法選択",
+    "part2_txt14":"決済実⾏",
+
+    "part3_title":"Selling NFT /販売方法",
+    "part3_txt1":"あなたの購入したNFTを<br>出品する方法",
+    "part3_txt2":"購入されましたNFTはFireDigitalにで出品し販売することができます。",
+    "part3_txt3":"販売方法は一般的なフリマアプリのように好きな価格を設定して販売することも、オークション形式で販売することも可能です。",
+    "part3_txt4":"マイコレクションのNFT選択",
+    "part3_txt8":"販売方法選択",
+    "part3_txt9":"固定価格販売",
+    "part3_txt10":"フリマアプリに出品するように自分の好きな価格を<br>設定して出品することができます",
+    "part3_txt11":"オークション販売",
+    "part3_txt12":"最大7日間のオークション期間を設定し<br>より高い価格で販売することができます",
+    "part3_txt13":"オークション条件を設定"
+
+  },
   "header": {
+    "artist_signup": "新規アーテイスト登録",
     "guide": "Guide",
     "login": "login",
     "marketplace": "Marketplace",
-    "my_collection": "Collection",
+    "my_collection": "My Collection",
     "shop": "Shop",
     "logout": "ログアウト",
     "signup": "新規登録",
     "user_setting": "ユーザ設定"
   },
   "index": {
+    "banner":{
+      "text1": "FireDigital NFT<br>MarketPlace<span style=\"color: rgb(255, 69, 0);\"><b>(testnet)</b></span>",
+      "text2": "PlatForm Version"
+    },
     "sorts": {
-      "date": "販売日時降順",
+      "dateDesc": "販売日時降順",
+      "dateAsc": "販売日時昇順",
       "hot": "人気順",
-      "price": "価格降順"
+      "priceDesc": "価格降順",
+      "priceAsc": "価格昇順"
     },
     "titles": {
-      "auction": "オークション商品",
-      "fixed_price": "固定価格商品",
-      "hot_products": "TREND",
-      "latest_products": "NEW"
+      "auction": "オークション",
+      "fixed_price": "定額",
+      "hot_products": "人気商品",
+      "latest_products": "最新商品",
+      "recommend_products": "おすすめ",
+      "artist_introduction": "アーティスト紹介",
+      "subscribe": "メールアドレス登録で最新ニュースをお届けします"
+    },
+    "labels": {
+      "top_banner1": "すべての価値を<br>デジタルに",
+      "top_banner2": "あなたの大切な現物資産をお預かりして、デジタル所有権を<br>発行し売買できるNFTマーケットプレイス。",
+      "top_banner3": "NFT Maketplace",
+      "how_to": "FireDigitalはとても簡単にNFTを購入し<br>出品することができます。<br>ウォレットの準備は必要ありません。",
+      "create_account": "アカウント作成",
+      "select_nft": "出品済みNFTを<br>選んでください",
+      "buy_nft": "NFT購入<br><span>クレカ・暗号資産・銀行振込</span>",
+      "resell_nft": "購入したNFTを<br>転売することができます"
     }
   },
   "labels": {
@@ -148,6 +261,7 @@
     "error_transfer_failure": "振込済み処理に失敗しました。",
     "error_twoauth_delete_failure": "二段階認証解除に失敗しました。",
     "error_user_update_failure": "ユーザ設定処理に失敗しました。",
+    "error_image_file_type": "PNG, GIF, JPEG形式で画像を選択してください。",
     "info_auction_price_invalid": "有効な入札金額を入力してください。",
     "info_auction_success": "入札完了",
     "info_bid_unit_wrong": "入札単位は必ずお守りください。",
@@ -187,7 +301,7 @@
       "title": "お問い合わせ"
     },
     "credit_card": {
-      "cardC_cvc": "CVC番号",
+      "card_cvc": "CVC番号",
       "card_expiry": "有効期限",
       "card_number": "カード番号",
       "copy": "コピー",
@@ -240,7 +354,7 @@
           "cancel": "キャンセル",
           "paid": "支払済み",
           "transferred": "送金済み",
-          "waiting_confirm": "支払方法選択待ち",
+          "waiting_confirm": "支払待ち",
           "waiting_payment": "支払待ち"
         }
       },
@@ -273,7 +387,7 @@
           "cancel": "キャンセル",
           "paid": "支払済み",
           "transferred": "送金済み",
-          "waiting_confirm": "支払方法選択待ち",
+          "waiting_confirm": "支払待ち",
           "waiting_payment": "支払待ち"
         }
       },
@@ -283,11 +397,11 @@
         "account_type_checking": "当座預金",
         "account_type_normal": "普通預金",
         "amount": "価格",
-        "auction_amount": "入札価格",
+        "auction_amount": "支払金額",
         "bank": "金融機関名",
         "branch": "支店名",
         "buy_created_at": "購入日付",
-        "buy_name": "支払いユーザー",
+        "buy_name": "購入者",
         "created_at": "作成時刻",
         "credit_card": "クレジットカード",
         "exp_date": "有効期限",
@@ -300,7 +414,7 @@
         "pay_method_credit_card": "クレジットカード支払",
         "payment_due_at": "支払期限：",
         "price_type_auction": "オークション商品",
-        "price_type_fixed_price": "固定価格商品",
+        "price_type_fixed_price": "定額商品",
         "product_id": "登録番号"
       },
       "sale": {
@@ -316,7 +430,7 @@
           "cancel": "キャンセル",
           "paid": "支払済み",
           "transferred": "送金済み",
-          "waiting_confirm": "支払方法選択待ち",
+          "waiting_confirm": "支払待ち",
           "waiting_payment": "支払待ち"
         }
       },
@@ -325,7 +439,7 @@
         "bidding": "入札中",
         "buy_list": "購入一覧",
         "credit_card_select": "お支払いカードの選択",
-        "fixed_price": "定额商品",
+        "fixed_price": "定額商品",
         "sale_list": "販売一覧",
         "transfer_destination": "振込先情報"
       }
@@ -375,7 +489,7 @@
       "null": "",
       "paid": "支払済み",
       "transferred": "支払確認待ち",
-      "waiting_confirm": "支払方法選択待ち",
+      "waiting_confirm": "支払待ち",
       "waiting_payment": "支払待ち"
     }
   },
@@ -389,7 +503,7 @@
       "fields": {
         "created_at": "時間",
         "nick_name": "ユーザー",
-        "price": "入札"
+        "price": "入札価格"
       },
       "labels": {
         "account": "口座番号",
@@ -414,7 +528,7 @@
         "owner_name": "オーナー",
         "pay_method_bank": "銀行振込",
         "pay_method_credit_card": "クレジットカード支払",
-        "price": "価格",
+        "price": "現在価格",
         "product_id": "登録番号",
         "seconds_ago": "秒前",
         "start_price": "スタート価格",
@@ -456,7 +570,7 @@
     },
     "type": {
       "auction": "オークション",
-      "fixed_price": "固定価格"
+      "fixed_price": "定額"
     }
   },
   "shop": {
@@ -469,7 +583,6 @@
     }
   },
   "sidebar": {
-    "artist_signup":"新規アーテイスト登録",
     "my": {
       "affiliate": "友達招待",
       "collection": "コレクション",
@@ -498,6 +611,7 @@
     "password_confirmation": "パスワード確認",
     "successed": "本人確認用のメールを送信しました。メール内のリンクからアカウントを有効化させてください。",
     "title": "アカウントを作成",
+    "privacy_policy": "<a href='#' target='blank'>利用規約</a>に同意する",
     "verified": "メールアドレスが確認できました。"
   },
   "successes": {
@@ -543,7 +657,7 @@
     "other_destination": "その他お届け先",
     "pay_method": "支払方法",
     "payment_amount": "支払金額",
-    "payment_due_at": "支払時刻",
+    "payment_due_at": "支払期限",
     "payment_at": "支払時刻",
     "payment_status": "取引状況",
     "payment_success": "支払を承認しました",

@@ -69,7 +69,7 @@ export default {
     toDetailPage() {
       this.$router.push(`/products/${this.item.id}`);
     }, 
-    async setFavorites() {
+    async setFavorites() {      
       if (this.currentUser.uid === undefined) {
         this.$router.push('/login');
         return;

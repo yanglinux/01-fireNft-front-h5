@@ -1,14 +1,15 @@
 <template>
   <div>
     <div class="text-h6">{{ $t('index.titles.hot_products') }}</div>
-    <v-carousel height="350">
+    <v-carousel :show-arrows="false" 
+    hide-delimiter-background 
+    height="300" 
+    :interval="3000">
       <v-carousel-item
         @click="() => $router.push(`/products/${item.id}`)"
-        v-for="(item, i) in items"
+        v-for="(item, i) in items.slice(0, 5)"
         :key="i"
-        :src="item.cover_image_url"      
-        reverse-transition="fade-transition"
-        transition="fade-transition"
+        :src="item.cover_image_url" 
         class="img-item"
       ></v-carousel-item>
     </v-carousel>
@@ -32,8 +33,5 @@ export default {
   .img-item{
     border-radius: 16px;
     overflow: hidden;
-  }
-  /deep/ .v-carousel__controls{
-    display: none;
   }
 </style>

@@ -7,7 +7,7 @@
         <v-col cols="12" v-if="!items.length">
           <NoData />
         </v-col>
-        <v-col cols="6" v-for="item in items" :key="item.product.id">
+        <v-col cols="6" v-for="item in items" :key="item.product.id" style="position: relative;">
           <div class="d-flex flex-no-wrap justify-space-between"  @click="() => redictDetail(item.product.id)">
             <v-img
               :src="item.product.cover_image_url"
@@ -15,8 +15,11 @@
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="200px"
             >
-              <v-card-title class="pb-1 text-body-2" v-text="item.product.title"></v-card-title>
+              <v-card-title class="pb-1 text-body-2" v-text="item.product.title"></v-card-title>             
             </v-img>
+          </div>
+          <div class="dz"  style="cursor: unset;" @click.stop="setFavorites(item)" v-if="item.favorite != false">
+            <img src="@/assets/img/svg/ydz.svg"  />
           </div>
         </v-col>
         <v-col cols="12" v-if="items.length">
@@ -61,10 +64,41 @@ export default {
     updatePage(page) {
       this.getItems({ page });
     },
+    async setFavorites(item) {      
+      if (this.item.favorited === false) {
+        this.$axios.delete(`/v1/products/${this.item.product.id}/favorite`)
+          .then(response => {
+            this.item.favorited = false
+          })
+          .catch(e => {
+            console.log(e)
+          });
+      } else {
+        this.$axios.post(`/v1/products/${this.item.product.id}/favorite`)
+          .then(response => {
+            this.item.favorited = true
+          })
+          .catch(e => {
+            console.log(e)
+          });
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
 @import '@/assets/css/pages/my.scss';
+.dz {
+  position: absolute;
+  z-index: 20;
+  top: 15px;
+  right: 26px;
+  width: 13px;
+  height: 13px; 
+}
+.dz img{
+  width: 13px;
+  height: 13px;
+}
 </style>

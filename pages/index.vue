@@ -17,6 +17,9 @@
       <v-col class="ma-0" cols="12">
         <New :items="data.latest_products || []" />
       </v-col>
+      <v-col class="ma-0 pt-0" cols="12">
+        <IndexRecomment :items="data.recomment_products || []" />
+      </v-col>
       <v-col class="ma-0" cols="12">
         <Tab ref="tab" :tab1="data.fixed_price_products" :tab2="data.auction_products" />
       </v-col>

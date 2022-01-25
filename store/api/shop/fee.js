@@ -1,10 +1,10 @@
-import { vueAjaxManager as ajaxManager } from '@/plugins/axios';
+import { ajaxManager } from '@/plugins/axios';
 
 export default ajaxManager.create({
-  name: `SERVICE FEE`,
+  name: `SHOP SERVICE FEE`,
   defaultValue: {},
   axiosConfig: {
     method: 'get',
-    url: '/v1/service_fee',
+    url: '/v1/shop/service_fee',
   },
 });

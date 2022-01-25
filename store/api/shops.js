@@ -8,8 +8,8 @@ export default ajaxManager.create({
     url: '/v1/shops/{id}',
   },
   handlers: {
-    combineParams({ id, ...data }, { url, ...axiosConfig }) {
-      return { ...axiosConfig, url: url.replace('{id}', id), data };
+    combineParams({ id, ...params }, { url, ...axiosConfig }) {
+      return { ...axiosConfig, url: url.replace('{id}', id), params };
     },
   },
 });

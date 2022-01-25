@@ -24,13 +24,13 @@
             </v-tab>
           </v-tabs>
           <v-tabs-items v-model="subtab" class="my-sub-tab-items" touchless>
-            <v-tab-item><MyOrdersFixedPrice /></v-tab-item>
+            <v-tab-item><MyOrdersFixedPrice :visible="tab === 0 && subtab === 0" /></v-tab-item>
             <v-tab-item><MyOrdersBidding /></v-tab-item>
-            <v-tab-item><MyOrdersBidded /></v-tab-item>
+            <v-tab-item><MyOrdersBidded :visible="tab === 0 && subtab === 2" /></v-tab-item>
           </v-tabs-items>
         </v-tab-item>
         <v-tab-item>
-          <MyOrdersSale />
+          <MyOrdersSale :visible="tab === 1" />
         </v-tab-item>
       </v-tabs-items>
     </div>

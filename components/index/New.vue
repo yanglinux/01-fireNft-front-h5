@@ -1,18 +1,21 @@
 <template>
   <section>
-    <div class="text-h6">{{ $t('index.titles.latest_products') }}</div>
+    <div class="text-h6 d-flex">
+      {{ $t('index.titles.latest_products') }}
+      <v-btn color="primary" small class="ml-auto" rounded @click="$router.push('/products?tab=0&order=sale_start_desc')">
+        See all
+      </v-btn>
+    </div>
     <v-carousel
-      :continuous="false"
-      :cycle="cycle"
-      :show-arrows="false"
-      hide-delimiter-background
-      delimiter-icon="mdi-minus"
-      height="300"
-      v-model="index"
+    :show-arrows="false" 
+    hide-delimiter-background 
+    height="300" 
+    v-model="index" 
+    :interval="3000"
     >
       <v-carousel-item
         @click="() => $router.push(`/products/${item.id}`)"
-        v-for="(item, i) in items"
+        v-for="(item, i) in items.slice(0, 5)"
         :key="i"
         :src="item.cover_image_url"
         class="img-item"

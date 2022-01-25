@@ -9,7 +9,7 @@
     "auction": "出价",
     "back": "返回",
     "bankcode_manage": "银行账户管理",
-    "buy": "买",
+    "buy": "购买",
     "cancel": "取消",
     "cancel_sale": "取消出品",
     "change": "更新",
@@ -66,14 +66,18 @@
     "can_not_get_two_auth": "未能取得二次认证信息",
     "common": "发生错误",
     "current_password_required": "输入现在的密码",
+    "email_format_invalid": "邮件地址无效",
+    "email_required": "邮件地址是必须的",
     "otp_must_number": "二次验证码只能是数字",
     "otp_required": "请输入二次验证码",
+    "otp_invalid": "二次验证码不正确",
     "password_confirm_required": "请确认新密码",
     "password_confirm_to_password": "新密码不一致",
     "password_required": "请输入新密码",
     "product_image_required": "请上传商品图片",
     "product_name_required": "请输入商品名",
-    "email_required": "メールアドレスは有効なメールアドレスではありません",
+    "deliver_company_required": "请输入快递公司",
+    "deliver_no_required": "请输入快递号",    
     "shop_login": "店铺ID或用户名或密码错误",
     "shop_login_otp": "验证码错误"
   },
@@ -96,7 +100,7 @@
     "verified": "密码重置完了"
   },
   "footer": {
-    "about": "关于APRE",
+    "about": "关于FireDigital",
     "company_overview": "公司简介",
     "help_guide": "帮助&指南",
     "inquiry": "咨询",
@@ -107,27 +111,139 @@
     "transaction_platform": "基于特定商业交易法显示内容（平台版）",
     "transaction_producer": "基于特定商业交易法显示内容（店铺版）"
   },
+  "guide":{
+    "banner_txt1":"FireDigital的使用方法",
+    "banner_txt2":"在由股份有限公司FireDigital运营的FireDigital中，利用FireDigital的鉴定技术可以安心的实现交易。<br>这是一个将高价商品和稀有商品NFT化（赋予数字所有权），实物由FireDigital进行保管，仅通过买卖商品价值来进行交易的平台",
+    "banner_txt3":"FireDigital的优势",
+    "banner_txt4":"真伪鉴定技术",
+    "banner_txt5":"査定",
+    "banner_txt6":"拍卖",
+
+    "img1":"banner-img1-zh.png",
+    "img2":"img1-zh.jpg",
+    "img3":"img2-zh.jpg",
+    "img4":"img5-zh.png",
+    "img5":"img3-zh.jpg",
+    "img6":"img6-zh.png",
+    "img7":"img1-zh.jpg",
+    "img8":"img4-zh.png",
+    "img_account":"account-zh.png",
+    "img_collection":"collection-zh.png",
+    "img_conditions_left":"conditions-left-zh.png",
+    "img_conditions_right":"conditions-right-zh.png",
+    "img_execution":"execution-zh.png",
+    "img_features1": "features1-zh.jpg",
+    "img_features2": "features2-zh.jpg",
+    "img_features3": "features3-zh.jpg",
+    "img_features4": "features4-zh.jpg",
+    "img_features5": "features5-zh.jpg",
+    "img_features6": "features6-zh.jpg",
+    "img_flow": "flow-zh.png",
+    "img_flow6": "flow-6-zh.jpg",
+    "img_selection":"selection-zh.png",
+
+    "fqa_txt1":"FAQ",
+    "fqa_txt2":"FireDigital とはなんですか？",
+    "fqa_txt3":"ブロックチェーンを使ったあたらしい流通のインフラです。<br>FireDigital はモノとその価値を分離させ、その価値だけを売買できるプラットフォームです。<br>あらゆるモノの価値（所有権）をNFTにして、実際のモノは厳重にFireDigitalで保管します。<br>そうしてモノの価値（NFT）だけ流通させることで、どこでもモノの価値が変わらない世界を構築します。",
+    "fqa_txt4":"ブロックチェーンとはなんですか？",
+    "fqa_txt5":"日本語では「分散型台帳技術」と呼ばれます。取引データをブロックチェーンを利用する全てのユーザーのコンピューターに保存することで、「誰が、いつ、どのような取引を行ったか」を理論上偽造できないような形で管理、保存することができます。",
+    "fqa_txt7":"NFTとはなんですか？",
+    "fqa_txt8":"Non Fungible Token（ノン ファンジブル トークン）を省略した言葉で、日本語では「代替不可能なトークン」という意味です。デジタルデータが代替不可能となることで、唯一無二の価値を持てるようになります。",
+    "fqa_txt9":"支払い方法",
+    "fqa_txt10":"クレジットカード決済・銀行振込・仮想通貨決済（BTC/ETH等50種類以上の仮想通貨）での決済が可能.",
+    "fqa_txt11":"年会費や利用料はありますか？",
+    "fqa_txt12":"年会費や利用料,登録料は一切ございません。",
+    "fqa_txt13":"登録のために必要なものはありますか？",
+    "fqa_txt14":"何も必要ございません。メールアドレスをご記入いただくだけで登録可能です。",
+    "fqa_txt15":"クレジットカード",
+    "fqa_txt16":"FireDigital",
+    "fqa_txt17":"你可以登陆邮箱来获取最近消息",
+
+    "part1_flow_title":"FireDigital Business Flow",
+    "part1_flow_div6":"消",
+    "part1_flow_h1":"NFT发行和出售",
+    "part1_flow_h2":"NFT实物保管",
+    "part1_flow_h3":"NFT买卖",
+    "part1_flow_h4":"NFT转卖",
+    "part1_flow_h5":"物体指纹数据",
+    "part1_flow_h6":"NFT的销毁",
+    "part1_flow_txt1":"对FireDigital拥有并管理的商品进行NFT的发行",
+    "part1_flow_txt2":"FireDigital会妥善保管NFT的实物",
+    "part1_flow_txt3":"买家A购入在FireDigital出售的NFT",
+    "part1_flow_txt4":"买家A将已购入的NFT在FireDigital上出售<br>买家B将其购入",
+    "part1_flow_txt5":"FireDigital会收集保管的NFT实物的指纹数据",
+    "part1_flow_txt6":"买家B在提出想要NFT实物的申请时，实物在从仓库发出的瞬间NFT会被销毁",
+
+    "part1_txt1":"FireDigital的6个特征",
+    "part1_txt2":"活用股份有限公司FireDigital的业务资源来实现安心可信赖的NFT交易",
+
+    "part2_title":"NFT的购入方法",
+    "part2_txt1":"NFT的购入方法",
+    "part2_txt2":"在FireDigital上购买NFT非常简单。<br>你可以像在一般的电商平台购买商品一样购入NFT",
+    "part2_txt3":"登陆邮箱",
+    "part2_txt4":"创建账号",
+    "part2_txt8":"选择出售中的NFT",
+    "part2_txt9":"选择你喜欢的NFT",
+    "part2_txt10":"就像在电商平台上选择商品一样选择NFT",
+    "part2_txt11":"点亮红心之后你喜欢的NFT将会保存在收藏里",
+    "part2_txt12":"购买NFT",
+    "part2_txt13":"选择支付方式",
+    "part2_txt14":"支付实行",
+
+    "part3_title":"出售NFT",
+    "part3_txt1":"如何转卖你所拥有的NFT",
+    "part3_txt2":"已购入的NFT可以在FireDigital上转卖。<br>转卖方法和一般的二手物品交易平台一样，可以自己设置价格，并且可以选择以拍卖的形式出售",
+    "part3_txt3":"",
+    "part3_txt4":"从收藏中选择NFT",    
+    "part3_txt8":"选择出售方式",
+    "part3_txt9":"固定价格出售",
+    "part3_txt10":"像二手物品交易平台一样，<br>设置自己喜欢的价格即可出售",
+    "part3_txt11":"拍卖出售",
+    "part3_txt12":"可以设置最长7天的拍卖期间<br>可以以更高的价格出售",
+    "part3_txt13":"设定拍卖条件"
+
+  },
   "header": {
+    "artist_signup": "艺术家注册",
     "guide": "向导",
     "login": "登录",
     "logout": "退出登录",
     "marketplace": "市场",
-    "my_collection": "收藏",
+    "my_collection": "我的收藏",
     "shop": "店铺",
     "signup": "注册",
     "user_setting": "用户设定"
   },
   "index": {
+    "banner":{
+      "text1": "FireDigital NFT<br>MarketPlace<span style=\"color: rgb(255, 69, 0);\"><b>(testnet)</b></span>",
+      "text2": "PlatForm Version"
+    },
     "sorts": {
-      "date": "售卖时间降序",
+      "dateDesc": "售卖时间降序",
+      "dateAsc": "售卖时间升序",
       "hot": "人气顺序",
-      "price": "价格降序"
+      "priceDesc": "价格降序",
+      "priceAsc": "价格升序"
     },
     "titles": {
       "auction": "拍卖商品",
-      "fixed_price": "固定价格商品",
+      "fixed_price": "定价商品",
       "hot_products": "人气商品",
-      "latest_products": "最新售卖"
+      "latest_products": "最新售卖",
+      "recommend_products": "推荐商品",
+      "artist_introduction": "艺术家介绍",
+      "subscribe": "你可以登陆邮箱来获取最近消息"
+    },
+    "labels": {
+      "top_banner1": "数字化创造价值",
+      "top_banner2": "我们会妥善保管好你的实物资产并发行其数字所有权。<br>你可以在这个NFT交易平台上买卖你所拥有的数字所有权。",
+      "top_banner3": "NFT Maketplace",
+      "how_to": "在FireDigital，没有钱包你也可以很简单的购买和出售NFT。",
+      "create_account": "创建账户",
+      "select_nft": "选择在展出的NFT",
+      "buy_nft": "购买NFT<br><span>信用卡、银行转账、虚拟货币</span>",
+      "resell_nft": "转卖你拥有的NFT"
     }
   },
   "labels": {
@@ -148,6 +264,7 @@
     "error_transfer_failure": "汇款完了处理失败",
     "error_twoauth_delete_failure": "二次认证解除失败",
     "error_user_update_failure": "用户设定失败",
+    "error_image_file_type": "只允许上传PNG, GIF, JPEG类型的文件",
     "info_auction_price_invalid": "请输入有效的出价金额",
     "info_auction_success": "完成出价",
     "info_bid_unit_wrong": "请确保出价单位",
@@ -187,7 +304,7 @@
       "title": "联系客服"
     },
     "credit_card": {
-      "cardC_cvc": "安全码",
+      "card_cvc": "安全码",
       "card_expiry": "有效期",
       "card_number": "卡号",
       "copy": "复制",
@@ -240,7 +357,7 @@
           "cancel": "取消",
           "paid": "已支付",
           "transferred": "已汇款",
-          "waiting_confirm": "等待确认",
+          "waiting_confirm": "等待支付",
           "waiting_payment": "等待支付"
         }
       },
@@ -273,7 +390,7 @@
           "cancel": "取消",
           "paid": "已支付",
           "transferred": "已汇款",
-          "waiting_confirm": "等待确认",
+          "waiting_confirm": "等待支付",
           "waiting_payment": "等待支付"
         }
       },
@@ -283,7 +400,7 @@
         "account_type_checking": "企业账户",
         "account_type_normal": "个人账户",
         "amount": "价格",
-        "auction_amount": "出价价格",
+        "auction_amount": "支付价格",
         "bank": "银行名",
         "branch": "支店名",
         "buy_created_at": "购入日期",
@@ -291,6 +408,8 @@
         "created_at": "日期",
         "credit_card": "信用卡",
         "exp_date": "有效期",
+        "name": "姓名",
+        "name_kana": "姓名（カナ）",
         "last4": "末尾",
         "order_id": "订单号",
         "pay_method": "支付方式",
@@ -314,7 +433,7 @@
           "cancel": "取消",
           "paid": "已支付",
           "transferred": "已汇款",
-          "waiting_confirm": "等待确认",
+          "waiting_confirm": "等待支付",
           "waiting_payment": "等待支付"
         }
       },
@@ -373,7 +492,7 @@
       "null": "",
       "paid": "已支付",
       "transferred": "等待支付确认",
-      "waiting_confirm": "等待确认",
+      "waiting_confirm": "等待支付",
       "waiting_payment": "等待支付"
     }
   },
@@ -387,7 +506,7 @@
       "fields": {
         "created_at": "时间",
         "nick_name": "用户",
-        "price": "出价"
+        "price": "出价价格"
       },
       "labels": {
         "account": "银行卡号",
@@ -412,7 +531,7 @@
         "owner_name": "拥有者",
         "pay_method_bank": "银行汇款",
         "pay_method_credit_card": "信用卡",
-        "price": "价格",
+        "price": "现在价格",
         "product_id": "登录号码",
         "seconds_ago": "秒前",
         "start_price": "起拍价",
@@ -467,7 +586,6 @@
     }
   },
   "sidebar": {
-    "artist_signup":"艺术家注册",
     "my": {
       "affiliate": "友人邀请",
       "collection": "收藏",
@@ -496,6 +614,7 @@
     "password_confirmation": "确认密码",
     "successed": "已发送本人确认的邮件。请点击邮件内的链接确认。",
     "title": "作成账号",
+    "privacy_policy": "我已阅读并同意 <a href='#' target='blank'>隐私条款</a>",
     "verified": "已确认邮箱"
   },
   "successes": {
@@ -537,8 +656,9 @@
     "order_no": "订单号",
     "order_price": "交易金额",
     "other_destination": "其他收件人",
+    "pay_method": "支付方式",
     "payment_amount": "支付金额",
-    "payment_due_at": "支付时间",
+    "payment_due_at": "支付期限",
     "payment_status": "订单状态",
     "payment_success": "已确认收款",
     "phone": "个人电话号码",
